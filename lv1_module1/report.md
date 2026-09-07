@@ -423,16 +423,26 @@ crw-rw---- 1 root dialout 4, 64 Sep  7 10:52 /dev/ttyS0
 
 라이다는 16 MiB의 `lidar.img`, IMU는 24 MiB의 `imu.img`를 사용함, 기존 실습과 구별하기 위해 `~/fake_sensors_physicalai_lv1/` 경로를 사용했으며 규칙 파일에도 같은 절대 경로를 사용함
 
-2-6의 udev 실행 단계에서 `losetup -f --show`로 두 이미지를 연결한 뒤 다음 명령을 실행해 조사 결과를 저장함
+두 이미지의 연결과 고정 링크 설정은 문제 2의 '순서를 바꿔 재연결한 결과' 절에서 수행함. 연결된 장치의 속성을 다시 조회할 때는 같은 WSL 터미널에서 아래 명령 전체를 실행함.
+
+`bash scripts/verify_runtime.sh tty`는 장치 목록만 조회함. 별도로 실행한 스크립트 안의 변수는 현재 터미널에 남지 않으므로, `readlink -e`로 고정 링크의 실제 장치 경로를 읽어 `lidar_device`와 `imu_device`를 먼저 설정함. 고정 링크가 없으면 같은 작업 폴더에서 `sudo bash scripts/verify_runtime.sh udev`로 장치 연결과 규칙 적용을 수행한 뒤 조회함.
 
 ```bash
-udevadm info --attribute-walk --name="$lidar_device"
-udevadm info --attribute-walk --name="$imu_device"
-cat "/sys/class/block/${lidar_device#/dev/}/loop/backing_file"
-cat "/sys/class/block/${imu_device#/dev/}/loop/backing_file"
+lidar_device=$(readlink -e /dev/robot_lidar)
+imu_device=$(readlink -e /dev/robot_imu)
+
+if [ -b "$lidar_device" ] && [ -b "$imu_device" ]; then
+    printf 'lidar_device=%s\nimu_device=%s\n' "$lidar_device" "$imu_device"
+    udevadm info --attribute-walk --name="$lidar_device"
+    udevadm info --attribute-walk --name="$imu_device"
+    cat "/sys/class/block/${lidar_device#/dev/}/loop/backing_file"
+    cat "/sys/class/block/${imu_device#/dev/}/loop/backing_file"
+else
+    printf '장치가 연결되지 않음: sudo bash scripts/verify_runtime.sh udev 실행 후 다시 조회\n' >&2
+fi
 ```
 
-실행 결과 - 첫 연결의 속성 출력 발췌
+실행 결과 - 최초 연결 당시 속성 출력 발췌. loop 번호는 연결 순서에 따라 달라지므로 현재 조회 결과가 loop1이어도 같은 이미지 파일을 가리키면 정상임.
 
 ```text
 looking at device '/devices/virtual/block/loop0':
@@ -440,7 +450,7 @@ looking at device '/devices/virtual/block/loop0':
     SUBSYSTEM=="block"
 ```
 
-이 환경의 attribute-walk에는 `loop/backing_file` 값이 표시되지 않아 같은 장치의 sysfs 파일을 직접 읽음, 실제 결과는 2-6 로그의 첫 연결 아래 두 경로와 같음
+이 환경의 attribute-walk에는 `loop/backing_file` 값이 표시되지 않아 같은 장치의 sysfs 파일을 직접 읽음. 연결 순서에 관계없이 라이다와 IMU의 backing file은 각각 아래 경로여야 함.
 
 | 센서 역할 | 구분한 속성 | 실제 값 |
 |---|---|---|
@@ -449,7 +459,7 @@ looking at device '/devices/virtual/block/loop0':
 
 장치 번호인 loop0, loop1은 연결 순서에 따라 변하지만 backing file은 센서 역할을 식별하므로 규칙 조건으로 사용함, 전체 조사 결과는 [라이다 속성](evidence/udev_lidar_attributes.txt)과 [IMU 속성](evidence/udev_imu_attributes.txt)에 보관함
 
-이미지 파일을 loop 장치로 연결하고 `udevadm`으로 속성을 조사함, 화면에서 장치 번호와 `KERNEL=="loop0"`, `SUBSYSTEM=="block"`을 확인함, backing file은 위 속성 파일에 기록했으며 고정 링크의 재연결 결과는 2-6에 정리함
+이미지 파일을 loop 장치로 연결하고 `udevadm`으로 속성을 조사함. 아래 화면은 최초 연결 당시의 `KERNEL=="loop0"`, `SUBSYSTEM=="block"` 출력이며, 고정 링크의 역순 재연결 결과는 문제 2의 '순서를 바꿔 재연결한 결과' 절에 정리함.
 
 ![loop 장치 생성과 udev 속성 조사](images/problem2_06_udev_attributes_user_history.png)
 
