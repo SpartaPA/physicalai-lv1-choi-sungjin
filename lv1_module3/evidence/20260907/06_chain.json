@@ -10,6 +10,14 @@
     "images/20260907/06_chain_2.png",
     "images/20260907/06_chain_3.png"
   ],
-  "notebook_sha256": "78b4daa72b87701993e84d8fecb2d5e9135fab7b6831b09bf296a1a51563ba8c",
-  "result": "PASS"
+  "notebook_sha256": "6ce86fab34857926742f855ec7aba070e232663811261c18ff9e7602e120829d",
+  "result": "PASS",
+  "executed_notebook_sha256": "78b4daa72b87701993e84d8fecb2d5e9135fab7b6831b09bf296a1a51563ba8c",
+  "documentation_update": {
+    "updated_at": "2026-09-07T20:15:06+09:00",
+    "change": "Added one Markdown calculation illustration.",
+    "code_cells_and_saved_outputs_unchanged": true,
+    "image": "images/handwritten_math/06_chain.png",
+    "image_sha256": "d5c308fdf8e5696a6e940ce3fd4dda8020209c4861671630e14618a690b38239"
+  }
 }

@@ -8,7 +8,9 @@
       "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
       "provided_cells_unchanged": 6,
       "figures": 0,
-      "sha256": "def98ebd2c7bb97829ab794b8b0f98443917a45174dcd204bd64117136dd461e"
+      "sha256": "86d5ffe942726f3e2a93da34128252a003cda1379c3d156999bcabd824ad4165",
+      "executed_notebook_sha256": "def98ebd2c7bb97829ab794b8b0f98443917a45174dcd204bd64117136dd461e",
+      "calculation_illustrations": 1
     },
     {
       "notebook": "02_rotation.ipynb",
@@ -16,7 +18,9 @@
       "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
       "provided_cells_unchanged": 7,
       "figures": 2,
-      "sha256": "1a0c5f671eece30175cb7b74370b5afafdd1d93c94d55d60bae55c65ae80ea11"
+      "sha256": "d7d69523efa466663b8318ea26f58ba808259feab98681bbb07ece0f2be7f7a3",
+      "executed_notebook_sha256": "1a0c5f671eece30175cb7b74370b5afafdd1d93c94d55d60bae55c65ae80ea11",
+      "calculation_illustrations": 1
     },
     {
       "notebook": "03_reorthogonalize.ipynb",
@@ -24,7 +28,9 @@
       "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
       "provided_cells_unchanged": 6,
       "figures": 1,
-      "sha256": "cec245803602c5c1689cb03d734da72220bb22b6b8e7abc8422a406476ea1c4f"
+      "sha256": "d2b0f3a16c3f2119813bd48ec5502f58c1a6ee9f4e5118408605da927c8f5c4a",
+      "executed_notebook_sha256": "cec245803602c5c1689cb03d734da72220bb22b6b8e7abc8422a406476ea1c4f",
+      "calculation_illustrations": 1
     },
     {
       "notebook": "04_linear_system.ipynb",
@@ -32,7 +38,9 @@
       "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
       "provided_cells_unchanged": 7,
       "figures": 2,
-      "sha256": "d4c5df29736d37996008cd6f732eacf605a27fe951f7f4e27c131f3f6e8e4937"
+      "sha256": "e079c50d0eac7f03cf7fcc0b36511e2ddaf097d238111ce374bc098fd51e4d6f",
+      "executed_notebook_sha256": "d4c5df29736d37996008cd6f732eacf605a27fe951f7f4e27c131f3f6e8e4937",
+      "calculation_illustrations": 1
     },
     {
       "notebook": "05_transform.ipynb",
@@ -40,7 +48,9 @@
       "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
       "provided_cells_unchanged": 7,
       "figures": 2,
-      "sha256": "9ef7b6a0d5d15f02bdb44032358a871b69ff855afe0282967f2439d9476d0003"
+      "sha256": "62917ea4fa477c991584c37845ecf420ca80c78e3b34de53558713eecb32feba",
+      "executed_notebook_sha256": "9ef7b6a0d5d15f02bdb44032358a871b69ff855afe0282967f2439d9476d0003",
+      "calculation_illustrations": 1
     },
     {
       "notebook": "06_chain.ipynb",
@@ -48,7 +58,9 @@
       "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
       "provided_cells_unchanged": 8,
       "figures": 3,
-      "sha256": "78b4daa72b87701993e84d8fecb2d5e9135fab7b6831b09bf296a1a51563ba8c"
+      "sha256": "6ce86fab34857926742f855ec7aba070e232663811261c18ff9e7602e120829d",
+      "executed_notebook_sha256": "78b4daa72b87701993e84d8fecb2d5e9135fab7b6831b09bf296a1a51563ba8c",
+      "calculation_illustrations": 1
     }
   ],
   "total_pass_lines": 221,
@@ -64,5 +76,11 @@
     "tests/conftest.py": "c0b7ec01ea773ed770ec506b2377364b229c6df7117222ee4ecb15ee6091808c",
     "tests/test_rotation.py": "951b0458a77a92d4c0a9c8712e22142a40fbf8dfaf283d3aac885fca9abfdc96",
     "tests/test_transform.py": "68eea7607a9e9dcbe9d09302472384f65b8514cbfab3b84b462c0101f0e49ddb"
+  },
+  "documentation_update": {
+    "updated_at": "2026-09-07T20:15:06+09:00",
+    "calculation_illustrations": 6,
+    "code_cells_and_saved_outputs_unchanged": true,
+    "verification": "Original cells compared as JSON, image attachments decoded and matched to PNG files, all six notebooks rendered to HTML without execution."
   }
 }

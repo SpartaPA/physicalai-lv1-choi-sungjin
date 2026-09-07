@@ -8,6 +8,14 @@
   "images": [
     "images/20260907/03_reorthogonalize_1.png"
   ],
-  "notebook_sha256": "cec245803602c5c1689cb03d734da72220bb22b6b8e7abc8422a406476ea1c4f",
-  "result": "PASS"
+  "notebook_sha256": "d2b0f3a16c3f2119813bd48ec5502f58c1a6ee9f4e5118408605da927c8f5c4a",
+  "result": "PASS",
+  "executed_notebook_sha256": "cec245803602c5c1689cb03d734da72220bb22b6b8e7abc8422a406476ea1c4f",
+  "documentation_update": {
+    "updated_at": "2026-09-07T20:15:06+09:00",
+    "change": "Added one Markdown calculation illustration.",
+    "code_cells_and_saved_outputs_unchanged": true,
+    "image": "images/handwritten_math/03_reorthogonalize.png",
+    "image_sha256": "9e1b0f6688bfa19ec1efec6be976d6dd30e151f514b118708d2992c66883dab8"
+  }
 }

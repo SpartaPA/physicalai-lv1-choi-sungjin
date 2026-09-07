@@ -9,6 +9,14 @@
     "images/20260907/02_rotation_1.png",
     "images/20260907/02_rotation_2.png"
   ],
-  "notebook_sha256": "1a0c5f671eece30175cb7b74370b5afafdd1d93c94d55d60bae55c65ae80ea11",
-  "result": "PASS"
+  "notebook_sha256": "d7d69523efa466663b8318ea26f58ba808259feab98681bbb07ece0f2be7f7a3",
+  "result": "PASS",
+  "executed_notebook_sha256": "1a0c5f671eece30175cb7b74370b5afafdd1d93c94d55d60bae55c65ae80ea11",
+  "documentation_update": {
+    "updated_at": "2026-09-07T20:15:06+09:00",
+    "change": "Added one Markdown calculation illustration.",
+    "code_cells_and_saved_outputs_unchanged": true,
+    "image": "images/handwritten_math/02_rotation.png",
+    "image_sha256": "174c5b90c0ef7881f575f8705ebf928cd63a8d30b02729f9623ea2e1ba15f114"
+  }
 }

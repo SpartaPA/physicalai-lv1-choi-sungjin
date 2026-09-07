@@ -9,6 +9,14 @@
     "images/20260907/05_transform_1.png",
     "images/20260907/05_transform_2.png"
   ],
-  "notebook_sha256": "9ef7b6a0d5d15f02bdb44032358a871b69ff855afe0282967f2439d9476d0003",
-  "result": "PASS"
+  "notebook_sha256": "62917ea4fa477c991584c37845ecf420ca80c78e3b34de53558713eecb32feba",
+  "result": "PASS",
+  "executed_notebook_sha256": "9ef7b6a0d5d15f02bdb44032358a871b69ff855afe0282967f2439d9476d0003",
+  "documentation_update": {
+    "updated_at": "2026-09-07T20:15:06+09:00",
+    "change": "Added one Markdown calculation illustration.",
+    "code_cells_and_saved_outputs_unchanged": true,
+    "image": "images/handwritten_math/05_transform.png",
+    "image_sha256": "fc357ec7c77ba9bcb8dad350de479f12e8a30171120d7dde919dafad57c6a32c"
+  }
 }

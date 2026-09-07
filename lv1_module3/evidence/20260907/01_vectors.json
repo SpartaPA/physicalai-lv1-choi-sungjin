@@ -6,6 +6,14 @@
   "pass_lines": 41,
   "protected_cells": 6,
   "images": [],
-  "notebook_sha256": "def98ebd2c7bb97829ab794b8b0f98443917a45174dcd204bd64117136dd461e",
-  "result": "PASS"
+  "notebook_sha256": "86d5ffe942726f3e2a93da34128252a003cda1379c3d156999bcabd824ad4165",
+  "result": "PASS",
+  "executed_notebook_sha256": "def98ebd2c7bb97829ab794b8b0f98443917a45174dcd204bd64117136dd461e",
+  "documentation_update": {
+    "updated_at": "2026-09-07T20:15:06+09:00",
+    "change": "Added one Markdown calculation illustration.",
+    "code_cells_and_saved_outputs_unchanged": true,
+    "image": "images/handwritten_math/01_vectors.png",
+    "image_sha256": "cb7a39a1cb0f55f0a8446ceefbcc37abd6eba45c8ccc59c96f6251b4e3017a4d"
+  }
 }

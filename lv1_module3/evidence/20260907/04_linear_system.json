@@ -9,6 +9,14 @@
     "images/20260907/04_linear_system_1.png",
     "images/20260907/04_linear_system_2.png"
   ],
-  "notebook_sha256": "d4c5df29736d37996008cd6f732eacf605a27fe951f7f4e27c131f3f6e8e4937",
-  "result": "PASS"
+  "notebook_sha256": "e079c50d0eac7f03cf7fcc0b36511e2ddaf097d238111ce374bc098fd51e4d6f",
+  "result": "PASS",
+  "executed_notebook_sha256": "d4c5df29736d37996008cd6f732eacf605a27fe951f7f4e27c131f3f6e8e4937",
+  "documentation_update": {
+    "updated_at": "2026-09-07T20:15:06+09:00",
+    "change": "Added one Markdown calculation illustration.",
+    "code_cells_and_saved_outputs_unchanged": true,
+    "image": "images/handwritten_math/04_linear_system.png",
+    "image_sha256": "0cb16fda9b95bbe0bb043432a4330d464df8655a40c1bdf10f9927092665afdb"
+  }
 }
