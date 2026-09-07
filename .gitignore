@@ -1,0 +1,22 @@
+# ROS 2 / colcon
+**/build/
+**/install/
+**/log/
+
+# C++ build products
+*.o
+/lv1_module2/cpp_basics/stop_distance
+/lv1_module2/cpp_basics/motor_app
+
+# Python / Jupyter
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.ipynb_checkpoints/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,25 @@
+stage=keysetup time=2026-09-07T11:01:33+09:00
+Generating public/private ed25519 key pair.
+Your identification has been saved in /home/chsjh/.ssh/physicalai_lv1_module1_completion_ed25519
+Your public key has been saved in /home/chsjh/.ssh/physicalai_lv1_module1_completion_ed25519.pub
+The key fingerprint is:
+SHA256:mEpMQgfHCJ/24zh0+4L631+sQwzUvEP0YbuDMUsAFvc physicalai-lv1-module1-completion
+The key's randomart image is:
++--[ED25519 256]--+
+|..o+*oo+. o      |
+| o.=...o+o o     |
+|  = .. .E.o      |
+| . =  .+o= .     |
+|  . * ooS.o      |
+| . = +  o. .     |
+|  o.+  .  o      |
+|  ...o  .o       |
+|.o....o.o.       |
++----[SHA256]-----+
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/chsjh/.ssh/physicalai_lv1_module1_completion_ed25519.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+
+/usr/bin/ssh-copy-id: WARNING: All keys were skipped because they already exist on the remote system.
+		(if you think this is a mistake, you may want to use -f option)
+
+256 SHA256:mEpMQgfHCJ/24zh0+4L631+sQwzUvEP0YbuDMUsAFvc physicalai-lv1-module1-completion (ED25519)

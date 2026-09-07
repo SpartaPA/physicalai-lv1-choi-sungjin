@@ -1,0 +1,12 @@
+frame_bytes=2764800
+camera_MB_per_second=165.888
+camera_Mbps=1327.104
+LTE_95_Mbps: capacity_MB_per_second=11.875, camera_ratio=13.969516
+LTE_100_Mbps: capacity_MB_per_second=12.5, camera_ratio=13.271040
+encoder: 2000 Hz, period_ms=0.500000
+IMU: 400 Hz, period_ms=2.500000
+lidar: 15 Hz, period_ms=66.666667
+camera: 60 Hz, period_ms=16.666667
+assumed_encoder_and_IMU_bytes_per_second=28800
+assumed_lidar_bytes_per_second=43200
+[PASS] camera bandwidth, sensor periods and explicit payload assumptions

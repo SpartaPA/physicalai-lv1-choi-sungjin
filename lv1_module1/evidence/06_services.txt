@@ -1,0 +1,22 @@
+stage=services time=2026-09-07T11:04:00+09:00
+openssh-server 1:8.9p1-3ubuntu0.16 install ok installed
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2026-09-07 09:37:55 KST; 1h 26min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 252 (sshd)
+      Tasks: 1 (limit: 23986)
+     Memory: 3.5M
+        CPU: 554ms
+     CGroup: /system.slice/ssh.service
+             └─252 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Sep 07 11:01:59 PA12 sshd[5476]: Accepted publickey for chsjh from 127.0.0.1 port 48012 ssh2: ED25519 SHA256:mEpMQgfHCJ/24zh0+4L631+sQwzUvEP0YbuDMUsAFvc
+Sep 07 11:01:59 PA12 sshd[5476]: pam_unix(sshd:session): session opened for user chsjh(uid=1000) by (uid=0)
+Sep 07 11:01:59 PA12 sshd[5476]: pam_unix(sshd:session): session closed for user chsjh
+active
+active
+LISTEN 0      128           0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=252,fd=3))            
+LISTEN 0      128              [::]:22           [::]:*    users:(("sshd",pid=252,fd=4))            
+[PASS] SSH service active and TCP port 22 listening

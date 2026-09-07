@@ -1,0 +1,10 @@
+stage=env time=2026-09-07T11:00:05+09:00
+chsjh
+PA12
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+6.18.33.2-microsoft-standard-WSL2
+/mnt/c/Desktop/coding/lv1_module1_student
+/home/chsjh/.venvs/ros2-humble/bin/python
+Python 3.10.12
+venv_active=True
+[PASS] Ubuntu and existing Python venv verified

@@ -1,0 +1,16 @@
+stage=udev time=2026-09-07T11:00:07+09:00
+FIRST: lidar=/dev/loop0 imu=/dev/loop1
+/home/chsjh/fake_sensors_physicalai_lv1/lidar.img
+/home/chsjh/fake_sensors_physicalai_lv1/imu.img
+lrwxrwxrwx 1 root root 5 Sep  7 11:00 /dev/robot_imu -> loop1
+lrwxrwxrwx 1 root root 5 Sep  7 11:00 /dev/robot_lidar -> loop0
+robot_lidar -> /dev/loop0 backing=/home/chsjh/fake_sensors_physicalai_lv1/lidar.img
+robot_imu -> /dev/loop1 backing=/home/chsjh/fake_sensors_physicalai_lv1/imu.img
+[PASS] first attachment links and mode/group verified
+REVERSED: imu=/dev/loop0 lidar=/dev/loop1
+lrwxrwxrwx 1 root root 5 Sep  7 11:00 /dev/robot_imu -> loop0
+lrwxrwxrwx 1 root root 5 Sep  7 11:00 /dev/robot_lidar -> loop1
+robot_lidar -> /dev/loop1 backing=/home/chsjh/fake_sensors_physicalai_lv1/lidar.img
+robot_imu -> /dev/loop0 backing=/home/chsjh/fake_sensors_physicalai_lv1/imu.img
+[PASS] loop numbers exchanged; fixed links still identify correct sensors
+[PASS] only this assignment images detached; no mounted device touched

@@ -1,0 +1,3 @@
+# `udevadm info`에서 block/loop 계층을 확인하고 sysfs의 backing_file로 구분한다.
+SUBSYSTEM=="block", KERNEL=="loop*", ATTR{loop/backing_file}=="/home/chsjh/fake_sensors_physicalai_lv1/lidar.img", SYMLINK+="robot_lidar", MODE="0660", GROUP="disk"
+SUBSYSTEM=="block", KERNEL=="loop*", ATTR{loop/backing_file}=="/home/chsjh/fake_sensors_physicalai_lv1/imu.img", SYMLINK+="robot_imu", MODE="0660", GROUP="disk"

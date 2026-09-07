@@ -1,0 +1,30 @@
+Module 1 / Git history verification (local practice)
+time=2026-09-07T12:17:23+09:00
+$ git log --graph --oneline --no-decorate -6 compare/merge-main
+*   808bb80 merge: preserve comparison branch topology
+|\  
+| * b45cdd5 docs: add comparison feature
+* | 68db888 docs: advance comparison base
+|/  
+*   459e802 merge: resolve lidar and imu status conflict
+|\  
+| * db68ad7 docs: record imu verification on shared row
+* |   814b0a7 merge: integrate lidar verification
+|\ \  
+| |/  
+|/|   
+
+$ git log --graph --oneline --no-decorate -5 compare/rebase-main
+* 60e977a docs: add comparison feature
+* 68db888 docs: advance comparison base
+*   459e802 merge: resolve lidar and imu status conflict
+|\  
+| * db68ad7 docs: record imu verification on shared row
+* |   814b0a7 merge: integrate lidar verification
+|\ \  
+| |/  
+|/|   
+
+$ git diff --exit-code compare/merge-main compare/rebase-main
+[PASS] merge and rebase final trees are identical; git diff exit code=0
+GitHub PR and review are pending; this is local verification only.
