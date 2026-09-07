@@ -1,0 +1,11 @@
+
+Files:             problem10_pose_distance_20260907_164050_0.db3
+Bag size:          145.5 KiB
+Storage id:        sqlite3
+Duration:          28.912243819s
+Start:             Sep  7 2026 16:40:51.809199181 (1788766851.809199181)
+End:               Sep  7 2026 16:41:20.721443000 (1788766880.721443000)
+Messages:          2088
+Topic information: Topic: /turtle_distance | Type: std_msgs/msg/Float32 | Count: 280 | Serialization Format: cdr
+                   Topic: /turtle1/pose | Type: turtlesim/msg/Pose | Count: 1808 | Serialization Format: cdr
+

@@ -1,0 +1,327 @@
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/diagnostic_turtlesim.log ros2 run turtlesim turtlesim_node
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/diagnostic_turtlesim.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/diagnostic_turtlesim.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=18875
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtlesim turtlesim_node
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ DIAGNOSTIC_TURTLE_ID=18875
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/diagnostic_distance_publisher.log ros2 run turtle_py distance_publisher
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/diagnostic_distance_publisher.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/diagnostic_distance_publisher.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=18878
++ setsid ros2 run turtle_py distance_publisher
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ DIAGNOSTIC_PUBLISHER_ID=18878
++ wait_for_topic /turtle_distance
++ local name=/turtle_distance
++ for _ in {1..30}
++ timeout 5 ros2 topic list --no-daemon --spin-time 1
++ grep -qx /turtle_distance
++ return 0
++ sleep 2
++ timeout_capture 5 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log ros2 topic hz /turtle_distance
++ local seconds=5 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log status
++ shift 2
++ set +e
++ timeout --signal=INT --kill-after=3 5 ros2 topic hz /turtle_distance
++ status=124
++ set -e
++ [[ 124 == 0 ]]
++ [[ 124 == 124 ]]
++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log
+WARNING: topic [/turtle_distance] does not appear to be published yet
+average rate: 9.998
+	min: 0.100s max: 0.101s std dev: 0.00023s window: 12
+average rate: 10.000
+	min: 0.099s max: 0.101s std dev: 0.00022s window: 23
++ assert_hz /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log 8.5 11.5
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/assert_hz.py /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log 8.5 11.5
+Observed final rate=10.000 Hz; accepted range=8.5..11.5
++ ros2 node list --no-daemon --spin-time 2
++ sort
++ ros2 topic info --no-daemon --spin-time 1 /turtle_distance --verbose
++ stop_group 18875
++ local id=18875
++ [[ 1 == 1 ]]
++ kill -INT -- -18875
++ for _ in {1..30}
++ kill -0 18875
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 18875
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 18875
++ break
++ kill -TERM -- -18875
++ true
++ for _ in {1..20}
++ kill -0 18875
++ break
++ kill -KILL -- -18875
++ true
++ wait 18875
++ unset 'ACTIVE_GROUPS[$id]'
++ sleep 2
++ timeout_capture 5 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_after_turtlesim_stop.log ros2 topic hz /turtle_distance
++ local seconds=5 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_after_turtlesim_stop.log status
++ shift 2
++ set +e
++ timeout --signal=INT --kill-after=3 5 ros2 topic hz /turtle_distance
++ status=124
++ set -e
++ [[ 124 == 0 ]]
++ [[ 124 == 124 ]]
++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_after_turtlesim_stop.log
++ grep -q 'average rate:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_after_turtlesim_stop.log
++ kill -0 18878
++ ros2 node list --no-daemon --spin-time 2
++ sort
++ grep -qx /turtlesim /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/nodes_after_turtlesim_stop.log
++ ros2 topic info --no-daemon --spin-time 1 /turtle_distance --verbose
++ stop_group 18878
++ local id=18878
++ [[ 1 == 1 ]]
++ kill -INT -- -18878
++ for _ in {1..30}
++ kill -0 18878
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 18878
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 18878
++ break
++ kill -TERM -- -18878
++ true
++ for _ in {1..20}
++ kill -0 18878
++ break
++ kill -KILL -- -18878
++ true
++ wait 18878
++ unset 'ACTIVE_GROUPS[$id]'
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_turtlesim.log ros2 run turtlesim turtlesim_node
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_turtlesim.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_turtlesim.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=18992
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtlesim turtlesim_node
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ BAG_TURTLE_ID=18992
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_distance_publisher.log ros2 run turtle_py distance_publisher
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_distance_publisher.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_distance_publisher.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=18995
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtle_py distance_publisher
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ BAG_PUBLISHER_ID=18995
++ wait_for_topic /turtle_distance
++ local name=/turtle_distance
++ for _ in {1..30}
++ timeout 5 ros2 topic list --no-daemon --spin-time 1
++ grep -qx /turtle_distance
++ return 0
++ sleep 2
+++ date +%Y%m%d_%H%M%S
++ BAG_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_record.log ros2 bag record -o /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050 /turtle1/pose /turtle_distance
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_record.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_record.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=19035
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid ros2 bag record -o /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050 /turtle1/pose /turtle_distance
++ BAG_RECORD_ID=19035
++ sleep 30
++ stop_group 19035
++ local id=19035
++ [[ 1 == 1 ]]
++ kill -INT -- -19035
++ for _ in {1..30}
++ kill -0 19035
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 19035
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 19035
++ break
++ kill -TERM -- -19035
++ true
++ for _ in {1..20}
++ kill -0 19035
++ break
++ kill -KILL -- -19035
++ true
++ wait 19035
++ unset 'ACTIVE_GROUPS[$id]'
++ ros2 bag info /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_info.log
+
+Files:             problem10_pose_distance_20260907_164050_0.db3
+Bag size:          145.5 KiB
+Storage id:        sqlite3
+Duration:          28.912243819s
+Start:             Sep  7 2026 16:40:51.809199181 (1788766851.809199181)
+End:               Sep  7 2026 16:41:20.721443000 (1788766880.721443000)
+Messages:          2088
+Topic information: Topic: /turtle_distance | Type: std_msgs/msg/Float32 | Count: 280 | Serialization Format: cdr
+                   Topic: /turtle1/pose | Type: turtlesim/msg/Pose | Count: 1808 | Serialization Format: cdr
+
++ echo /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_path.log
+/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
++ stop_group 18995
++ local id=18995
++ [[ 1 == 1 ]]
++ kill -INT -- -18995
++ for _ in {1..30}
++ kill -0 18995
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 18995
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 18995
++ break
++ kill -TERM -- -18995
++ true
++ for _ in {1..20}
++ kill -0 18995
++ break
++ kill -KILL -- -18995
++ true
++ wait 18995
++ unset 'ACTIVE_GROUPS[$id]'
++ stop_group 18992
++ local id=18992
++ [[ 1 == 1 ]]
++ kill -INT -- -18992
++ for _ in {1..30}
++ kill -0 18992
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 18992
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 18992
++ break
++ kill -TERM -- -18992
++ true
++ for _ in {1..20}
++ kill -0 18992
++ break
++ kill -KILL -- -18992
++ true
++ wait 18992
++ unset 'ACTIVE_GROUPS[$id]'
++ sleep 2
++ ros2 node list --no-daemon --spin-time 2
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/live_nodes_before_bag_play.log
++ grep -Eq '^/(turtlesim|distance_publisher)$' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/live_nodes_before_bag_play.log
++ python3 - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
+Bag duration=28.912 s, counts={'/turtle_distance': 280, '/turtle1/pose': 1808}, total bytes=148980
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_echo.log timeout 20s ros2 topic echo /turtle_distance std_msgs/msg/Float32 --once
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_echo.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_echo.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=19089
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid timeout 20s ros2 topic echo /turtle_distance std_msgs/msg/Float32 --once
++ BAG_ECHO_PID=19089
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_pose_echo.log timeout 20s ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_pose_echo.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_pose_echo.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=19092
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid timeout 20s ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ BAG_POSE_ECHO_PID=19092
++ sleep 1
++ timeout 45 ros2 bag play /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050 --delay 2.0
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play.log
+/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/verify_problem10_cli.sh: line 72: 19101 Killed                  timeout 45 ros2 bag play "$BAG_PATH" --delay 2.0
+     19102 Done                    | tee "$OUTPUT_DIR/bag_play.log"
++ cleanup
++ local id
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 18875
++ local id=18875
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 18878
++ local id=18878
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 18992
++ local id=18992
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 18995
++ local id=18995
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 19035
++ local id=19035
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 19089
++ local id=19089
++ [[ 1 == 1 ]]
++ kill -INT -- -19089
++ true
++ for _ in {1..30}
++ kill -0 19089
++ break
++ kill -TERM -- -19089
++ true
++ for _ in {1..20}
++ kill -0 19089
++ break
++ kill -KILL -- -19089
++ true
++ wait 19089
++ true
++ unset 'ACTIVE_GROUPS[$id]'
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 19092
++ local id=19092
++ [[ 1 == 1 ]]
++ kill -INT -- -19092
++ true
++ for _ in {1..30}
++ kill -0 19092
++ break
++ kill -TERM -- -19092
++ true
++ for _ in {1..20}
++ kill -0 19092
++ break
++ kill -KILL -- -19092
++ true
++ wait 19092
++ true
++ unset 'ACTIVE_GROUPS[$id]'

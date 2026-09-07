@@ -1,0 +1,8 @@
+/usr/bin/ld: /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/main.o: in function `main':
+main.cpp:(.text+0x5a): undefined reference to `Motor::Motor(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+/usr/bin/ld: main.cpp:(.text+0xba): undefined reference to `Motor::Motor(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+/usr/bin/ld: main.cpp:(.text+0xf0): undefined reference to `Motor::set_rpm(double)'
+/usr/bin/ld: main.cpp:(.text+0x108): undefined reference to `Motor::set_rpm(double)'
+/usr/bin/ld: main.cpp:(.text+0x114): undefined reference to `Motor::print_status() const'
+/usr/bin/ld: main.cpp:(.text+0x120): undefined reference to `Motor::print_status() const'
+collect2: error: ld returned 1 exit status

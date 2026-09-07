@@ -1,0 +1,9 @@
+[INFO] [1788765049.443314601] [service_sequence_client]: calling /turtle1/teleport_absolute with call_async()
+[INFO] [1788765049.469437741] [service_sequence_client]: /turtle1/teleport_absolute response: turtlesim.srv.TeleportAbsolute_Response()
+[INFO] [1788765049.480720734] [service_sequence_client]: calling /turtle1/set_pen with call_async()
+[INFO] [1788765049.498897864] [service_sequence_client]: /turtle1/set_pen response: turtlesim.srv.SetPen_Response()
+[INFO] [1788765049.509041963] [service_sequence_client]: calling /spawn with call_async()
+[INFO] [1788765049.532563923] [service_sequence_client]: /spawn response: turtlesim.srv.Spawn_Response(name='turtle2')
+[INFO] [1788765049.544226440] [service_sequence_client]: calling /clear with call_async()
+[INFO] [1788765049.564621633] [service_sequence_client]: /clear response: std_srvs.srv.Empty_Response()
+[INFO] [1788765049.576284679] [service_sequence_client]: all four built-in service calls completed

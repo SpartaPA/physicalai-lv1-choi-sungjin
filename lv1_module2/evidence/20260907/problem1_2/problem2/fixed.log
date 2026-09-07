@@ -1,0 +1,18 @@
+
+=== Fixed version using make_unique ===
+[create] Sensor base: managed_lidar_0
+[create] Lidar: managed_lidar_0
+[create] Sensor base: managed_lidar_1
+[create] Lidar: managed_lidar_1
+[create] Sensor base: managed_lidar_2
+[create] Lidar: managed_lidar_2
+[read] managed_lidar_0 (Lidar) = 1.00 m
+[read] managed_lidar_1 (Lidar) = 2.00 m
+[read] managed_lidar_2 (Lidar) = 3.00 m
+Program exit: unique_ptr releases every sensor automatically.
+[destroy] Lidar: managed_lidar_0
+[destroy] Sensor base: managed_lidar_0
+[destroy] Lidar: managed_lidar_1
+[destroy] Sensor base: managed_lidar_1
+[destroy] Lidar: managed_lidar_2
+[destroy] Sensor base: managed_lidar_2

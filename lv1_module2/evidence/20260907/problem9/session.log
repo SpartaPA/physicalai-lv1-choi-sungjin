@@ -1,0 +1,19 @@
+Build/install non-cache files recorded: 875
+All required names observed in one graph snapshot: ['/distance_publisher', '/draw_polygon_server', '/turtlesim', '/warn_subscriber']
+/distance_publisher
+/draw_polygon_server
+/turtlesim
+/warn_subscriber
+All required names observed in one graph snapshot: ['/distance_publisher', '/draw_polygon_server', '/turtlesim', '/warn_subscriber']
+/distance_publisher
+/draw_polygon_server
+/turtlesim
+/warn_subscriber
+Build/install non-cache files recorded: 875
+PASS same YAML path edited from 8.0 to 1.0; values loaded at runtime
+PASS unchanged build/install non-cache file hashes, sizes and modification times
+/_ros2cli_daemon_62_ea392f5eddcd4874aed3494478b4cd52
+/distance_publisher
+/module2_graph_observer
+/turtle2/distance_publisher
+FAIL persistent graph after 15 seconds; missing: ['/turtlesim']

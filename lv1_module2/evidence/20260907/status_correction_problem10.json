@@ -1,0 +1,15 @@
+{
+  "required_next": "Fresh replay reception, TF/Marker, exception handling, calculation-function mutation pytest fail/restore/pass, and current-run completion receipt.",
+  "original_preserved": "diagnostics/first_10",
+  "original_child_exit": "not reliably recorded",
+  "stage": "10",
+  "reason": "Playback process was stopped and its owned process group was killed. Replay echo logs are empty; final PROBLEM10_CLI_PASS, TF/Marker CLI checks, invalid-input checks and pytest logs are absent. The wrapper-reported zero is not evidence of stage completion.",
+  "invalidated_status": {
+    "reported_exit": 0,
+    "started": "2026-09-07T16:40:19+09:00",
+    "finished": "2026-09-07T16:44:52+09:00",
+    "result": "PASS"
+  },
+  "correction": "INVALID",
+  "corrected_at": "2026-09-07T16:52:21.2823447+09:00"
+}

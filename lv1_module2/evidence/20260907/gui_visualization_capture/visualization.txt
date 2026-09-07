@@ -1,0 +1,24 @@
+[INFO] [launch]: All log files can be found below /home/chsjh/.ros/log/2026-09-07-16-58-15-088219-PA12-20827
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [turtlesim_node-1]: process started with pid [20833]
+[INFO] [pose_tf_broadcaster-2]: process started with pid [20835]
+[INFO] [waypoint_publisher-3]: process started with pid [20837]
+[INFO] [waypoint_marker_publisher-4]: process started with pid [20839]
+[INFO] [rviz2-5]: process started with pid [20841]
+[turtlesim_node-1] [INFO] [1788767895.754112287] [turtlesim]: Starting turtlesim with node name /turtlesim
+[turtlesim_node-1] [INFO] [1788767895.771072659] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[rviz2-5] [INFO] [1788767896.587553856] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-5] [INFO] [1788767896.587692826] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[rviz2-5] [INFO] [1788767896.651088989] [rviz2]: Stereo is NOT SUPPORTED
+[pose_tf_broadcaster-2] [INFO] [1788767896.877730588] [pose_tf_broadcaster]: broadcasting world -> turtle1 from /turtle1/pose
+[waypoint_publisher-3] [INFO] [1788767896.877922648] [waypoint_publisher]: waypoint publisher on /waypoints: reliable/transient_local/depth 1
+[waypoint_marker_publisher-4] [INFO] [1788767897.003195662] [waypoint_marker_publisher]: converting /waypoints to RViz marker /waypoint_markers
+[waypoint_publisher-3] [INFO] [1788767897.817595089] [waypoint_publisher]: published 4 waypoint(s)
+[waypoint_marker_publisher-4] [INFO] [1788767897.817853344] [waypoint_marker_publisher]: published RViz marker with 4 point(s)
+[turtlesim_node-1] [INFO] [1788768322.637196231] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[rviz2-5] [INFO] [1788768322.637195702] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [turtlesim_node-1]: process has finished cleanly [pid 20833]
+[INFO] [waypoint_publisher-3]: process has finished cleanly [pid 20837]
+[INFO] [pose_tf_broadcaster-2]: process has finished cleanly [pid 20835]
+[INFO] [waypoint_marker_publisher-4]: process has finished cleanly [pid 20839]
+[INFO] [rviz2-5]: process has finished cleanly [pid 20841]

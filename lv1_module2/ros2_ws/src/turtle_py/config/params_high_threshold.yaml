@@ -1,0 +1,24 @@
+distance_publisher:
+  ros__parameters:
+    publish_rate: 10.0
+    pose_topic: /turtle1/pose
+    distance_topic: /turtle_distance
+    reliability: reliable
+    durability: volatile
+    qos_depth: 10
+
+warn_subscriber:
+  ros__parameters:
+    warn_distance: 8.0
+    distance_topic: /turtle_distance
+    reliability: reliable
+    durability: volatile
+    qos_depth: 10
+
+draw_polygon_server:
+  ros__parameters:
+    linear_speed: 1.0
+    angular_speed: 1.5
+    cmd_vel_topic: /turtle1/cmd_vel
+    pose_topic: /turtle1/pose
+

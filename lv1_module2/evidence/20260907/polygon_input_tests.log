@@ -1,0 +1,14 @@
+test_eof_and_ctrl_c_exit_before_ros_initialization (__main__.PolygonInputTests) ... ok
+test_existing_ros_parameter_mode_is_preserved (__main__.PolygonInputTests) ... [INFO] [1788768559.725961968] [draw_polygon_client]: sending polygon goal: sides=8, side_length=1.20
+[INFO] [1788768559.738443256] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=1.00 m
+ok
+test_interactive_parameters_and_transmitted_goal_match (__main__.PolygonInputTests) ... [INFO] [1788768560.191135869] [draw_polygon_client]: sending polygon goal: sides=4, side_length=0.70
+[INFO] [1788768560.202862273] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=1.00 m
+ok
+test_invalid_input_retries_until_valid (__main__.PolygonInputTests) ... ok
+test_ros_arguments_are_preserved (__main__.PolygonInputTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.068s
+
+OK

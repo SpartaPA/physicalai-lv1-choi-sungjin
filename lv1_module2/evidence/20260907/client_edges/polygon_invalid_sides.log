@@ -1,0 +1,2 @@
+[INFO] [1788768400.525468770] [draw_polygon_client]: sending polygon goal: sides=2, side_length=2.00
+[ERROR] [1788768401.009922186] [draw_polygon_client]: polygon goal was rejected

@@ -1,0 +1,782 @@
++ cd /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws
++ python -c 'import sys; print("Build interpreter:", sys.executable); assert sys.prefix == "/home/chsjh/.venvs/ros2-humble"'
+Build interpreter: /home/chsjh/.venvs/ros2-humble/bin/python
++ python /usr/bin/colcon build --build-base /home/chsjh/physicalai_lv1_build/module2_20260907/build --symlink-install --executor sequential --event-handlers console_direct+ --cmake-args -DPython3_EXECUTABLE=/home/chsjh/.venvs/ros2-humble/bin/python
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/colcon_build.log
+Starting >>> turtle_cpp
+[100%] Built target distance_publisher
+[100%] Built target distance_subscriber
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/lib/turtle_cpp/distance_publisher
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/lib/turtle_cpp/distance_subscriber
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/ament_index/resource_index/package_run_dependencies/turtle_cpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/ament_index/resource_index/parent_prefix_path/turtle_cpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/environment/path.sh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/environment/path.dsv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/local_setup.bash
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/local_setup.sh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/local_setup.zsh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/local_setup.dsv
+-- Symlinking: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/package.dsv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/ament_index/resource_index/packages/turtle_cpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/cmake/turtle_cppConfig.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/cmake/turtle_cppConfig-version.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/share/turtle_cpp/package.xml
+Finished <<< turtle_cpp [0.43s]
+Starting >>> turtle_interfaces
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_generator_c
+[  1%] Built target turtle_interfaces__rs
+[  3%] Built target turtle_interfaces__cpp
+[ 14%] Built target turtle_interfaces__rosidl_generator_c
+[ 14%] Built target ament_cmake_python_symlink_turtle_interfaces
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_cpp
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_introspection_cpp
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_c
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_fastrtps_cpp
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_introspection_c
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_fastrtps_c
+[ 25%] Built target turtle_interfaces__rosidl_typesupport_cpp
+[ 46%] Built target turtle_interfaces__rosidl_typesupport_c
+[ 44%] Built target turtle_interfaces__rosidl_typesupport_introspection_cpp
+[ 67%] Built target turtle_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 66%] Built target turtle_interfaces__rosidl_typesupport_introspection_c
+[ 78%] Built target turtle_interfaces__rosidl_typesupport_fastrtps_c
+[ 78%] Built target turtle_interfaces
+[ 80%] Built target turtle_interfaces__py
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_generator_py
+[ 89%] Built target turtle_interfaces__rosidl_generator_py
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_introspection_c__pyext
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_fastrtps_c__pyext
+Consolidate compiler generated dependencies of target turtle_interfaces__rosidl_typesupport_c__pyext
+[100%] Built target turtle_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target turtle_interfaces__rosidl_typesupport_introspection_c__pyext
+[100%] Built target turtle_interfaces__rosidl_typesupport_c__pyext
+running egg_info
+writing turtle_interfaces.egg-info/PKG-INFO
+writing dependency_links to turtle_interfaces.egg-info/dependency_links.txt
+writing top-level names to turtle_interfaces.egg-info/top_level.txt
+reading manifest file 'turtle_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'turtle_interfaces.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_turtle_interfaces_egg
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/ament_index/resource_index/rosidl_interfaces/turtle_interfaces
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__functions.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__struct.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__type_support.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/draw_polygon.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__functions.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__struct.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__type_support.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__functions.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__struct.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__type_support.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/waypoint.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/waypoint_list.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__functions.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__struct.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__type_support.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/set_gain.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/environment/library_path.sh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/environment/library_path.dsv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__rosidl_typesupport_introspection_c.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__rosidl_typesupport_introspection_c.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__rosidl_typesupport_introspection_c.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__rosidl_typesupport_introspection_c.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__builder.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__struct.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__traits.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__type_support.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/draw_polygon.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__builder.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__struct.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__traits.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__type_support.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__builder.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__struct.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__traits.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__type_support.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/waypoint.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/waypoint_list.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__builder.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__struct.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__traits.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__type_support.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/set_gain.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/action/detail/draw_polygon__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/msg/detail/waypoint_list__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/include/turtle_interfaces/turtle_interfaces/srv/detail/set_gain__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/environment/pythonpath.sh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/environment/pythonpath.dsv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces-0.1.0-py3.10.egg-info/PKG-INFO
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces-0.1.0-py3.10.egg-info/SOURCES.txt
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces-0.1.0-py3.10.egg-info/dependency_links.txt
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces-0.1.0-py3.10.egg-info/top_level.txt
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/__init__.py
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/_turtle_interfaces_s.ep.rosidl_typesupport_c.c
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/_turtle_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/_turtle_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/action/__init__.py
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/action/_draw_polygon.py
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/action/_draw_polygon_s.c
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/libturtle_interfaces__rosidl_generator_py.so
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/msg/__init__.py
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/msg/_waypoint.py
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/msg/_waypoint_list.py
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/msg/_waypoint_list_s.c
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/msg/_waypoint_s.c
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/srv/__init__.py
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/srv/_set_gain.py
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/srv/_set_gain_s.c
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/turtle_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/turtle_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/turtle_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/turtle_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/turtle_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/turtle_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/ament_index/resource_index/rust_packages/turtle_interfaces
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/Cargo.toml
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/build.rs
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/src/action.rs
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/src/action/rmw.rs
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/src/lib.rs
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/src/msg.rs
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/src/msg/rmw.rs
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/src/srv.rs
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/rust/src/srv/rmw.rs
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/msg/Waypoint.idl
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/msg/WaypointList.idl
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/srv/SetGain.idl
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/action/DrawPolygon.idl
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/msg/Waypoint.msg
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/msg/WaypointList.msg
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/srv/SetGain.srv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/srv/SetGain_Request.msg
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/srv/SetGain_Response.msg
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/action/DrawPolygon.action
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/ament_index/resource_index/package_run_dependencies/turtle_interfaces
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/ament_index/resource_index/parent_prefix_path/turtle_interfaces
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/environment/path.sh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/environment/path.dsv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/local_setup.bash
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/local_setup.sh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/local_setup.zsh
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/local_setup.dsv
+-- Symlinking: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/package.dsv
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/ament_index/resource_index/packages/turtle_interfaces
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfacesConfig.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfacesConfig-version.cmake
+-- Up-to-date symlink: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/package.xml
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/libturtle_interfaces__rosidl_generator_c.so
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/libturtle_interfaces__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/libturtle_interfaces__rosidl_typesupport_introspection_c.so
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/libturtle_interfaces__rosidl_typesupport_c.so
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/libturtle_interfaces__rosidl_typesupport_fastrtps_cpp.so
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/libturtle_interfaces__rosidl_typesupport_introspection_cpp.so
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/libturtle_interfaces__rosidl_typesupport_cpp.so
+Listing '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces'...
+Listing '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/action'...
+Listing '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/msg'...
+Listing '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages/turtle_interfaces/srv'...
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/libturtle_interfaces__rosidl_generator_py.so
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_generator_cExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfaces__rosidl_typesupport_cExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_generator_cppExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfaces__rosidl_typesupport_cppExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/turtle_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_generator_pyExport.cmake
+-- Up-to-date: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/share/turtle_interfaces/cmake/export_turtle_interfaces__rosidl_generator_pyExport-noconfig.cmake
+Finished <<< turtle_interfaces [1.96s]
+Starting >>> turtle_py
+running develop
+running egg_info
+writing turtle_py.egg-info/PKG-INFO
+writing dependency_links to turtle_py.egg-info/dependency_links.txt
+writing entry points to turtle_py.egg-info/entry_points.txt
+writing requirements to turtle_py.egg-info/requires.txt
+writing top-level names to turtle_py.egg-info/top_level.txt
+reading manifest file 'turtle_py.egg-info/SOURCES.txt'
+writing manifest file 'turtle_py.egg-info/SOURCES.txt'
+running build_ext
+Creating /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages/turtle-py.egg-link (link to .)
+Installing distance_publisher script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing draw_polygon_client script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing draw_polygon_server script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing pose_tf_broadcaster script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing rotate_action_client script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing service_sequence_client script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing slow_distance_subscriber script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing square_driver script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing warn_subscriber script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing waypoint_marker_publisher script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing waypoint_publisher script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Installing waypoint_subscriber script to /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+
+Installed /home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py
+running symlink_data
+Finished <<< turtle_py [2.45s]
+
+Summary: 3 packages finished [5.38s]
++ python - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
+Every installed turtle_py executable uses the ros2-humble virtual environment.
++ python3 - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/colcon_build.log
+Interface package finished before dependent turtle_py started.
++ echo 'Before source install/setup.bash'
++ printf 'AMENT_PREFIX_PATH=%s\nPYTHONPATH=%s\n' /opt/ros/humble /opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
++ set +e
++ timeout 5 ros2 run turtle_py waypoint_subscriber
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/source_before_after.log
+Before source install/setup.bash
+AMENT_PREFIX_PATH=/opt/ros/humble
+PYTHONPATH=/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
++ BEFORE_STATUS=1
++ set -e
++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/before_source_run.log
+Package 'turtle_py' not found
++ printf 'ros2 run exit=%s\n' 1
++ [[ 1 == 1 ]]
++ grep -q 'Package '\''turtle_py'\'' not found' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/before_source_run.log
+ros2 run exit=1
++ set +u
++ source /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/setup.bash
+++ COLCON_CURRENT_PREFIX=/opt/ros/humble
+++ _colcon_prefix_chain_bash_source_script /opt/ros/humble/local_setup.bash
+++ '[' -f /opt/ros/humble/local_setup.bash ']'
+++ '[' -n '' ']'
+++ . /opt/ros/humble/local_setup.bash
++++ AMENT_SHELL=bash
++++++ dirname /opt/ros/humble/local_setup.bash
+++++ builtin cd /opt/ros/humble
+++++ pwd
++++ AMENT_CURRENT_PREFIX=/opt/ros/humble
++++ '[' -n '' ']'
++++ . /opt/ros/humble/local_setup.sh
+++++ _ament_prefix_sh_AMENT_CURRENT_PREFIX=/opt/ros/humble
+++++ '[' -z /opt/ros/humble ']'
+++++ _ament_prefix_sh_AMENT_CURRENT_PREFIX=/opt/ros/humble
+++++ : bash
+++++ _ament_python_executable=/usr/bin/python3
+++++ '[' -n '' ']'
+++++ '[' '!' -f /usr/bin/python3 ']'
+++++ _ament_additional_extension=
+++++ '[' bash '!=' sh ']'
+++++ _ament_additional_extension=bash
++++++ /usr/bin/python3 /opt/ros/humble/_local_setup_util.py sh bash
+++++ _ament_ordered_commands='AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash"
+AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh"
+export ROS_DISTRO="humble"
+# export ROS_LOCALHOST_ONLY="0"
+export ROS_PYTHON_VERSION="3"
+export ROS_VERSION="2"
+AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash"'
+++++ unset _ament_additional_extension
+++++ unset _ament_python_executable
+++++ '[' -n '' ']'
+++++ eval 'AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash"
+AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh"
+export ROS_DISTRO="humble"
+# export ROS_LOCALHOST_ONLY="0"
+export ROS_PYTHON_VERSION="3"
+export ROS_VERSION="2"
+AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash"'
++++++ AMENT_CURRENT_PREFIX=/opt/ros/humble
++++++ _ament_prefix_sh_source_script /opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash
++++++ '[' -f /opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash ']'
++++++ '[' -n '' ']'
++++++ . /opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash
+++++++ type register-python-argcomplete3
++++++++ register-python-argcomplete3 ros2
+++++++ eval '
+_python_argcomplete() {
+    local IFS=$'\''\013'\''
+    local SUPPRESS_SPACE=0
+    if compopt +o nospace 2> /dev/null; then
+        SUPPRESS_SPACE=1
+    fi
+    COMPREPLY=( $(IFS="$IFS" \
+                  COMP_LINE="$COMP_LINE" \
+                  COMP_POINT="$COMP_POINT" \
+                  COMP_TYPE="$COMP_TYPE" \
+                  _ARGCOMPLETE_COMP_WORDBREAKS="$COMP_WORDBREAKS" \
+                  _ARGCOMPLETE=1 \
+                  _ARGCOMPLETE_SUPPRESS_SPACE=$SUPPRESS_SPACE \
+                  "$1" 8>&1 9>&2 1>/dev/null 2>/dev/null) )
+    if [[ $? != 0 ]]; then
+        unset COMPREPLY
+    elif [[ $SUPPRESS_SPACE == 1 ]] && [[ "$COMPREPLY" =~ [=/:]$ ]]; then
+        compopt -o nospace
+    fi
+}
+complete -o nospace -o default -F _python_argcomplete "ros2"'
++++++++ complete -o nospace -o default -F _python_argcomplete ros2
++++++ AMENT_CURRENT_PREFIX=/opt/ros/humble
++++++ _ament_prefix_sh_source_script /opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh
++++++ '[' -f /opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh ']'
++++++ '[' -n '' ']'
++++++ . /opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh
+++++++ '[' -n humble -a humble '!=' humble ']'
++++++ export ROS_DISTRO=humble
++++++ ROS_DISTRO=humble
++++++ export ROS_PYTHON_VERSION=3
++++++ ROS_PYTHON_VERSION=3
++++++ export ROS_VERSION=2
++++++ ROS_VERSION=2
++++++ AMENT_CURRENT_PREFIX=/opt/ros/humble
++++++ _ament_prefix_sh_source_script /opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash
++++++ '[' -f /opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash ']'
++++++ '[' -n '' ']'
++++++ . /opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash
+++++++ type register-python-argcomplete3
++++++++ register-python-argcomplete3 rosidl
+++++++ eval '
+_python_argcomplete() {
+    local IFS=$'\''\013'\''
+    local SUPPRESS_SPACE=0
+    if compopt +o nospace 2> /dev/null; then
+        SUPPRESS_SPACE=1
+    fi
+    COMPREPLY=( $(IFS="$IFS" \
+                  COMP_LINE="$COMP_LINE" \
+                  COMP_POINT="$COMP_POINT" \
+                  COMP_TYPE="$COMP_TYPE" \
+                  _ARGCOMPLETE_COMP_WORDBREAKS="$COMP_WORDBREAKS" \
+                  _ARGCOMPLETE=1 \
+                  _ARGCOMPLETE_SUPPRESS_SPACE=$SUPPRESS_SPACE \
+                  "$1" 8>&1 9>&2 1>/dev/null 2>/dev/null) )
+    if [[ $? != 0 ]]; then
+        unset COMPREPLY
+    elif [[ $SUPPRESS_SPACE == 1 ]] && [[ "$COMPREPLY" =~ [=/:]$ ]]; then
+        compopt -o nospace
+    fi
+}
+complete -o nospace -o default -F _python_argcomplete "rosidl"'
++++++++ complete -o nospace -o default -F _python_argcomplete rosidl
+++++ unset _ament_ordered_commands
+++++ unset _ament_prefix_sh_source_script
+++++ unset _ament_prefix_sh_AMENT_CURRENT_PREFIX
+++++ dirname /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/setup.bash
++++ builtin cd /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ pwd
+++ COLCON_CURRENT_PREFIX=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
+++ _colcon_prefix_chain_bash_source_script /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/local_setup.bash
+++ '[' -f /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/local_setup.bash ']'
+++ '[' -n '' ']'
+++ . /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/local_setup.bash
++++ '[' -z /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install ']'
++++ _colcon_prefix_bash_COLCON_CURRENT_PREFIX=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ _colcon_prefix_bash_prepend_unique_value COLCON_PREFIX_PATH /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ _listname=COLCON_PREFIX_PATH
++++ _value=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ eval '_values="$COLCON_PREFIX_PATH"'
+++++ _values=
++++ _colcon_prefix_bash_prepend_unique_value_IFS=' 	
+'
++++ IFS=:
++++ _all_values=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ _contained_value=
++++ unset _item
++++ '[' -z '' ']'
++++ '[' -n '' ']'
++++ unset _contained_value
++++ IFS=' 	
+'
++++ unset _colcon_prefix_bash_prepend_unique_value_IFS
++++ eval export 'COLCON_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install"'
+++++ export COLCON_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
+++++ COLCON_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ unset _all_values
++++ unset _values
++++ unset _value
++++ unset _listname
++++ unset _colcon_prefix_bash_prepend_unique_value
++++ '[' -n '' ']'
++++ _colcon_python_executable=/home/chsjh/.venvs/ros2-humble/bin/python
++++ '[' '!' -f /home/chsjh/.venvs/ros2-humble/bin/python ']'
+++++ /home/chsjh/.venvs/ros2-humble/bin/python /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/_local_setup_util_sh.py sh bash
++++ _colcon_ordered_commands='export CMAKE_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:$CMAKE_PREFIX_PATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:$AMENT_PREFIX_PATH"
+export CMAKE_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib:$LD_LIBRARY_PATH"
+export PYTHONPATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:$PYTHONPATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:$AMENT_PREFIX_PATH"
+export PYTHONPATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:$PYTHONPATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:$AMENT_PREFIX_PATH"
+export PYTHONPATH="/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:$PYTHONPATH"
+export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH#:}
+export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH%:}'
++++ unset _colcon_python_executable
++++ '[' -n '' ']'
++++ eval 'export CMAKE_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:$CMAKE_PREFIX_PATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:$AMENT_PREFIX_PATH"
+export CMAKE_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib:$LD_LIBRARY_PATH"
+export PYTHONPATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:$PYTHONPATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:$AMENT_PREFIX_PATH"
+export PYTHONPATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:$PYTHONPATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:$AMENT_PREFIX_PATH"
+export PYTHONPATH="/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:$PYTHONPATH"
+export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH#:}
+export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH%:}'
+++++ export CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ export AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ export CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ export LD_LIBRARY_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib
+++++ LD_LIBRARY_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib
+++++ export PYTHONPATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ PYTHONPATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ export AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ export PYTHONPATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ PYTHONPATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ export AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ export PYTHONPATH=/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ PYTHONPATH=/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ export CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ export CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp
+++++ CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp
++++ unset _colcon_ordered_commands
++++ unset _colcon_prefix_sh_source_script
++++ unset _colcon_prefix_bash_COLCON_CURRENT_PREFIX
+++ unset COLCON_CURRENT_PREFIX
+++ unset _colcon_prefix_chain_bash_source_script
++ set_runtime_transport
++ export ROS_DOMAIN_ID=62 ROS_LOCALHOST_ONLY=0 RMW_IMPLEMENTATION=rmw_fastrtps_cpp
++ ROS_DOMAIN_ID=62
++ ROS_LOCALHOST_ONLY=0
++ RMW_IMPLEMENTATION=rmw_fastrtps_cpp
++ unset ROS_DISCOVERY_SERVER FASTDDS_DEFAULT_PROFILES_FILE CYCLONEDDS_URI FASTDDS_BUILTIN_TRANSPORTS RMW_FASTRTPS_USE_QOS_FROM_XML
++ export FASTRTPS_DEFAULT_PROFILES_FILE=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/config/fastdds_loopback.xml
++ FASTRTPS_DEFAULT_PROFILES_FILE=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/config/fastdds_loopback.xml
++ [[ -f /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/config/fastdds_loopback.xml ]]
++ set -u
++ echo 'After source install/setup.bash'
+After source install/setup.bash
++ printf 'AMENT_PREFIX_PATH=%s\nPYTHONPATH=%s\n' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble /home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+PYTHONPATH=/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++ ros2 pkg prefix turtle_py
++ [[ /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py == \/\m\n\t\/\c\/\D\e\s\k\t\o\p\/\c\o\d\i\n\g\/\p\h\y\s\i\c\a\l\a\i\-\l\v\1\-\최\성\진\/\l\v\1\_\m\o\d\u\l\e\2\/\r\o\s\2\_\w\s\/\i\n\s\t\a\l\l\/\t\u\r\t\l\e\_\p\y ]]
++ [[ /home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages == *\/\m\n\t\/\c\/\D\e\s\k\t\o\p\/\c\o\d\i\n\g\/\p\h\y\s\i\c\a\l\a\i\-\l\v\1\-\최\성\진\/\l\v\1\_\m\o\d\u\l\e\2\/\r\o\s\2\_\w\s\/\i\n\s\t\a\l\l\/\t\u\r\t\l\e\_\p\y\/* ]]
++ ros2 pkg executables turtle_py
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/registered_executables.log
+turtle_py distance_publisher
+turtle_py draw_polygon_client
+turtle_py draw_polygon_server
+turtle_py pose_tf_broadcaster
+turtle_py rotate_action_client
+turtle_py service_sequence_client
+turtle_py slow_distance_subscriber
+turtle_py square_driver
+turtle_py warn_subscriber
+turtle_py waypoint_marker_publisher
+turtle_py waypoint_publisher
+turtle_py waypoint_subscriber
++ set +u
++ source /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/setup.bash
+++ COLCON_CURRENT_PREFIX=/opt/ros/humble
+++ _colcon_prefix_chain_bash_source_script /opt/ros/humble/local_setup.bash
+++ '[' -f /opt/ros/humble/local_setup.bash ']'
+++ '[' -n '' ']'
+++ . /opt/ros/humble/local_setup.bash
++++ AMENT_SHELL=bash
++++++ dirname /opt/ros/humble/local_setup.bash
+++++ builtin cd /opt/ros/humble
+++++ pwd
++++ AMENT_CURRENT_PREFIX=/opt/ros/humble
++++ '[' -n '' ']'
++++ . /opt/ros/humble/local_setup.sh
+++++ _ament_prefix_sh_AMENT_CURRENT_PREFIX=/opt/ros/humble
+++++ '[' -z /opt/ros/humble ']'
+++++ _ament_prefix_sh_AMENT_CURRENT_PREFIX=/opt/ros/humble
+++++ : bash
+++++ _ament_python_executable=/usr/bin/python3
+++++ '[' -n '' ']'
+++++ '[' '!' -f /usr/bin/python3 ']'
+++++ _ament_additional_extension=
+++++ '[' bash '!=' sh ']'
+++++ _ament_additional_extension=bash
++++++ /usr/bin/python3 /opt/ros/humble/_local_setup_util.py sh bash
+++++ _ament_ordered_commands='AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash"
+AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh"
+export ROS_DISTRO="humble"
+# export ROS_LOCALHOST_ONLY="0"
+export ROS_PYTHON_VERSION="3"
+export ROS_VERSION="2"
+AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash"'
+++++ unset _ament_additional_extension
+++++ unset _ament_python_executable
+++++ '[' -n '' ']'
+++++ eval 'AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash"
+AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh"
+export ROS_DISTRO="humble"
+# export ROS_LOCALHOST_ONLY="0"
+export ROS_PYTHON_VERSION="3"
+export ROS_VERSION="2"
+AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash"'
++++++ AMENT_CURRENT_PREFIX=/opt/ros/humble
++++++ _ament_prefix_sh_source_script /opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash
++++++ '[' -f /opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash ']'
++++++ '[' -n '' ']'
++++++ . /opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash
+++++++ type register-python-argcomplete3
++++++++ register-python-argcomplete3 ros2
+++++++ eval '
+_python_argcomplete() {
+    local IFS=$'\''\013'\''
+    local SUPPRESS_SPACE=0
+    if compopt +o nospace 2> /dev/null; then
+        SUPPRESS_SPACE=1
+    fi
+    COMPREPLY=( $(IFS="$IFS" \
+                  COMP_LINE="$COMP_LINE" \
+                  COMP_POINT="$COMP_POINT" \
+                  COMP_TYPE="$COMP_TYPE" \
+                  _ARGCOMPLETE_COMP_WORDBREAKS="$COMP_WORDBREAKS" \
+                  _ARGCOMPLETE=1 \
+                  _ARGCOMPLETE_SUPPRESS_SPACE=$SUPPRESS_SPACE \
+                  "$1" 8>&1 9>&2 1>/dev/null 2>/dev/null) )
+    if [[ $? != 0 ]]; then
+        unset COMPREPLY
+    elif [[ $SUPPRESS_SPACE == 1 ]] && [[ "$COMPREPLY" =~ [=/:]$ ]]; then
+        compopt -o nospace
+    fi
+}
+complete -o nospace -o default -F _python_argcomplete "ros2"'
++++++++ complete -o nospace -o default -F _python_argcomplete ros2
++++++ AMENT_CURRENT_PREFIX=/opt/ros/humble
++++++ _ament_prefix_sh_source_script /opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh
++++++ '[' -f /opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh ']'
++++++ '[' -n '' ']'
++++++ . /opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh
+++++++ '[' -n humble -a humble '!=' humble ']'
++++++ export ROS_DISTRO=humble
++++++ ROS_DISTRO=humble
++++++ export ROS_PYTHON_VERSION=3
++++++ ROS_PYTHON_VERSION=3
++++++ export ROS_VERSION=2
++++++ ROS_VERSION=2
++++++ AMENT_CURRENT_PREFIX=/opt/ros/humble
++++++ _ament_prefix_sh_source_script /opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash
++++++ '[' -f /opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash ']'
++++++ '[' -n '' ']'
++++++ . /opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash
+++++++ type register-python-argcomplete3
++++++++ register-python-argcomplete3 rosidl
+++++++ eval '
+_python_argcomplete() {
+    local IFS=$'\''\013'\''
+    local SUPPRESS_SPACE=0
+    if compopt +o nospace 2> /dev/null; then
+        SUPPRESS_SPACE=1
+    fi
+    COMPREPLY=( $(IFS="$IFS" \
+                  COMP_LINE="$COMP_LINE" \
+                  COMP_POINT="$COMP_POINT" \
+                  COMP_TYPE="$COMP_TYPE" \
+                  _ARGCOMPLETE_COMP_WORDBREAKS="$COMP_WORDBREAKS" \
+                  _ARGCOMPLETE=1 \
+                  _ARGCOMPLETE_SUPPRESS_SPACE=$SUPPRESS_SPACE \
+                  "$1" 8>&1 9>&2 1>/dev/null 2>/dev/null) )
+    if [[ $? != 0 ]]; then
+        unset COMPREPLY
+    elif [[ $SUPPRESS_SPACE == 1 ]] && [[ "$COMPREPLY" =~ [=/:]$ ]]; then
+        compopt -o nospace
+    fi
+}
+complete -o nospace -o default -F _python_argcomplete "rosidl"'
++++++++ complete -o nospace -o default -F _python_argcomplete rosidl
+++++ unset _ament_ordered_commands
+++++ unset _ament_prefix_sh_source_script
+++++ unset _ament_prefix_sh_AMENT_CURRENT_PREFIX
+++++ dirname /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/setup.bash
++++ builtin cd /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ pwd
+++ COLCON_CURRENT_PREFIX=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
+++ _colcon_prefix_chain_bash_source_script /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/local_setup.bash
+++ '[' -f /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/local_setup.bash ']'
+++ '[' -n '' ']'
+++ . /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/local_setup.bash
++++ '[' -z /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install ']'
++++ _colcon_prefix_bash_COLCON_CURRENT_PREFIX=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ _colcon_prefix_bash_prepend_unique_value COLCON_PREFIX_PATH /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ _listname=COLCON_PREFIX_PATH
++++ _value=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ eval '_values="$COLCON_PREFIX_PATH"'
+++++ _values=
++++ _colcon_prefix_bash_prepend_unique_value_IFS=' 	
+'
++++ IFS=:
++++ _all_values=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ _contained_value=
++++ unset _item
++++ '[' -z '' ']'
++++ '[' -n '' ']'
++++ unset _contained_value
++++ IFS=' 	
+'
++++ unset _colcon_prefix_bash_prepend_unique_value_IFS
++++ eval export 'COLCON_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install"'
+++++ export COLCON_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
+++++ COLCON_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install
++++ unset _all_values
++++ unset _values
++++ unset _value
++++ unset _listname
++++ unset _colcon_prefix_bash_prepend_unique_value
++++ '[' -n '' ']'
++++ _colcon_python_executable=/home/chsjh/.venvs/ros2-humble/bin/python
++++ '[' '!' -f /home/chsjh/.venvs/ros2-humble/bin/python ']'
+++++ /home/chsjh/.venvs/ros2-humble/bin/python /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/_local_setup_util_sh.py sh bash
++++ _colcon_ordered_commands='export CMAKE_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:$CMAKE_PREFIX_PATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:$AMENT_PREFIX_PATH"
+export CMAKE_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib:$LD_LIBRARY_PATH"
+export PYTHONPATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:$PYTHONPATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:$AMENT_PREFIX_PATH"
+export PYTHONPATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:$PYTHONPATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:$AMENT_PREFIX_PATH"
+export PYTHONPATH="/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:$PYTHONPATH"
+export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH#:}
+export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH%:}'
++++ unset _colcon_python_executable
++++ '[' -n '' ']'
++++ eval 'export CMAKE_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:$CMAKE_PREFIX_PATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:$AMENT_PREFIX_PATH"
+export CMAKE_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib:$LD_LIBRARY_PATH"
+export PYTHONPATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:$PYTHONPATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:$AMENT_PREFIX_PATH"
+export PYTHONPATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:$PYTHONPATH"
+export AMENT_PREFIX_PATH="/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:$AMENT_PREFIX_PATH"
+export PYTHONPATH="/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:$PYTHONPATH"
+export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH#:}
+export CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH%:}'
+++++ export CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ export AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ export CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ export LD_LIBRARY_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib
+++++ LD_LIBRARY_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib
+++++ export PYTHONPATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ PYTHONPATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ export AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ export PYTHONPATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ PYTHONPATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ export AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+++++ export PYTHONPATH=/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ PYTHONPATH=/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+++++ export CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:
+++++ export CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp
+++++ CMAKE_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp
++++ unset _colcon_ordered_commands
++++ unset _colcon_prefix_sh_source_script
++++ unset _colcon_prefix_bash_COLCON_CURRENT_PREFIX
+++ unset COLCON_CURRENT_PREFIX
+++ unset _colcon_prefix_chain_bash_source_script
++ set_runtime_transport
++ export ROS_DOMAIN_ID=62 ROS_LOCALHOST_ONLY=0 RMW_IMPLEMENTATION=rmw_fastrtps_cpp
++ ROS_DOMAIN_ID=62
++ ROS_LOCALHOST_ONLY=0
++ RMW_IMPLEMENTATION=rmw_fastrtps_cpp
++ unset ROS_DISCOVERY_SERVER FASTDDS_DEFAULT_PROFILES_FILE CYCLONEDDS_URI FASTDDS_BUILTIN_TRANSPORTS RMW_FASTRTPS_USE_QOS_FROM_XML
++ export FASTRTPS_DEFAULT_PROFILES_FILE=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/config/fastdds_loopback.xml
++ FASTRTPS_DEFAULT_PROFILES_FILE=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/config/fastdds_loopback.xml
++ [[ -f /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/config/fastdds_loopback.xml ]]
++ set -u
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/after_source_run.log ros2 run turtle_py waypoint_subscriber
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/after_source_run.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/after_source_run.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8
++ LAST_GROUP_ID=16434
++ setsid ros2 run turtle_py waypoint_subscriber
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ RUN_ID=16434
++ wait_for_node /waypoint_subscriber
++ local name=/waypoint_subscriber
++ for _ in {1..20}
++ timeout 5 ros2 node list --no-daemon --spin-time 1
++ grep -qx /waypoint_subscriber
++ return 0
++ grep -q 'waypoint subscriber' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8/after_source_run.log
++ stop_group 16434
++ local id=16434
++ [[ 1 == 1 ]]
++ kill -INT -- -16434
++ for _ in {1..30}
++ kill -0 16434
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 16434
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 16434
++ break
++ kill -TERM -- -16434
++ true
++ for _ in {1..20}
++ kill -0 16434
++ break
++ kill -KILL -- -16434
++ true
++ wait 16434
++ unset 'ACTIVE_GROUPS[$id]'
++ python3 - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/src/turtle_py /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem8
+Dependencies declared; every entry point is registered: ['distance_publisher', 'draw_polygon_client', 'draw_polygon_server', 'pose_tf_broadcaster', 'rotate_action_client', 'service_sequence_client', 'slow_distance_subscriber', 'square_driver', 'warn_subscriber', 'waypoint_marker_publisher', 'waypoint_publisher', 'waypoint_subscriber']
++ echo 'PROBLEM8_STRUCTURE_SOURCE_RUN_PASS; individual node behavior is verified in problems 3 through 10.'
+PROBLEM8_STRUCTURE_SOURCE_RUN_PASS; individual node behavior is verified in problems 3 through 10.
++ cleanup
++ local id
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 16434
++ local id=16434
++ [[ '' == 1 ]]
++ return 0

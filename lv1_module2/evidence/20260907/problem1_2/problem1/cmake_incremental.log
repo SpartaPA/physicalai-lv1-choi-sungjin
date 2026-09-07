@@ -1,0 +1,33 @@
+/usr/bin/cmake -S/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source -B/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/stop_distance.dir/build.make CMakeFiles/stop_distance.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/stop_distance.dir/DependInfo.cmake --color=
+Dependencies file "CMakeFiles/stop_distance.dir/stop_distance.cpp.o.d" is newer than depends file "/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/stop_distance.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target stop_distance
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/stop_distance.dir/build.make CMakeFiles/stop_distance.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+gmake[2]: Nothing to be done for 'CMakeFiles/stop_distance.dir/build'.
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[ 40%] Built target stop_distance
+/usr/bin/gmake  -f CMakeFiles/motor_app.dir/build.make CMakeFiles/motor_app.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/motor_app.dir/DependInfo.cmake --color=
+Dependencies file "CMakeFiles/motor_app.dir/main.cpp.o.d" is newer than depends file "/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/motor_app.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/motor_app.dir/motor.cpp.o.d" is newer than depends file "/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/motor_app.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target motor_app
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/motor_app.dir/build.make CMakeFiles/motor_app.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[ 60%] Building CXX object CMakeFiles/motor_app.dir/motor.cpp.o
+/usr/bin/c++   -Wall -std=c++17 -MD -MT CMakeFiles/motor_app.dir/motor.cpp.o -MF CMakeFiles/motor_app.dir/motor.cpp.o.d -o CMakeFiles/motor_app.dir/motor.cpp.o -c /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/motor.cpp
+[ 80%] Linking CXX executable motor_app
+/usr/bin/cmake -E cmake_link_script CMakeFiles/motor_app.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/motor_app.dir/main.cpp.o CMakeFiles/motor_app.dir/motor.cpp.o -o motor_app 
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[100%] Built target motor_app
+gmake[1]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/cmake -E cmake_progress_start /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles 0

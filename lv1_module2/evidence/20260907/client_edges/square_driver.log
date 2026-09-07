@@ -1,0 +1,5 @@
+[INFO] [1788768405.156743166] [square_driver]: square driver started; for-loop sides=4; services: /set_driving and /save_home
+[INFO] [1788768405.211660741] [square_driver]: side 1/4 target: x=5.536, y=3.000
+[INFO] [1788768405.525421092] [square_driver]: square driving disabled and turtle stopped
+[INFO] [1788768406.841752872] [square_driver]: square driving enabled
+[INFO] [1788768406.903838957] [square_driver]: square driving disabled and turtle stopped

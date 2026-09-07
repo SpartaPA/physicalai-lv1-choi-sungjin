@@ -1,0 +1,203 @@
+Both graph identity and QoS verified for 2 named endpoints.
+Type: std_msgs/msg/Float32
+
+Publisher count: 1
+
+Node name: distance_publisher
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.9c.3d.38.14.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: warn_subscriber
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.9b.3d.95.0e.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+PASS endpoint distance_publisher: PUBLISHER, BEST_EFFORT, VOLATILE
+PASS endpoint warn_subscriber: SUBSCRIPTION, RELIABLE, VOLATILE
+PASS live publisher emits a distance above the subscriber warning threshold
+Both graph identity and QoS verified for 2 named endpoints.
+Type: std_msgs/msg/Float32
+
+Publisher count: 1
+
+Node name: distance_publisher
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.9c.3d.38.14.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: warn_subscriber
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.fb.3d.22.6a.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+PASS endpoint distance_publisher: PUBLISHER, BEST_EFFORT, VOLATILE
+PASS endpoint warn_subscriber: SUBSCRIPTION, BEST_EFFORT, VOLATILE
+Both graph identity and QoS verified for 2 named endpoints.
+Type: turtle_interfaces/msg/WaypointList
+
+Publisher count: 1
+
+Node name: transient_local_waypoint_publisher
+Node namespace: /
+Topic type: turtle_interfaces/msg/WaypointList
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.26.3e.c1.f9.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: transient_local_waypoint_subscriber
+Node namespace: /
+Topic type: turtle_interfaces/msg/WaypointList
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.49.3e.09.6e.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+PASS endpoint transient_local_waypoint_publisher: PUBLISHER, RELIABLE, TRANSIENT_LOCAL
+PASS endpoint transient_local_waypoint_subscriber: SUBSCRIPTION, RELIABLE, TRANSIENT_LOCAL
+Both graph identity and QoS verified for 2 named endpoints.
+Type: turtle_interfaces/msg/WaypointList
+
+Publisher count: 1
+
+Node name: volatile_waypoint_publisher
+Node namespace: /
+Topic type: turtle_interfaces/msg/WaypointList
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.90.3e.d2.24.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: volatile_waypoint_subscriber
+Node namespace: /
+Topic type: turtle_interfaces/msg/WaypointList
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.b3.3e.bd.de.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+PASS endpoint volatile_waypoint_publisher: PUBLISHER, RELIABLE, VOLATILE
+PASS endpoint volatile_waypoint_subscriber: SUBSCRIPTION, RELIABLE, VOLATILE
+WARNING: topic [/turtle_distance] does not appear to be published yet
+average rate: 99.996
+	min: 0.010s max: 0.010s std dev: 0.00013s window: 100
+average rate: 99.969
+	min: 0.010s max: 0.011s std dev: 0.00016s window: 100
+average rate: 100.041
+	min: 0.010s max: 0.010s std dev: 0.00016s window: 100
+Observed final rate=100.041 Hz; accepted range=70..130
+Both graph identity and QoS verified for 2 named endpoints.
+Type: std_msgs/msg/Float32
+
+Publisher count: 1
+
+Node name: distance_publisher
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.f7.3e.87.d3.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: slow_distance_subscriber
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.19.3f.42.dd.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+PASS endpoint slow_distance_subscriber: SUBSCRIPTION, BEST_EFFORT, VOLATILE
+Mismatched RELIABLE warning count while both endpoints live: 0
+Matched BEST_EFFORT warning count: 144
+Late TRANSIENT_LOCAL messages after exactly one earlier publication: 1
+Late VOLATILE messages after exactly one earlier publication: 0
+Observed publisher rate: 100.041 Hz
+Observed callback rate: 4.705 Hz over 9.99 s
+Callback samples in interval: 48
+Publication/callback rate ratio: 21.26
+PASS: depth-1 slow reader processes far fewer samples than the measured publication rate
+PASS problem 7 runtime checks

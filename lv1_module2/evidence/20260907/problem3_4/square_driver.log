@@ -1,0 +1,10 @@
+[INFO] [1788764800.389624061] [square_driver]: square driver started; for-loop sides=4; services: /set_driving and /save_home
+[INFO] [1788764800.448861949] [square_driver]: side 1/4 target: x=7.544, y=5.544
+[INFO] [1788764805.135744286] [square_driver]: completed side 1/4
+[INFO] [1788764805.147541427] [square_driver]: side 2/4 target: x=7.544, y=7.544
+[INFO] [1788764809.835423865] [square_driver]: completed side 2/4
+[INFO] [1788764809.845162526] [square_driver]: side 3/4 target: x=5.544, y=7.544
+[INFO] [1788764814.532014459] [square_driver]: completed side 3/4
+[INFO] [1788764814.542189713] [square_driver]: side 4/4 target: x=5.544, y=5.544
+[INFO] [1788764819.232474057] [square_driver]: completed side 4/4
+[INFO] [1788764819.242533942] [square_driver]: square completed; turtle stopped

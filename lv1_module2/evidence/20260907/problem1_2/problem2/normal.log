@@ -1,0 +1,41 @@
+Modern C++ sensor hierarchy demo
+
+=== 1. Polymorphism with unique_ptr ===
+[create] Sensor base: front_lidar
+[create] Lidar: front_lidar
+[create] Sensor base: body_imu
+[create] Imu: body_imu
+[read] front_lidar (Lidar) = 1.20 m
+[read] body_imu (Imu yaw rate) = 0.35 rad/s
+
+Latest measurements (unordered_map)
+  body_imu -> 0.35
+  front_lidar -> 1.20
+Records within 0.35 m: 1
+Leaving this function destroys vector elements automatically.
+[destroy] Lidar: front_lidar
+[destroy] Sensor base: front_lidar
+[destroy] Imu: body_imu
+[destroy] Sensor base: body_imu
+
+=== 2. clamp template ===
+double speed: 3.70 -> 2.00
+int pixel: 300 -> 255
+
+=== 3. Stack lifetime ===
+[create] Sensor base: stack_lidar
+[create] Lidar: stack_lidar
+[read] stack_lidar (Lidar) = 2.40 m
+End of stack scope -> destructor runs now.
+[destroy] Lidar: stack_lidar
+[destroy] Sensor base: stack_lidar
+
+=== 4. Heap lifetime managed by unique_ptr ===
+[create] Sensor base: heap_imu
+[create] Imu: heap_imu
+[read] heap_imu (Imu yaw rate) = 0.75 rad/s
+End of unique_ptr scope -> destructor runs now.
+[destroy] Imu: heap_imu
+[destroy] Sensor base: heap_imu
+
+All normal demonstrations completed.

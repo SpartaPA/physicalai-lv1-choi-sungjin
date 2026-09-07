@@ -1,0 +1,11 @@
+High-threshold warnings: 0
+Low-threshold warnings: 169
+Same YAML file edited in place; build/install non-cache file manifests unchanged.
+Main/YAML evidence mode: --namespace-only
+Additional namespace graph observation exit: 1 (separate from required checks)
+turtle1: pose=(5.544445, 5.544445), distance=7.841029, hypot=7.841029
+turtle2: pose=(2.000000, 2.000000), distance=2.828427, hypot=2.828427
+Additional namespace graph snapshot: ['/_ros2cli_daemon_62_f0dbcd96fed94b50bad01f30a02733cb', '/distance_publisher', '/module2_graph_observer', '/turtle2/distance_publisher']
+Names not observed in that snapshot: ['/turtlesim']
+PASS namespace routes distinct live pose streams to their respective distance topics
+PASS problem 9 runtime checks

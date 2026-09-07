@@ -1,0 +1,34 @@
+Type: std_msgs/msg/Float32
+
+Publisher count: 1
+
+Node name: distance_publisher
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.f7.3e.87.d3.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: slow_distance_subscriber
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.19.3f.42.dd.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+

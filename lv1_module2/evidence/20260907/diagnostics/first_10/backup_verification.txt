@@ -1,0 +1,19 @@
+SHA256 matches original files:
+bag_distance_publisher.log
+bag_info.log
+bag_path.log
+bag_play_echo.log
+bag_play_pose_echo.log
+bag_play.log
+bag_record.log
+bag_turtlesim.log
+diagnostic_distance_publisher.log
+diagnostic_turtlesim.log
+hz_after_turtlesim_stop.log
+hz_while_running.log
+live_nodes_before_bag_play.log
+nodes_after_turtlesim_stop.log
+nodes_before_turtlesim_stop.log
+session.log
+topic_info_after_turtlesim_stop.log
+topic_info_before_turtlesim_stop.log

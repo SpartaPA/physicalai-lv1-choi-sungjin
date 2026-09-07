@@ -1,0 +1,503 @@
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/turtlesim.log ros2 run turtlesim turtlesim_node
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/turtlesim.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/turtlesim.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6
++ LAST_GROUP_ID=14659
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtlesim turtlesim_node
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ service_ready=false
++ for _ in {1..40}
++ ros2 service list --no-daemon --spin-time 1
++ grep -qx /spawn
++ service_ready=true
++ break
++ [[ true != true ]]
++ ros2 service list --no-daemon --spin-time 1 -t
++ grep -E '^/(turtle1/teleport_absolute|turtle1/set_pen|spawn|clear) '
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/service_types.log
+/clear [std_srvs/srv/Empty]
+/spawn [turtlesim/srv/Spawn]
+/turtle1/set_pen [turtlesim/srv/SetPen]
+/turtle1/teleport_absolute [turtlesim/srv/TeleportAbsolute]
++ for service in /turtle1/teleport_absolute /turtle1/set_pen /spawn /clear
++ printf '%s: ' /turtle1/teleport_absolute
++ ros2 service type /turtle1/teleport_absolute
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/service_type_queries.log
+/turtle1/teleport_absolute: turtlesim/srv/TeleportAbsolute
++ for service in /turtle1/teleport_absolute /turtle1/set_pen /spawn /clear
++ printf '%s: ' /turtle1/set_pen
++ ros2 service type /turtle1/set_pen
+/turtle1/set_pen: turtlesim/srv/SetPen
++ for service in /turtle1/teleport_absolute /turtle1/set_pen /spawn /clear
++ printf '%s: ' /spawn
++ ros2 service type /spawn
+/spawn: turtlesim/srv/Spawn
++ for service in /turtle1/teleport_absolute /turtle1/set_pen /spawn /clear
++ printf '%s: ' /clear
++ ros2 service type /clear
+/clear: std_srvs/srv/Empty
++ PYTHONUNBUFFERED=1
++ timeout 30s ros2 run turtle_py service_sequence_client
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/service_sequence.log
+[INFO] [1788765049.443314601] [service_sequence_client]: calling /turtle1/teleport_absolute with call_async()
+[INFO] [1788765049.469437741] [service_sequence_client]: /turtle1/teleport_absolute response: turtlesim.srv.TeleportAbsolute_Response()
+[INFO] [1788765049.480720734] [service_sequence_client]: calling /turtle1/set_pen with call_async()
+[INFO] [1788765049.498897864] [service_sequence_client]: /turtle1/set_pen response: turtlesim.srv.SetPen_Response()
+[INFO] [1788765049.509041963] [service_sequence_client]: calling /spawn with call_async()
+[INFO] [1788765049.532563923] [service_sequence_client]: /spawn response: turtlesim.srv.Spawn_Response(name='turtle2')
+[INFO] [1788765049.544226440] [service_sequence_client]: calling /clear with call_async()
+[INFO] [1788765049.564621633] [service_sequence_client]: /clear response: std_srvs.srv.Empty_Response()
+[INFO] [1788765049.576284679] [service_sequence_client]: all four built-in service calls completed
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/square_services_server.log ros2 run turtle_py square_driver
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/square_services_server.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/square_services_server.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6
++ LAST_GROUP_ID=14719
++ setsid ros2 run turtle_py square_driver
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ SQUARE_GROUP_ID=14719
++ sleep 1
++ ros2 service call /set_driving std_srvs/srv/SetBool '{data: false}'
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/set_driving.log
+waiting for service to become available...
+requester: making request: std_srvs.srv.SetBool_Request(data=False)
+
+response:
+std_srvs.srv.SetBool_Response(success=True, message='square driving disabled and turtle stopped')
+
++ grep -q success=True /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/set_driving.log
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/disabled_observation.log
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/observe_stopped.py --no-publication
+Observed pose messages=125, cmd_vel messages=0, max translation=0.00000000, max heading change=0.00000000
++ ros2 service call /save_home std_srvs/srv/Trigger '{}'
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/save_home.log
+requester: making request: std_srvs.srv.Trigger_Request()
+
+response:
+std_srvs.srv.Trigger_Response(success=True, message='home saved at x=3.992, y=3.000, theta=0.000')
+
++ grep -q success=True /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/save_home.log
++ stop_group 14719
++ local id=14719
++ [[ 1 == 1 ]]
++ kill -INT -- -14719
++ for _ in {1..30}
++ kill -0 14719
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14719
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14719
++ break
++ kill -TERM -- -14719
++ true
++ for _ in {1..20}
++ kill -0 14719
++ break
++ kill -KILL -- -14719
++ true
++ wait 14719
++ unset 'ACTIVE_GROUPS[$id]'
++ PYTHONUNBUFFERED=1
++ timeout 30s ros2 run turtle_py rotate_action_client --ros-args -p target_angle:=1.0
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/rotate_complete.log
+[INFO] [1788765058.904603884] [rotate_action_client]: sending target angle 1.0000 rad
+[INFO] [1788765058.926304652] [rotate_action_client]: rotation goal accepted
+[INFO] [1788765058.941254321] [rotate_action_client]: rotation remaining: 1.0000 rad
+[INFO] [1788765058.955680410] [rotate_action_client]: rotation remaining: 0.9840 rad
+[INFO] [1788765058.970721685] [rotate_action_client]: rotation remaining: 0.9680 rad
+[INFO] [1788765058.985806200] [rotate_action_client]: rotation remaining: 0.9520 rad
+[INFO] [1788765058.998436071] [rotate_action_client]: rotation remaining: 0.9360 rad
+[INFO] [1788765059.009712065] [rotate_action_client]: rotation remaining: 0.9200 rad
+[INFO] [1788765059.022898128] [rotate_action_client]: rotation remaining: 0.9040 rad
+[INFO] [1788765059.037358894] [rotate_action_client]: rotation remaining: 0.8880 rad
+[INFO] [1788765059.052719569] [rotate_action_client]: rotation remaining: 0.8720 rad
+[INFO] [1788765059.066969390] [rotate_action_client]: rotation remaining: 0.8560 rad
+[INFO] [1788765059.083165980] [rotate_action_client]: rotation remaining: 0.8400 rad
+[INFO] [1788765059.099460853] [rotate_action_client]: rotation remaining: 0.8240 rad
+[INFO] [1788765059.113721761] [rotate_action_client]: rotation remaining: 0.8080 rad
+[INFO] [1788765059.129263869] [rotate_action_client]: rotation remaining: 0.7920 rad
+[INFO] [1788765059.145645030] [rotate_action_client]: rotation remaining: 0.7760 rad
+[INFO] [1788765059.161324594] [rotate_action_client]: rotation remaining: 0.7600 rad
+[INFO] [1788765059.178122526] [rotate_action_client]: rotation remaining: 0.7440 rad
+[INFO] [1788765059.193894815] [rotate_action_client]: rotation remaining: 0.7280 rad
+[INFO] [1788765059.210615161] [rotate_action_client]: rotation remaining: 0.7120 rad
+[INFO] [1788765059.226186368] [rotate_action_client]: rotation remaining: 0.6960 rad
+[INFO] [1788765059.241742927] [rotate_action_client]: rotation remaining: 0.6800 rad
+[INFO] [1788765059.258426761] [rotate_action_client]: rotation remaining: 0.6640 rad
+[INFO] [1788765059.273741391] [rotate_action_client]: rotation remaining: 0.6480 rad
+[INFO] [1788765059.289847270] [rotate_action_client]: rotation remaining: 0.6320 rad
+[INFO] [1788765059.306822693] [rotate_action_client]: rotation remaining: 0.6160 rad
+[INFO] [1788765059.322702284] [rotate_action_client]: rotation remaining: 0.6000 rad
+[INFO] [1788765059.338391148] [rotate_action_client]: rotation remaining: 0.5840 rad
+[INFO] [1788765059.353856584] [rotate_action_client]: rotation remaining: 0.5680 rad
+[INFO] [1788765059.371583184] [rotate_action_client]: rotation remaining: 0.5520 rad
+[INFO] [1788765059.386839206] [rotate_action_client]: rotation remaining: 0.5360 rad
+[INFO] [1788765059.402633358] [rotate_action_client]: rotation remaining: 0.5200 rad
+[INFO] [1788765059.419443003] [rotate_action_client]: rotation remaining: 0.5040 rad
+[INFO] [1788765059.435442428] [rotate_action_client]: rotation remaining: 0.4880 rad
+[INFO] [1788765059.451244680] [rotate_action_client]: rotation remaining: 0.4720 rad
+[INFO] [1788765059.466892100] [rotate_action_client]: rotation remaining: 0.4560 rad
+[INFO] [1788765059.483016728] [rotate_action_client]: rotation remaining: 0.4400 rad
+[INFO] [1788765059.498501202] [rotate_action_client]: rotation remaining: 0.4240 rad
+[INFO] [1788765059.514237493] [rotate_action_client]: rotation remaining: 0.4080 rad
+[INFO] [1788765059.531190162] [rotate_action_client]: rotation remaining: 0.3920 rad
+[INFO] [1788765059.546393166] [rotate_action_client]: rotation remaining: 0.3760 rad
+[INFO] [1788765059.562188398] [rotate_action_client]: rotation remaining: 0.3600 rad
+[INFO] [1788765059.578062834] [rotate_action_client]: rotation remaining: 0.3440 rad
+[INFO] [1788765059.593765998] [rotate_action_client]: rotation remaining: 0.3280 rad
+[INFO] [1788765059.610440464] [rotate_action_client]: rotation remaining: 0.3120 rad
+[INFO] [1788765059.626929433] [rotate_action_client]: rotation remaining: 0.2960 rad
+[INFO] [1788765059.642561913] [rotate_action_client]: rotation remaining: 0.2800 rad
+[INFO] [1788765059.658460229] [rotate_action_client]: rotation remaining: 0.2640 rad
+[INFO] [1788765059.674174734] [rotate_action_client]: rotation remaining: 0.2480 rad
+[INFO] [1788765059.690157072] [rotate_action_client]: rotation remaining: 0.2320 rad
+[INFO] [1788765059.706992773] [rotate_action_client]: rotation remaining: 0.2160 rad
+[INFO] [1788765059.723816294] [rotate_action_client]: rotation remaining: 0.2000 rad
+[INFO] [1788765059.738757442] [rotate_action_client]: rotation remaining: 0.1840 rad
+[INFO] [1788765059.754281248] [rotate_action_client]: rotation remaining: 0.1680 rad
+[INFO] [1788765059.770087571] [rotate_action_client]: rotation remaining: 0.1520 rad
+[INFO] [1788765059.786155069] [rotate_action_client]: rotation remaining: 0.1360 rad
+[INFO] [1788765059.803220394] [rotate_action_client]: rotation remaining: 0.1200 rad
+[INFO] [1788765059.819414175] [rotate_action_client]: rotation remaining: 0.1040 rad
+[INFO] [1788765059.834298821] [rotate_action_client]: rotation remaining: 0.0880 rad
+[INFO] [1788765059.849801563] [rotate_action_client]: rotation remaining: 0.0720 rad
+[INFO] [1788765059.865892996] [rotate_action_client]: rotation remaining: 0.0560 rad
+[INFO] [1788765059.882240067] [rotate_action_client]: rotation remaining: 0.0400 rad
+[INFO] [1788765059.899103770] [rotate_action_client]: rotation remaining: 0.0240 rad
+[INFO] [1788765059.913747731] [rotate_action_client]: rotation remaining: 0.0080 rad
+[INFO] [1788765060.038959837] [rotate_action_client]: rotation action finished: SUCCEEDED
++ PYTHONUNBUFFERED=1
++ timeout 30s ros2 run turtle_py rotate_action_client --ros-args -p target_angle:=-2.5 -p cancel_after_sec:=0.20
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/rotate_cancel.log
+[INFO] [1788765061.556224258] [rotate_action_client]: sending target angle -2.5000 rad
+[INFO] [1788765061.577820274] [rotate_action_client]: rotation remaining: 2.7912 rad
+[INFO] [1788765061.587659227] [rotate_action_client]: rotation goal accepted
+[INFO] [1788765061.597222705] [rotate_action_client]: rotation remaining: 2.7752 rad
+[INFO] [1788765061.609720575] [rotate_action_client]: rotation remaining: 2.7592 rad
+[INFO] [1788765061.625792340] [rotate_action_client]: rotation remaining: 2.7432 rad
+[INFO] [1788765061.643175613] [rotate_action_client]: rotation remaining: 2.7272 rad
+[INFO] [1788765061.657303785] [rotate_action_client]: rotation remaining: 2.7112 rad
+[INFO] [1788765061.673586229] [rotate_action_client]: rotation remaining: 2.6952 rad
+[INFO] [1788765061.689811644] [rotate_action_client]: rotation remaining: 2.6792 rad
+[INFO] [1788765061.706262524] [rotate_action_client]: rotation remaining: 2.6632 rad
+[INFO] [1788765061.722292396] [rotate_action_client]: rotation remaining: 2.6472 rad
+[INFO] [1788765061.738061328] [rotate_action_client]: rotation remaining: 2.6312 rad
+[INFO] [1788765061.754408634] [rotate_action_client]: rotation remaining: 2.6152 rad
+[INFO] [1788765061.770169687] [rotate_action_client]: rotation remaining: 2.5992 rad
+[INFO] [1788765061.785797643] [rotate_action_client]: rotation remaining: 2.5832 rad
+[WARN] [1788765061.796957548] [rotate_action_client]: requesting action cancel at turtle angle 1.2160 rad
+[INFO] [1788765061.807046344] [rotate_action_client]: rotation remaining: 2.5672 rad
+[INFO] [1788765061.818535441] [rotate_action_client]: cancel response: 1 goal(s) canceling
+[INFO] [1788765061.828416075] [rotate_action_client]: rotation action finished: CANCELED
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/observe_stopped.py
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/rotate_cancel_stopped.log
+Observed pose messages=125, cmd_vel messages=0, max translation=0.00000000, max heading change=0.00000000
++ for definition in msg/Waypoint msg/WaypointList srv/SetGain action/DrawPolygon
++ ros2 interface show turtle_interfaces/msg/Waypoint
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/interface_Waypoint.log
+# 문제 6 — 경유점 하나를 표현하는 메시지.
+# 좌표는 정밀도를 위해 float64, 허용 오차는 float32 로 두어
+# "같은 메시지 안에서 서로 다른 실수 타입을 쓸 수 있다" 는 점을 보여 줍니다.
+# (turtlesim 의 Pose 는 float32 지만, 경유점 좌표는 double 로 두는 편이 일반적입니다.)
+
+float64 x            # 경유점 x 좌표 [m] (turtlesim 좌표계, 0 ~ 11)
+float64 y            # 경유점 y 좌표 [m]
+float32 tolerance    # 도달 판정 허용 오차 [m] — 이 거리 이내면 "도달" 로 봅니다
+string  label        # 사람이 읽는 이름 (예: "corner_A")
++ for definition in msg/Waypoint msg/WaypointList srv/SetGain action/DrawPolygon
++ ros2 interface show turtle_interfaces/msg/WaypointList
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/interface_WaypointList.log
+# 문제 6 — 경유점 목록. "중첩(다른 메시지를 필드로)" 과 "배열" 을 모두 사용합니다.
+#
+# 다른 패키지의 메시지를 쓸 때는 "패키지/타입" 으로 적습니다 (std_msgs/Header).
+# 같은 패키지의 메시지는 패키지 이름 없이 타입 이름만 적어도 됩니다 (Waypoint).
+# Waypoint[] 처럼 [] 를 붙이면 가변 길이 배열이 됩니다. (고정 길이는 Waypoint[4])
+
+std_msgs/Header header   # stamp(발행 시각) + frame_id(좌표계 이름, 여기서는 "world")
+	builtin_interfaces/Time stamp
+		int32 sec
+		uint32 nanosec
+	string frame_id
+Waypoint[] waypoints     # 경유점 배열 — 문제 6 에서는 4개 이상을 채워 발행합니다
+	float64 x            # 경유점 x 좌표 [m] (turtlesim 좌표계, 0 ~ 1
+	float64 y            #
+	float32 tolerance    # 도달 판정 허용 오차 [m] — 이 거리 이내면 "도달" 로 봅
+	string  label        #
++ for definition in msg/Waypoint msg/WaypointList srv/SetGain action/DrawPolygon
++ ros2 interface show turtle_interfaces/srv/SetGain
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/interface_SetGain.log
+# 문제 6 — 회전 제어 게인 설정 서비스.
+# 서비스 파일은 "---" 로 요청(request)과 응답(response)을 나눕니다.
+
+# ---------- 요청 ----------
+float64 kp    # 비례 게인
+float64 ki    # 적분 게인
+float64 kd    # 미분 게인
+---
+# ---------- 응답 ----------
+bool   success   # 값이 유효해서 적용됐는지
+string message   # 사람이 읽을 결과 설명 (예: "kp must be >= 0")
++ for definition in msg/Waypoint msg/WaypointList srv/SetGain action/DrawPolygon
++ ros2 interface show turtle_interfaces/action/DrawPolygon
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/interface_DrawPolygon.log
+# 문제 6 — 거북이가 정다각형을 그리게 하는 액션.
+# 액션 파일은 "---" 두 개로 목표(goal) / 결과(result) / 피드백(feedback) 세 구역을 나눕니다.
+# 순서가 goal → result → feedback 임에 주의하세요 (goal → feedback → result 가 아닙니다).
+
+# ---------- 목표 (goal) ----------
+int32   sides         # 변의 개수 (3 이상)
+float64 side_length   # 한 변의 길이 [m]
+---
+# ---------- 결과 (result) ----------
+float64 total_distance   # 실제로 이동한 총 거리 [m] (취소되면 그때까지의 거리)
+---
+# ---------- 피드백 (feedback) ----------
+int32   completed_sides  # 지금까지 완성한 변의 수
+float32 progress         # 진행률 0.0 ~ 1.0 (= completed_sides / sides)
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoints_echo.log timeout 15s ros2 topic echo /waypoints turtle_interfaces/msg/WaypointList --qos-reliability reliable --qos-durability transient_local --once
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoints_echo.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoints_echo.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6
++ LAST_GROUP_ID=14822
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid timeout 15s ros2 topic echo /waypoints turtle_interfaces/msg/WaypointList --qos-reliability reliable --qos-durability transient_local --once
++ WAYPOINT_ECHO_PID=14822
++ sleep 1
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoint_publisher.log ros2 run turtle_py waypoint_publisher
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoint_publisher.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoint_publisher.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6
++ LAST_GROUP_ID=14832
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtle_py waypoint_publisher
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ wait 14822
++ unset 'ACTIVE_GROUPS[$WAYPOINT_ECHO_PID]'
++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoints_echo.log
+header:
+  stamp:
+    sec: 1788765071
+    nanosec: 246608062
+  frame_id: world
+waypoints:
+- x: 2.0
+  y: 2.0
+  tolerance: 0.20000000298023224
+  label: start
+- x: 2.0
+  y: 8.0
+  tolerance: 0.25
+  label: upper_left
+- x: 8.0
+  y: 8.0
+  tolerance: 0.25
+  label: upper_right
+- x: 8.0
+  y: 3.0
+  tolerance: 0.20000000298023224
+  label: finish
+---
++ python3 - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoints_echo.log
+Nested header and four complete Waypoint entries received.
++ grep -m 1 'published 4 waypoint(s)' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoint_publisher.log
+[INFO] [1788765071.255924312] [waypoint_publisher]: published 4 waypoint(s)
+++ grep -c label: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/waypoints_echo.log
++ [[ 4 -ne 4 ]]
++ ros2 service call /reset std_srvs/srv/Empty '{}'
+waiting for service to become available...
+requester: making request: std_srvs.srv.Empty_Request()
+
+response:
+std_srvs.srv.Empty_Response()
+
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/draw_polygon_server.log ros2 run turtle_py draw_polygon_server
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/draw_polygon_server.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/draw_polygon_server.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6
++ LAST_GROUP_ID=14873
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtle_py draw_polygon_server
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ sleep 1
++ ros2 service call /set_polygon_gain turtle_interfaces/srv/SetGain '{kp: 5.0, ki: 0.0, kd: 0.0}'
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/set_gain.log
+waiting for service to become available...
+requester: making request: turtle_interfaces.srv.SetGain_Request(kp=5.0, ki=0.0, kd=0.0)
+
+response:
+turtle_interfaces.srv.SetGain_Response(success=True, message='gains stored: kp=5.00, ki=0.00, kd=0.00')
+
++ grep -q success=True /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/set_gain.log
++ PYTHONUNBUFFERED=1
++ timeout 60s /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/draw_polygon_client --ros-args -p sides:=3 -p side_length:=0.7
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_triangle.log
+[INFO] [1788765075.246529976] [draw_polygon_client]: sending polygon goal: sides=3, side_length=0.70
+[INFO] [1788765077.251140061] [draw_polygon_client]: polygon feedback: completed=1, progress=0.33
+[INFO] [1788765080.941555383] [draw_polygon_client]: polygon feedback: completed=2, progress=0.67
+[INFO] [1788765084.538222238] [draw_polygon_client]: polygon feedback: completed=3, progress=1.00
+[INFO] [1788765086.257263474] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=2.01 m
++ ros2 service call /reset std_srvs/srv/Empty '{}'
+requester: making request: std_srvs.srv.Empty_Request()
+
+response:
+std_srvs.srv.Empty_Response()
+
++ sleep 1
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_pentagon.log
++ PYTHONUNBUFFERED=1
++ timeout 60s /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/draw_polygon_client --ros-args -p sides:=5 -p side_length:=0.7
+[INFO] [1788765088.864667135] [draw_polygon_client]: sending polygon goal: sides=5, side_length=0.70
+[INFO] [1788765090.874197431] [draw_polygon_client]: polygon feedback: completed=1, progress=0.20
+[INFO] [1788765093.968762266] [draw_polygon_client]: polygon feedback: completed=2, progress=0.40
+[INFO] [1788765097.082645409] [draw_polygon_client]: polygon feedback: completed=3, progress=0.60
+[INFO] [1788765100.191639485] [draw_polygon_client]: polygon feedback: completed=4, progress=0.80
+[INFO] [1788765103.350901636] [draw_polygon_client]: polygon feedback: completed=5, progress=1.00
+[INFO] [1788765104.509086521] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=3.36 m
++ ros2 service call /reset std_srvs/srv/Empty '{}'
+requester: making request: std_srvs.srv.Empty_Request()
+
+response:
+std_srvs.srv.Empty_Response()
+
++ sleep 1
++ PYTHONUNBUFFERED=1
++ timeout 90s /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/draw_polygon_client --ros-args -p sides:=8 -p side_length:=0.7
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_octagon.log
+[INFO] [1788765107.120292393] [draw_polygon_client]: sending polygon goal: sides=8, side_length=0.70
+[INFO] [1788765109.081760526] [draw_polygon_client]: polygon feedback: completed=1, progress=0.12
+[INFO] [1788765111.850378091] [draw_polygon_client]: polygon feedback: completed=2, progress=0.25
+[INFO] [1788765114.665371053] [draw_polygon_client]: polygon feedback: completed=3, progress=0.38
+[INFO] [1788765117.476239521] [draw_polygon_client]: polygon feedback: completed=4, progress=0.50
+[INFO] [1788765120.316023301] [draw_polygon_client]: polygon feedback: completed=5, progress=0.62
+[INFO] [1788765123.128758483] [draw_polygon_client]: polygon feedback: completed=6, progress=0.75
+[INFO] [1788765125.946818596] [draw_polygon_client]: polygon feedback: completed=7, progress=0.88
+[INFO] [1788765128.795811705] [draw_polygon_client]: polygon feedback: completed=8, progress=1.00
+[INFO] [1788765129.652833673] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=5.38 m
++ ros2 service call /reset std_srvs/srv/Empty '{}'
+requester: making request: std_srvs.srv.Empty_Request()
+
+response:
+std_srvs.srv.Empty_Response()
+
++ sleep 1
++ PYTHONUNBUFFERED=1
++ timeout 30s /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/draw_polygon_client --ros-args -p sides:=6 -p side_length:=1.0 -p cancel_after_sec:=0.50
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_cancel.log
+[INFO] [1788765132.258261133] [draw_polygon_client]: sending polygon goal: sides=6, side_length=1.00
+[WARN] [1788765132.780839466] [draw_polygon_client]: requesting DrawPolygon cancellation
+[INFO] [1788765132.859609117] [draw_polygon_client]: cancel response: 1 goal(s)
+[INFO] [1788765132.925717264] [draw_polygon_client]: polygon result: CANCELED, total_distance=0.48 m
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/observe_stopped.py
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_cancel_stopped.log
+Observed pose messages=125, cmd_vel messages=0, max translation=0.00000000, max heading change=0.00000000
++ python3 - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6
+Action feedback, acknowledged cancellation and measured partial distance verified.
++ grep -m 1 'all four built-in service calls completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/service_sequence.log
+[INFO] [1788765049.576284679] [service_sequence_client]: all four built-in service calls completed
++ grep -m 1 'rotation action finished: SUCCEEDED' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/rotate_complete.log
+[INFO] [1788765060.038959837] [rotate_action_client]: rotation action finished: SUCCEEDED
++ grep -m 1 'rotation action finished: CANCELED' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/rotate_cancel.log
+[INFO] [1788765061.828416075] [rotate_action_client]: rotation action finished: CANCELED
++ grep -m 1 'polygon result: SUCCEEDED' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_triangle.log
+[INFO] [1788765086.257263474] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=2.01 m
++ grep -m 1 'polygon result: SUCCEEDED' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_pentagon.log
+[INFO] [1788765104.509086521] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=3.36 m
++ grep -m 1 'polygon result: SUCCEEDED' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_octagon.log
+[INFO] [1788765129.652833673] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=5.38 m
++ grep -m 1 'polygon result: CANCELED' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6/polygon_cancel.log
+[INFO] [1788765132.925717264] [draw_polygon_client]: polygon result: CANCELED, total_distance=0.48 m
++ echo 'Verification logs: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6'
+Verification logs: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem5_6
++ echo 'PROBLEM5_6_RUNTIME_PASS; triangle/pentagon/octagon screenshots require a separate GUI observation.'
+PROBLEM5_6_RUNTIME_PASS; triangle/pentagon/octagon screenshots require a separate GUI observation.
++ cleanup
++ local id
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14659
++ local id=14659
++ [[ 1 == 1 ]]
++ kill -INT -- -14659
++ for _ in {1..30}
++ kill -0 14659
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14659
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14659
++ break
++ kill -TERM -- -14659
++ true
++ for _ in {1..20}
++ kill -0 14659
++ break
++ kill -KILL -- -14659
++ true
++ wait 14659
++ unset 'ACTIVE_GROUPS[$id]'
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14719
++ local id=14719
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14822
++ local id=14822
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14832
++ local id=14832
++ [[ 1 == 1 ]]
++ kill -INT -- -14832
++ for _ in {1..30}
++ kill -0 14832
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14832
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14832
++ break
++ kill -TERM -- -14832
++ true
++ for _ in {1..20}
++ kill -0 14832
++ break
++ kill -KILL -- -14832
++ true
++ wait 14832
++ unset 'ACTIVE_GROUPS[$id]'
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14873
++ local id=14873
++ [[ 1 == 1 ]]
++ kill -INT -- -14873
++ for _ in {1..30}
++ kill -0 14873
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14873
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14873
++ break
++ kill -TERM -- -14873
++ true
++ for _ in {1..20}
++ kill -0 14873
++ break
++ kill -KILL -- -14873
++ true
++ wait 14873
++ unset 'ACTIVE_GROUPS[$id]'

@@ -1,0 +1,48 @@
+Type: std_msgs/msg/Float32
+
+Publisher count: 1
+
+Node name: distance_publisher
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.ae.36.e8.d4.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 2
+
+Node name: warn_subscriber_1
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.b1.36.e2.9f.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: cpp_distance_subscriber
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.b7.36.3c.cf.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+

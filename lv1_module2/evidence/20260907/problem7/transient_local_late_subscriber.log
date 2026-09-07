@@ -1,0 +1,2 @@
+[INFO] [1788765711.422700174] [transient_local_waypoint_subscriber]: waypoint subscriber on /waypoints_transient_local: reliable/transient_local/depth 1, delay 0.000 s
+[INFO] [1788765713.382005808] [transient_local_waypoint_subscriber]: received waypoint message #1: 4 point(s) [start, upper_left, upper_right, finish]

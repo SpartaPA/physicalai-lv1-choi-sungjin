@@ -1,0 +1,17 @@
+[INFO] [launch]: All log files can be found below /home/chsjh/.ros/log/2026-09-07-16-37-15-531104-PA12-18351
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [turtlesim_node-1]: process started with pid [18359]
+[INFO] [distance_publisher-2]: process started with pid [18361]
+[INFO] [warn_subscriber-3]: process started with pid [18363]
+[INFO] [draw_polygon_server-4]: process started with pid [18365]
+[turtlesim_node-1] [INFO] [1788766635.883410697] [turtlesim]: Starting turtlesim with node name /turtlesim
+[turtlesim_node-1] [INFO] [1788766635.887750963] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[warn_subscriber-3] [INFO] [1788766636.514670436] [warn_subscriber]: listening on /turtle_distance; warning above 8.00 m (reliable/volatile)
+[distance_publisher-2] [INFO] [1788766636.586326223] [distance_publisher]: distance publisher: /turtle1/pose -> /turtle_distance, 10.0 Hz, reliable/volatile
+[draw_polygon_server-4] [INFO] [1788766636.734275751] [draw_polygon_server]: DrawPolygon action server ready on /draw_polygon; cmd_vel=/turtle1/cmd_vel
+[turtlesim_node-1] [INFO] [1788766654.387420654] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[draw_polygon_server-4] The following exception was never retrieved: cannot use Destroyable because destruction was requested
+[INFO] [turtlesim_node-1]: process has finished cleanly [pid 18359]
+[INFO] [warn_subscriber-3]: process has finished cleanly [pid 18363]
+[INFO] [distance_publisher-2]: process has finished cleanly [pid 18361]
+[INFO] [draw_polygon_server-4]: process has finished cleanly [pid 18365]

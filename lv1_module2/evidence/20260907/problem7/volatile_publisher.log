@@ -1,0 +1,2 @@
+[INFO] [1788765725.063556890] [volatile_waypoint_publisher]: waypoint publisher on /waypoints_volatile: reliable/volatile/depth 1
+[INFO] [1788765726.012498930] [volatile_waypoint_publisher]: published 4 waypoint(s)

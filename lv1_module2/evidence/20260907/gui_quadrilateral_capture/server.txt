@@ -1,0 +1,11 @@
+[INFO] [1788767282.672486252] [draw_polygon_server]: DrawPolygon action server ready on /draw_polygon; cmd_vel=/turtle1/cmd_vel
+[INFO] [1788767323.840851016] [draw_polygon_server]: accepting polygon: 4 sides, 1.50 m each
+[INFO] [1788767323.853578619] [draw_polygon_server]: polygon side 1/4 target: x=7.044, y=5.544
+[INFO] [1788767326.658951076] [draw_polygon_server]: polygon side 1/4; progress=0.25
+[INFO] [1788767328.007486192] [draw_polygon_server]: polygon side 2/4 target: x=7.020, y=7.044
+[INFO] [1788767330.833243135] [draw_polygon_server]: polygon side 2/4; progress=0.50
+[INFO] [1788767332.181975243] [draw_polygon_server]: polygon side 3/4 target: x=5.520, y=7.018
+[INFO] [1788767334.959192285] [draw_polygon_server]: polygon side 3/4; progress=0.75
+[INFO] [1788767336.320901487] [draw_polygon_server]: polygon side 4/4 target: x=5.547, y=5.518
+[INFO] [1788767339.078200128] [draw_polygon_server]: polygon side 4/4; progress=1.00
+[INFO] [1788767340.407977744] [draw_polygon_server]: polygon completed; total distance=5.89 m

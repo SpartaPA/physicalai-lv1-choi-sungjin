@@ -1,0 +1,20 @@
+[INFO] [1788765880.395407148] [draw_polygon_server]: DrawPolygon action server ready on /draw_polygon; cmd_vel=/turtle1/cmd_vel
+[INFO] [1788765882.263542567] [draw_polygon_server]: accepting polygon: 8 sides, 1.50 m each
+[INFO] [1788765882.273148214] [draw_polygon_server]: polygon side 1/8 target: x=7.044, y=5.544
+[INFO] [1788765885.068128901] [draw_polygon_server]: polygon side 1/8; progress=0.12
+[INFO] [1788765885.898654553] [draw_polygon_server]: polygon side 2/8 target: x=8.079, y=6.605
+[INFO] [1788765888.701956306] [draw_polygon_server]: polygon side 2/8; progress=0.25
+[INFO] [1788765889.549572723] [draw_polygon_server]: polygon side 3/8 target: x=8.060, y=8.087
+[INFO] [1788765892.306684677] [draw_polygon_server]: polygon side 3/8; progress=0.38
+[INFO] [1788765893.133128609] [draw_polygon_server]: polygon side 4/8 target: x=7.000, y=9.118
+[INFO] [1788765895.911846264] [draw_polygon_server]: polygon side 4/8; progress=0.50
+[INFO] [1788765896.731050577] [draw_polygon_server]: polygon side 5/8 target: x=5.519, y=9.099
+[INFO] [1788765899.519434704] [draw_polygon_server]: polygon side 5/8; progress=0.62
+[INFO] [1788765900.338549437] [draw_polygon_server]: polygon side 6/8 target: x=4.486, y=8.039
+[INFO] [1788765903.147118789] [draw_polygon_server]: polygon side 6/8; progress=0.75
+[INFO] [1788765903.965213378] [draw_polygon_server]: polygon side 7/8 target: x=4.505, y=6.557
+[INFO] [1788765906.720718209] [draw_polygon_server]: polygon side 7/8; progress=0.88
+[INFO] [1788765907.543744403] [draw_polygon_server]: polygon side 8/8 target: x=5.565, y=5.526
+[INFO] [1788765910.303989270] [draw_polygon_server]: polygon side 8/8; progress=1.00
+[INFO] [1788765911.128085635] [draw_polygon_server]: polygon completed; total distance=11.78 m
+The following exception was never retrieved: cannot use Destroyable because destruction was requested

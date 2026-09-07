@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/chsjh/.venvs/ros2-humble/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_170553_21138/calculation_mutation
+plugins: colcon-core-0.21.0, cov-3.0.0
+collecting ... collected 3 items
+
+test_calculations.py::test_distance_to_goal_normal_zero_and_invalid PASSED [ 33%]
+test_calculations.py::test_normalize_and_angle_to_goal PASSED            [ 66%]
+test_calculations.py::test_waypoint_reached_inclusive_boundary_and_invalid_tolerance PASSED [100%]
+
+============================== 3 passed in 0.04s ===============================

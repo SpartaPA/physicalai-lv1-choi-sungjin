@@ -1,0 +1,36 @@
+
+=== Intentional memory leak (assignment experiment) ===
+The raw pointers below are intentionally not deleted.
+[create] Sensor base: leaked_lidar_0
+[create] Lidar: leaked_lidar_0
+[read] leaked_lidar_0 (Lidar) = 1.00 m
+[create] Sensor base: leaked_lidar_1
+[create] Lidar: leaked_lidar_1
+[read] leaked_lidar_1 (Lidar) = 2.00 m
+[create] Sensor base: leaked_lidar_2
+[create] Lidar: leaked_lidar_2
+[read] leaked_lidar_2 (Lidar) = 3.00 m
+Program exit: AddressSanitizer should report the leak.
+
+=================================================================
+==11182==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 192 byte(s) in 3 object(s) allocated from:
+    #0 0x78c8b10b61e7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x5d5148858229 in reproduce_memory_leak() /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:88
+    #2 0x5d5148858d67 in main /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:132
+    #3 0x78c8b0829d8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+
+Indirect leak of 72 byte(s) in 3 object(s) allocated from:
+    #0 0x78c8b10b61e7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x5d5148861a19 in __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) /usr/include/c++/11/ext/new_allocator.h:127
+    #2 0x5d5148860665 in std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) /usr/include/c++/11/bits/alloc_traits.h:464
+    #3 0x5d514885f093 in std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) /usr/include/c++/11/bits/stl_vector.h:346
+    #4 0x5d514885d472 in void std::vector<double, std::allocator<double> >::_M_range_initialize<double const*>(double const*, double const*, std::forward_iterator_tag) /usr/include/c++/11/bits/stl_vector.h:1582
+    #5 0x5d514885b610 in std::vector<double, std::allocator<double> >::vector(std::initializer_list<double>, std::allocator<double> const&) /usr/include/c++/11/bits/stl_vector.h:629
+    #6 0x5d514885a666 in Lidar::Lidar(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double) /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/lidar.hpp:14
+    #7 0x5d5148858259 in reproduce_memory_leak() /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:88
+    #8 0x5d5148858d67 in main /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:132
+    #9 0x78c8b0829d8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+
+SUMMARY: AddressSanitizer: 264 byte(s) leaked in 6 allocation(s).

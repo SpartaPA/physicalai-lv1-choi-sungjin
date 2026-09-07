@@ -1,0 +1,744 @@
++ PYBIN=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py
++ CPPBIN=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/lib/turtle_cpp
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/turtlesim.log ros2 run turtlesim turtlesim_node
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/turtlesim.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/turtlesim.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
++ LAST_GROUP_ID=13954
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtlesim turtlesim_node
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ wait_for_service /reset
++ local name=/reset
++ for _ in {1..30}
++ timeout 5 ros2 service list --no-daemon --spin-time 1
++ grep -qx /reset
++ return 0
++ timeout 10 ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/pose_once.log
+x: 5.544444561004639
+y: 5.544444561004639
+theta: 0.0
+linear_velocity: 0.0
+angular_velocity: 0.0
+---
++ for field in x y theta linear_velocity angular_velocity
++ grep -q '^x:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/pose_once.log
++ for field in x y theta linear_velocity angular_velocity
++ grep -q '^y:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/pose_once.log
++ for field in x y theta linear_velocity angular_velocity
++ grep -q '^theta:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/pose_once.log
++ for field in x y theta linear_velocity angular_velocity
++ grep -q '^linear_velocity:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/pose_once.log
++ for field in x y theta linear_velocity angular_velocity
++ grep -q '^angular_velocity:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/pose_once.log
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_publisher.log /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/distance_publisher
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_publisher.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_publisher.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
++ LAST_GROUP_ID=13998
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/distance_publisher
++ PUBLISHER_ID=13998
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_1.log /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/warn_subscriber --ros-args -r __node:=warn_subscriber_1
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_1.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_1.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
++ LAST_GROUP_ID=14001
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/warn_subscriber --ros-args -r __node:=warn_subscriber_1
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ WARN1_ID=14001
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_2.log /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/warn_subscriber --ros-args -r __node:=warn_subscriber_2
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_2.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_2.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
++ LAST_GROUP_ID=14004
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/warn_subscriber --ros-args -r __node:=warn_subscriber_2
++ WARN2_ID=14004
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_subscriber.log /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/lib/turtle_cpp/distance_subscriber
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_subscriber.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_subscriber.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
++ LAST_GROUP_ID=14007
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/lib/turtle_cpp/distance_subscriber
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ CPP_SUB_ID=14007
++ wait_for_node /warn_subscriber_2
++ local name=/warn_subscriber_2
++ for _ in {1..20}
++ timeout 5 ros2 node list --no-daemon --spin-time 1
++ grep -qx /warn_subscriber_2
++ return 0
++ sleep 2
++ ros2 topic info --no-daemon --spin-time 1 /turtle_distance --verbose
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/python_publisher_topic_info.log
+Type: std_msgs/msg/Float32
+
+Publisher count: 1
+
+Node name: distance_publisher
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.ae.36.e8.d4.00.00.00.00.00.00.11.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 2
+
+Node name: warn_subscriber_1
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.b1.36.e2.9f.00.00.00.00.00.00.11.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Node name: cpp_distance_subscriber
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.b7.36.3c.cf.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
++ ros2 param get /distance_publisher publish_rate
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/publish_rate.log
+Double value is: 10.0
++ ros2 param get /warn_subscriber_1 warn_distance
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_distance.log
+Double value is: 2.5
++ grep -qx 'Double value is: 10.0' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/publish_rate.log
++ grep -qx 'Double value is: 2.5' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_distance.log
++ timeout_capture 6 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz.log ros2 topic hz /turtle_distance
++ local seconds=6 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz.log status
++ shift 2
++ set +e
++ timeout --signal=INT --kill-after=3 6 ros2 topic hz /turtle_distance
++ status=124
++ set -e
++ [[ 124 == 0 ]]
++ [[ 124 == 124 ]]
++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz.log
+average rate: 9.998
+	min: 0.100s max: 0.100s std dev: 0.00013s window: 11
+average rate: 10.000
+	min: 0.100s max: 0.100s std dev: 0.00012s window: 22
+average rate: 10.000
+	min: 0.100s max: 0.100s std dev: 0.00015s window: 32
+average rate: 10.000
+	min: 0.100s max: 0.100s std dev: 0.00016s window: 42
++ assert_hz /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz.log 8.5 11.5
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/assert_hz.py /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz.log 8.5 11.5
+Observed final rate=10.000 Hz; accepted range=8.5..11.5
++ python3 - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
+Both Python subscribers received during an overlapping interval; C++ subscriber also received.
++ ros2 param set /distance_publisher publish_rate 20.0
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/change_publish_rate.log
+Set parameter successful
++ timeout_capture 5 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz_changed.log ros2 topic hz /turtle_distance
++ local seconds=5 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz_changed.log status
++ shift 2
++ set +e
++ timeout --signal=INT --kill-after=3 5 ros2 topic hz /turtle_distance
++ status=124
++ set -e
++ [[ 124 == 0 ]]
++ [[ 124 == 124 ]]
++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz_changed.log
+average rate: 20.003
+	min: 0.050s max: 0.050s std dev: 0.00013s window: 22
+average rate: 20.000
+	min: 0.050s max: 0.050s std dev: 0.00014s window: 42
+average rate: 19.999
+	min: 0.050s max: 0.050s std dev: 0.00014s window: 62
++ assert_hz /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz_changed.log 17 23
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/assert_hz.py /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_hz_changed.log 17 23
+Observed final rate=19.999 Hz; accepted range=17..23
++ ros2 param set /warn_subscriber_1 warn_distance 8.0
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/change_warn_distance.log
+Set parameter successful
++ ros2 param get /warn_subscriber_1 warn_distance
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/changed_warn_distance.log
+Double value is: 8.0
++ grep -q 'Double value is: 8.0' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/changed_warn_distance.log
++ ros2 param set /distance_publisher publish_rate 10.0
+Set parameter successful
++ ros2 service call /reset std_srvs/srv/Empty '{}'
+requester: making request: std_srvs.srv.Empty_Request()
+
+response:
+std_srvs.srv.Empty_Response()
+
++ timeout 10 ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/square_driver
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
++ LAST_GROUP_ID=14193
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/square_driver
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ SQUARE_ID=14193
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ kill -0 14193
++ sleep 0.25
++ for _ in {1..240}
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ break
++ grep -q 'square completed' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ timeout 10 ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once
++ python3 - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
+Square: four sides completed; start/end position error=0.007947 m
++ clean_interrupt 14193 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ local id=14193 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log status
++ kill -0 14193
++ kill -INT -- -14193
++ for _ in {1..50}
++ kill -0 14193
++ sleep 0.1
++ for _ in {1..50}
++ kill -0 14193
++ sleep 0.1
++ for _ in {1..50}
++ kill -0 14193
++ break
++ kill -0 14193
++ set +e
++ wait 14193
++ status=0
++ set -e
++ unset 'ACTIVE_GROUPS[$id]'
++ printf 'SIGINT pid=%s exit=%s\n' 14193 0
++ tee -a /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/clean_shutdown.log
+SIGINT pid=14193 exit=0
++ [[ 0 == 0 ]]
++ grep -E 'Traceback|RCLError|terminate called|uncaught' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/square_driver.log
++ clean_interrupt 14001 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_1.log
++ local id=14001 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_1.log status
++ kill -0 14001
++ kill -INT -- -14001
++ for _ in {1..50}
++ kill -0 14001
++ sleep 0.1
++ for _ in {1..50}
++ kill -0 14001
++ break
++ kill -0 14001
++ set +e
++ wait 14001
++ status=0
++ set -e
++ unset 'ACTIVE_GROUPS[$id]'
++ printf 'SIGINT pid=%s exit=%s\n' 14001 0
++ tee -a /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/clean_shutdown.log
+SIGINT pid=14001 exit=0
++ [[ 0 == 0 ]]
++ grep -E 'Traceback|RCLError|terminate called|uncaught' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_1.log
++ clean_interrupt 14004 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_2.log
++ local id=14004 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_2.log status
++ kill -0 14004
++ kill -INT -- -14004
++ for _ in {1..50}
++ kill -0 14004
++ sleep 0.1
++ for _ in {1..50}
++ kill -0 14004
++ sleep 0.1
++ for _ in {1..50}
++ kill -0 14004
++ break
++ kill -0 14004
++ set +e
++ wait 14004
++ status=0
++ set -e
++ unset 'ACTIVE_GROUPS[$id]'
++ printf 'SIGINT pid=%s exit=%s\n' 14004 0
++ tee -a /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/clean_shutdown.log
+SIGINT pid=14004 exit=0
++ [[ 0 == 0 ]]
++ grep -E 'Traceback|RCLError|terminate called|uncaught' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/warn_subscriber_2.log
++ clean_interrupt 13998 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_publisher.log
++ local id=13998 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_publisher.log status
++ kill -0 13998
++ kill -INT -- -13998
++ for _ in {1..50}
++ kill -0 13998
++ sleep 0.1
++ for _ in {1..50}
++ kill -0 13998
++ break
++ kill -0 13998
++ set +e
++ wait 13998
++ status=0
++ set -e
++ unset 'ACTIVE_GROUPS[$id]'
++ printf 'SIGINT pid=%s exit=%s\n' 13998 0
++ tee -a /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/clean_shutdown.log
+SIGINT pid=13998 exit=0
++ [[ 0 == 0 ]]
++ grep -E 'Traceback|RCLError|terminate called|uncaught' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/distance_publisher.log
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_publisher.log /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/lib/turtle_cpp/distance_publisher
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_publisher.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_publisher.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4
++ LAST_GROUP_ID=14376
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp/lib/turtle_cpp/distance_publisher
++ CPP_PUB_ID=14376
++ sleep 2
++ ros2 topic info --no-daemon --spin-time 1 /turtle_distance --verbose
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_publisher_topic_info.log
+Type: std_msgs/msg/Float32
+
+Publisher count: 1
+
+Node name: _NODE_NAME_UNKNOWN_
+Node namespace: _NODE_NAMESPACE_UNKNOWN_
+Topic type: std_msgs/msg/Float32
+Endpoint type: PUBLISHER
+GID: 01.0f.09.ea.28.38.b3.aa.00.00.00.00.00.00.12.03.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: cpp_distance_subscriber
+Node namespace: /
+Topic type: std_msgs/msg/Float32
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.09.ea.b7.36.3c.cf.00.00.00.00.00.00.12.04.00.00.00.00.00.00.00.00
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
++ timeout_capture 6 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_hz.log ros2 topic hz /turtle_distance
++ local seconds=6 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_hz.log status
++ shift 2
++ set +e
++ timeout --signal=INT --kill-after=3 6 ros2 topic hz /turtle_distance
++ status=124
++ set -e
++ [[ 124 == 0 ]]
++ [[ 124 == 124 ]]
++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_hz.log
+average rate: 9.999
+	min: 0.100s max: 0.100s std dev: 0.00008s window: 11
+average rate: 10.000
+	min: 0.100s max: 0.100s std dev: 0.00009s window: 22
+average rate: 10.000
+	min: 0.100s max: 0.100s std dev: 0.00009s window: 32
+average rate: 10.000
+	min: 0.100s max: 0.100s std dev: 0.00010s window: 42
++ assert_hz /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_hz.log 8.5 11.5
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/assert_hz.py /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_hz.log 8.5 11.5
+Observed final rate=10.000 Hz; accepted range=8.5..11.5
++ timeout 10 ros2 topic echo /turtle_distance std_msgs/msg/Float32 --once
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_echo.log
+data: 7.8466644287109375
+---
++ grep -q data: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem3_4/cpp_distance_echo.log
++ echo 'PROBLEM3_4_RUNTIME_PASS; square screenshot remains a separate GUI requirement.'
+PROBLEM3_4_RUNTIME_PASS; square screenshot remains a separate GUI requirement.
++ cleanup
++ local id
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 13954
++ local id=13954
++ [[ 1 == 1 ]]
++ kill -INT -- -13954
++ for _ in {1..30}
++ kill -0 13954
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 13954
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 13954
++ break
++ kill -TERM -- -13954
++ true
++ for _ in {1..20}
++ kill -0 13954
++ break
++ kill -KILL -- -13954
++ true
++ wait 13954
++ unset 'ACTIVE_GROUPS[$id]'
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 13998
++ local id=13998
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14001
++ local id=14001
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14004
++ local id=14004
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14007
++ local id=14007
++ [[ 1 == 1 ]]
++ kill -INT -- -14007
++ for _ in {1..30}
++ kill -0 14007
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14007
++ break
++ kill -TERM -- -14007
++ true
++ for _ in {1..20}
++ kill -0 14007
++ break
++ kill -KILL -- -14007
++ true
++ wait 14007
++ unset 'ACTIVE_GROUPS[$id]'
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14193
++ local id=14193
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 14376
++ local id=14376
++ [[ 1 == 1 ]]
++ kill -INT -- -14376
++ for _ in {1..30}
++ kill -0 14376
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 14376
++ break
++ kill -TERM -- -14376
++ true
++ for _ in {1..20}
++ kill -0 14376
++ break
++ kill -KILL -- -14376
++ true
++ wait 14376
++ unset 'ACTIVE_GROUPS[$id]'

@@ -1,0 +1,2 @@
+[INFO] [1788765683.999874874] [warn_subscriber]: listening on /turtle_distance; warning above 1.00 m (reliable/volatile)
+[WARN] [1788765684.000798997] [warn_subscriber]: New publisher discovered on topic '/turtle_distance', offering incompatible QoS. No messages will be received from it. Last incompatible policy: RELIABILITY

@@ -1,0 +1,2 @@
+[INFO] [1788765683.963615641] [distance_publisher]: distance publisher: /turtle1/pose -> /turtle_distance, 20.0 Hz, best_effort/volatile
+[WARN] [1788765683.968363940] [distance_publisher]: New subscription discovered on topic '/turtle_distance', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY

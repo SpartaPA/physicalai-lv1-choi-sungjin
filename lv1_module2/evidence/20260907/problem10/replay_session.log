@@ -1,0 +1,308 @@
++ [[ --replay-only == full ]]
+++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_path.log
++ BAG_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
++ echo 'Reusing the recorded bag and original healthy/stale-input diagnostic evidence; recording is not repeated.'
+Reusing the recorded bag and original healthy/stale-input diagnostic evidence; recording is not repeated.
++ assert_hz /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log 8.5 11.5
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/assert_hz.py /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log 8.5 11.5
+Observed final rate=10.000 Hz; accepted range=8.5..11.5
++ grep -q 'average rate:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_after_turtlesim_stop.log
++ grep -q 'no fresh pose' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/diagnostic_distance_publisher.log
++ grep -qx /distance_publisher /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/nodes_after_turtlesim_stop.log
++ grep -qx /turtlesim /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/nodes_after_turtlesim_stop.log
++ sleep 2
++ ros2 node list --no-daemon --spin-time 2
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/live_nodes_before_bag_play.log
++ grep -Eq '^/(turtlesim|distance_publisher)$' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/live_nodes_before_bag_play.log
++ python - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_integrity_before_replay.json
+Bag duration=28.912 s, counts={'/turtle_distance': 280, '/turtle1/pose': 1808}, total bytes=148980
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_echo.log timeout --signal=INT --kill-after=3 20s python /opt/ros/humble/bin/ros2 topic echo /turtle_distance std_msgs/msg/Float32 --once
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_echo.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_echo.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=20382
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid timeout --signal=INT --kill-after=3 20s python /opt/ros/humble/bin/ros2 topic echo /turtle_distance std_msgs/msg/Float32 --once
++ BAG_ECHO_PID=20382
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_pose_echo.log timeout --signal=INT --kill-after=3 20s python /opt/ros/humble/bin/ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_pose_echo.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_pose_echo.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=20385
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid timeout --signal=INT --kill-after=3 20s python /opt/ros/humble/bin/ros2 topic echo /turtle1/pose turtlesim/msg/Pose --once
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ BAG_POSE_ECHO_PID=20385
++ sleep 1
++ set +e
++ timeout --signal=INT --kill-after=3 45s python /opt/ros/humble/bin/ros2 bag play /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050 --delay 2.0 --disable-keyboard-controls
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play.log
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1788767749.181132853] [rosbag2_storage]: Opened database '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050/problem10_pose_distance_20260907_164050_0.db3' for READ_ONLY.
+[INFO] [1788767749.181222313] [rosbag2_player]: Set rate to 1
+[INFO] [1788767749.208613167] [rosbag2_player]: Sleep 2000000000 ns
+[INFO] [1788767751.213345522] [rosbag2_storage]: Opened database '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050/problem10_pose_distance_20260907_164050_0.db3' for READ_ONLY.
++ BAG_PLAY_STATUS=0
++ set -e
++ printf 'bag_play_exit=%s\n' 0
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_exit.log
+bag_play_exit=0
++ [[ 0 == 0 ]]
++ set +e
++ wait 20382
++ BAG_ECHO_STATUS=0
++ unset 'ACTIVE_GROUPS[$BAG_ECHO_PID]'
++ wait 20385
++ BAG_POSE_ECHO_STATUS=0
++ unset 'ACTIVE_GROUPS[$BAG_POSE_ECHO_PID]'
++ set -e
++ printf 'distance_echo_exit=%s\npose_echo_exit=%s\n' 0 0
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_subscriber_exits.log
+distance_echo_exit=0
+pose_echo_exit=0
++ [[ 0 == 0 ]]
++ [[ 0 == 0 ]]
++ python - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_replay_verification.log
+Replayed pose={'x': 5.544444561004639, 'y': 5.544444561004639, 'theta': 0.0, 'linear_velocity': 0.0, 'angular_velocity': 0.0}, distance={'data': 7.841028690338135}, all recorded bag file hashes unchanged.
+With both live publishers stopped, replay subscribers received both recorded topics.
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf_turtlesim.log ros2 run turtlesim turtlesim_node
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf_turtlesim.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf_turtlesim.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=20439
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtlesim turtlesim_node
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ TF_TURTLE_ID=20439
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf_broadcaster.log ros2 run turtle_py pose_tf_broadcaster
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf_broadcaster.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf_broadcaster.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=20442
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtle_py pose_tf_broadcaster
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ TF_BROADCASTER_ID=20442
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_publisher.log ros2 run turtle_py waypoint_marker_publisher
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_publisher.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_publisher.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=20445
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtle_py waypoint_marker_publisher
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ MARKER_PUBLISHER_ID=20445
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_waypoints.log ros2 run turtle_py waypoint_publisher --ros-args -p publish_once:=false -p publish_rate:=1.0
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_waypoints.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_waypoints.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=20448
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ setsid ros2 run turtle_py waypoint_publisher --ros-args -p publish_once:=false -p publish_rate:=1.0
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ MARKER_WAYPOINTS_ID=20448
++ sleep 3
++ timeout_capture 5 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf2_echo.log ros2 run tf2_ros tf2_echo world turtle1
++ local seconds=5 log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf2_echo.log status
++ shift 2
++ set +e
++ timeout --signal=INT --kill-after=3 5 ros2 run tf2_ros tf2_echo world turtle1
++ status=124
++ set -e
++ [[ 124 == 0 ]]
++ [[ 124 == 124 ]]
++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf2_echo.log
+[INFO] [1788767783.997524473] [tf2_echo]: Waiting for transform world ->  turtle1: Invalid frame ID "world" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1788767785.756827666] [tf2_echo]: Waiting for transform world ->  turtle1: Invalid frame ID "world" passed to canTransform argument target_frame - frame does not exist
+At time 1788767786.753031098
+- Translation: [5.544, 5.544, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  5.544
+  0.000  1.000  0.000  5.544
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+At time 1788767787.745711688
+- Translation: [5.544, 5.544, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  5.544
+  0.000  1.000  0.000  5.544
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+[INFO] [1788767788.507389565] [rclcpp]: signal_handler(SIGINT/SIGTERM)
++ timeout 10s ros2 topic echo /waypoint_markers visualization_msgs/msg/Marker --qos-durability transient_local --once
++ stop_group 20448
++ local id=20448
++ [[ 1 == 1 ]]
++ kill -INT -- -20448
++ for _ in {1..30}
++ kill -0 20448
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20448
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20448
++ break
++ kill -TERM -- -20448
++ true
++ for _ in {1..20}
++ kill -0 20448
++ break
++ kill -KILL -- -20448
++ true
++ wait 20448
++ unset 'ACTIVE_GROUPS[$id]'
++ stop_group 20445
++ local id=20445
++ [[ 1 == 1 ]]
++ kill -INT -- -20445
++ for _ in {1..30}
++ kill -0 20445
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20445
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20445
++ break
++ kill -TERM -- -20445
++ true
++ for _ in {1..20}
++ kill -0 20445
++ break
++ kill -KILL -- -20445
++ true
++ wait 20445
++ unset 'ACTIVE_GROUPS[$id]'
++ stop_group 20442
++ local id=20442
++ [[ 1 == 1 ]]
++ kill -INT -- -20442
++ for _ in {1..30}
++ kill -0 20442
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20442
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20442
++ break
++ kill -TERM -- -20442
++ true
++ for _ in {1..20}
++ kill -0 20442
++ break
++ kill -KILL -- -20442
++ true
++ wait 20442
++ unset 'ACTIVE_GROUPS[$id]'
++ stop_group 20439
++ local id=20439
++ [[ 1 == 1 ]]
++ kill -INT -- -20439
++ for _ in {1..30}
++ kill -0 20439
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20439
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20439
++ break
++ kill -TERM -- -20439
++ true
++ for _ in {1..20}
++ kill -0 20439
++ break
++ kill -KILL -- -20439
++ true
++ wait 20439
++ unset 'ACTIVE_GROUPS[$id]'
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_publish_rate.log ros2 run turtle_py distance_publisher --ros-args -p publish_rate:=0.0
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_publish_rate.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_publish_rate.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=20527
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid ros2 run turtle_py distance_publisher --ros-args -p publish_rate:=0.0
++ INVALID_ID=20527
++ sleep 3
++ kill -0 20527
++ ros2 node list --no-daemon --spin-time 1
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_rate_nodes.log
++ grep -qx /distance_publisher /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_rate_nodes.log
++ handle_exit
++ local original_status=1
++ trap - EXIT
++ set +e
++ cleanup
++ local id
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 20382
++ local id=20382
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 20385
++ local id=20385
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 20439
++ local id=20439
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 20442
++ local id=20442
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 20445
++ local id=20445
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 20448
++ local id=20448
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 20527
++ local id=20527
++ [[ 1 == 1 ]]
++ kill -INT -- -20527
++ for _ in {1..30}
++ kill -0 20527
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20527
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 20527
++ break
++ kill -TERM -- -20527
++ true
++ for _ in {1..20}
++ kill -0 20527
++ break
++ kill -KILL -- -20527
++ true
++ wait 20527
++ unset 'ACTIVE_GROUPS[$id]'
++ exit 1

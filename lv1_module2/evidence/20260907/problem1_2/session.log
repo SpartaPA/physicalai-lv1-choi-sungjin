@@ -1,0 +1,274 @@
++ echo '=== Problem 1: g++, link error, CMake incremental build ==='
+=== Problem 1: g++, link error, CMake incremental build ===
++ g++ -Wall -std=c++17 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/stop_distance.cpp -o /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/stop_distance
++ printf '10\n0.8\n'
++ /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/stop_distance
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/stop_distance.log
+Speed (m/s): Friction coefficient: Stopping distance: 6.371 m
++ grep -q 'Stopping distance: 6.371 m' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/stop_distance.log
++ g++ -Wall -std=c++17 -c /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/motor.cpp -o /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/motor.o
++ g++ -Wall -std=c++17 -c /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/main.cpp -o /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/main.o
++ g++ -Wall -std=c++17 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/main.o /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/motor.o -o /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/motor_app
++ /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/motor_app
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/motor_app.log
+left motor speed: 120 rpm
+right motor speed: 115 rpm
++ set +e
++ g++ -Wall -std=c++17 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/main.o -o /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/motor_app_missing
++ LINK_STATUS=1
++ set -e
++ [[ 1 -ne 0 ]]
++ grep -q 'undefined reference' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/link_error.log
++ echo 'Expected link failure reproduced: exit=1'
+Expected link failure reproduced: exit=1
++ P1_COPY=/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source
++ mkdir -p /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source
++ cp /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/CMakeLists.txt /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/stop_distance.cpp /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/motor.hpp /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/motor.cpp /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/main.cpp /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/
++ cmake -S /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source -B /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/cmake_configure.log
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build
++ cmake --build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build --verbose
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/cmake_first_build.log
+/usr/bin/cmake -S/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source -B/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/stop_distance.dir/build.make CMakeFiles/stop_distance.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/stop_distance.dir/DependInfo.cmake --color=
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/stop_distance.dir/build.make CMakeFiles/stop_distance.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[ 20%] Building CXX object CMakeFiles/stop_distance.dir/stop_distance.cpp.o
+/usr/bin/c++   -Wall -std=c++17 -MD -MT CMakeFiles/stop_distance.dir/stop_distance.cpp.o -MF CMakeFiles/stop_distance.dir/stop_distance.cpp.o.d -o CMakeFiles/stop_distance.dir/stop_distance.cpp.o -c /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/stop_distance.cpp
+[ 40%] Linking CXX executable stop_distance
+/usr/bin/cmake -E cmake_link_script CMakeFiles/stop_distance.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/stop_distance.dir/stop_distance.cpp.o -o stop_distance 
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[ 40%] Built target stop_distance
+/usr/bin/gmake  -f CMakeFiles/motor_app.dir/build.make CMakeFiles/motor_app.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/motor_app.dir/DependInfo.cmake --color=
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/motor_app.dir/build.make CMakeFiles/motor_app.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[ 60%] Building CXX object CMakeFiles/motor_app.dir/main.cpp.o
+/usr/bin/c++   -Wall -std=c++17 -MD -MT CMakeFiles/motor_app.dir/main.cpp.o -MF CMakeFiles/motor_app.dir/main.cpp.o.d -o CMakeFiles/motor_app.dir/main.cpp.o -c /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/main.cpp
+[ 80%] Building CXX object CMakeFiles/motor_app.dir/motor.cpp.o
+/usr/bin/c++   -Wall -std=c++17 -MD -MT CMakeFiles/motor_app.dir/motor.cpp.o -MF CMakeFiles/motor_app.dir/motor.cpp.o.d -o CMakeFiles/motor_app.dir/motor.cpp.o -c /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/motor.cpp
+[100%] Linking CXX executable motor_app
+/usr/bin/cmake -E cmake_link_script CMakeFiles/motor_app.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/motor_app.dir/main.cpp.o CMakeFiles/motor_app.dir/motor.cpp.o -o motor_app 
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[100%] Built target motor_app
+gmake[1]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/cmake -E cmake_progress_start /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles 0
++ sleep 1
++ python3 - /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/motor.cpp
+Private source copy: changed output string in motor.cpp only.
++ diff -u /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/motor.cpp /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/motor.cpp
++ [[ 1 == 1 ]]
++ cmake --build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build --verbose
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/cmake_incremental.log
+/usr/bin/cmake -S/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source -B/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/stop_distance.dir/build.make CMakeFiles/stop_distance.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/stop_distance.dir/DependInfo.cmake --color=
+Dependencies file "CMakeFiles/stop_distance.dir/stop_distance.cpp.o.d" is newer than depends file "/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/stop_distance.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target stop_distance
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/stop_distance.dir/build.make CMakeFiles/stop_distance.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+gmake[2]: Nothing to be done for 'CMakeFiles/stop_distance.dir/build'.
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[ 40%] Built target stop_distance
+/usr/bin/gmake  -f CMakeFiles/motor_app.dir/build.make CMakeFiles/motor_app.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/motor_app.dir/DependInfo.cmake --color=
+Dependencies file "CMakeFiles/motor_app.dir/main.cpp.o.d" is newer than depends file "/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/motor_app.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/motor_app.dir/motor.cpp.o.d" is newer than depends file "/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles/motor_app.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target motor_app
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/gmake  -f CMakeFiles/motor_app.dir/build.make CMakeFiles/motor_app.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[ 60%] Building CXX object CMakeFiles/motor_app.dir/motor.cpp.o
+/usr/bin/c++   -Wall -std=c++17 -MD -MT CMakeFiles/motor_app.dir/motor.cpp.o -MF CMakeFiles/motor_app.dir/motor.cpp.o.d -o CMakeFiles/motor_app.dir/motor.cpp.o -c /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/motor.cpp
+[ 80%] Linking CXX executable motor_app
+/usr/bin/cmake -E cmake_link_script CMakeFiles/motor_app.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/motor_app.dir/main.cpp.o CMakeFiles/motor_app.dir/motor.cpp.o -o motor_app 
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+[100%] Built target motor_app
+gmake[1]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build'
+/usr/bin/cmake -E cmake_progress_start /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/CMakeFiles 0
++ python3 - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/cmake_incremental.log
+Incremental compilation: motor.cpp only; main.cpp not recompiled.
++ /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_build/motor_app
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/motor_after_edit.log
+left motor speed after edit: 120 rpm
+right motor speed after edit: 115 rpm
++ grep -q 'motor speed after edit:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem1/motor_after_edit.log
++ echo PROBLEM1_PASS
+PROBLEM1_PASS
++ echo
+
++ echo '=== Problem 2: polymorphism, count_if, ASan failures and fix ==='
+=== Problem 2: polymorphism, count_if, ASan failures and fix ===
++ cmake -S /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors -B /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build -DCMAKE_BUILD_TYPE=Debug
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/cmake_configure.log
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build
++ cmake --build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build --verbose
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/cmake_build.log
+/usr/bin/cmake -S/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors -B/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/CMakeFiles /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+/usr/bin/gmake  -f CMakeFiles/sensors_app.dir/build.make CMakeFiles/sensors_app.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/CMakeFiles/sensors_app.dir/DependInfo.cmake --color=
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+/usr/bin/gmake  -f CMakeFiles/sensors_app.dir/build.make CMakeFiles/sensors_app.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+[ 16%] Building CXX object CMakeFiles/sensors_app.dir/main.cpp.o
+/usr/bin/c++  -I/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors -g -Wall -Wextra -Wpedantic -Wnon-virtual-dtor -std=c++17 -MD -MT CMakeFiles/sensors_app.dir/main.cpp.o -MF CMakeFiles/sensors_app.dir/main.cpp.o.d -o CMakeFiles/sensors_app.dir/main.cpp.o -c /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp
+[ 33%] Linking CXX executable sensors_app
+/usr/bin/cmake -E cmake_link_script CMakeFiles/sensors_app.dir/link.txt --verbose=1
+/usr/bin/c++ -g CMakeFiles/sensors_app.dir/main.cpp.o -o sensors_app 
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+[ 33%] Built target sensors_app
+/usr/bin/gmake  -f CMakeFiles/sensors_asan.dir/build.make CMakeFiles/sensors_asan.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/CMakeFiles/sensors_asan.dir/DependInfo.cmake --color=
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+/usr/bin/gmake  -f CMakeFiles/sensors_asan.dir/build.make CMakeFiles/sensors_asan.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+[ 50%] Building CXX object CMakeFiles/sensors_asan.dir/main.cpp.o
+/usr/bin/c++  -I/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors -g -Wall -Wextra -Wpedantic -Wnon-virtual-dtor -fsanitize=address -fno-omit-frame-pointer -std=c++17 -MD -MT CMakeFiles/sensors_asan.dir/main.cpp.o -MF CMakeFiles/sensors_asan.dir/main.cpp.o.d -o CMakeFiles/sensors_asan.dir/main.cpp.o -c /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp
+[ 66%] Linking CXX executable sensors_asan
+/usr/bin/cmake -E cmake_link_script CMakeFiles/sensors_asan.dir/link.txt --verbose=1
+/usr/bin/c++ -g -fsanitize=address CMakeFiles/sensors_asan.dir/main.cpp.o -o sensors_asan 
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+[ 66%] Built target sensors_asan
+/usr/bin/gmake  -f CMakeFiles/sensors_no_virtual.dir/build.make CMakeFiles/sensors_no_virtual.dir/depend
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+cd /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/CMakeFiles/sensors_no_virtual.dir/DependInfo.cmake --color=
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+/usr/bin/gmake  -f CMakeFiles/sensors_no_virtual.dir/build.make CMakeFiles/sensors_no_virtual.dir/build
+gmake[2]: Entering directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+[ 83%] Building CXX object CMakeFiles/sensors_no_virtual.dir/main.cpp.o
+/usr/bin/c++ -DSENSOR_DEMO_NON_VIRTUAL_DESTRUCTOR -I/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors -g -Wall -Wextra -Wpedantic -Wnon-virtual-dtor -fsanitize=address -fno-omit-frame-pointer -std=c++17 -MD -MT CMakeFiles/sensors_no_virtual.dir/main.cpp.o -MF CMakeFiles/sensors_no_virtual.dir/main.cpp.o.d -o CMakeFiles/sensors_no_virtual.dir/main.cpp.o -c /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp
+In file included from /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/imu.hpp:3,
+                 from /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:1:
+/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/sensor.hpp:9:7: warning: ‘class Sensor’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+    9 | class Sensor {
+      |       ^~~~~~
+In file included from /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:1:
+/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/imu.hpp:10:7: warning: base class ‘class Sensor’ has accessible non-virtual destructor [-Wnon-virtual-dtor]
+   10 | class Imu final : public Sensor {
+      |       ^~~
+In file included from /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:2:
+/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/lidar.hpp:10:7: warning: base class ‘class Sensor’ has accessible non-virtual destructor [-Wnon-virtual-dtor]
+   10 | class Lidar final : public Sensor {
+      |       ^~~~~
+[100%] Linking CXX executable sensors_no_virtual
+/usr/bin/cmake -E cmake_link_script CMakeFiles/sensors_no_virtual.dir/link.txt --verbose=1
+/usr/bin/c++ -g -fsanitize=address CMakeFiles/sensors_no_virtual.dir/main.cpp.o -o sensors_no_virtual 
+gmake[2]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+[100%] Built target sensors_no_virtual
+gmake[1]: Leaving directory '/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build'
+/usr/bin/cmake -E cmake_progress_start /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/CMakeFiles 0
++ /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/sensors_app
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/normal.log
+Modern C++ sensor hierarchy demo
+
+=== 1. Polymorphism with unique_ptr ===
+[create] Sensor base: front_lidar
+[create] Lidar: front_lidar
+[create] Sensor base: body_imu
+[create] Imu: body_imu
+[read] front_lidar (Lidar) = 1.20 m
+[read] body_imu (Imu yaw rate) = 0.35 rad/s
+
+Latest measurements (unordered_map)
+  body_imu -> 0.35
+  front_lidar -> 1.20
+Records within 0.35 m: 1
+Leaving this function destroys vector elements automatically.
+[destroy] Lidar: front_lidar
+[destroy] Sensor base: front_lidar
+[destroy] Imu: body_imu
+[destroy] Sensor base: body_imu
+
+=== 2. clamp template ===
+double speed: 3.70 -> 2.00
+int pixel: 300 -> 255
+
+=== 3. Stack lifetime ===
+[create] Sensor base: stack_lidar
+[create] Lidar: stack_lidar
+[read] stack_lidar (Lidar) = 2.40 m
+End of stack scope -> destructor runs now.
+[destroy] Lidar: stack_lidar
+[destroy] Sensor base: stack_lidar
+
+=== 4. Heap lifetime managed by unique_ptr ===
+[create] Sensor base: heap_imu
+[create] Imu: heap_imu
+[read] heap_imu (Imu yaw rate) = 0.75 rad/s
+End of unique_ptr scope -> destructor runs now.
+[destroy] Imu: heap_imu
+[destroy] Sensor base: heap_imu
+
+All normal demonstrations completed.
++ grep -q 'Records within 0.35 m: 1' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/normal.log
++ grep -q 'double speed: 3.70 -> 2.00' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/normal.log
++ grep -q 'int pixel: 300 -> 255' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/normal.log
++ grep -q '\[destroy\] Lidar: stack_lidar' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/normal.log
++ grep -q '\[destroy\] Imu: heap_imu' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/normal.log
+++ grep -n -m1 '\[destroy\] Lidar: front_lidar' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/normal.log
+++ cut -d: -f1
++ LIDAR_LINE=16
+++ grep -n -m1 '\[destroy\] Sensor base: front_lidar' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/normal.log
+++ cut -d: -f1
++ BASE_LINE=17
++ [[ 16 -lt 17 ]]
++ set +e
++ /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/sensors_no_virtual --destructor-demo
++ NO_VIRTUAL_STATUS=1
++ ASAN_OPTIONS=detect_leaks=1
++ /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/sensors_asan --leak
++ LEAK_STATUS=1
++ set -e
++ [[ 1 -ne 0 ]]
++ [[ 1 -ne 0 ]]
++ grep -q new-delete-type-mismatch /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/no_virtual.log
++ grep -Eq 'detected memory leaks|LeakSanitizer|byte\(s\) leaked' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/leak.log
++ echo 'Expected non-virtual destructor failure reproduced: exit=1'
+Expected non-virtual destructor failure reproduced: exit=1
++ echo 'Expected leak failure reproduced: exit=1'
+Expected leak failure reproduced: exit=1
++ ASAN_OPTIONS=detect_leaks=1
++ /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/sensors_asan --fixed
++ grep -Eq 'ERROR: (AddressSanitizer|LeakSanitizer)' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem1_2/problem2/fixed.log
++ echo PROBLEM2_PASS
+PROBLEM2_PASS
++ cleanup
++ local id

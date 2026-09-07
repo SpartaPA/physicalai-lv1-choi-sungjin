@@ -1,0 +1,24 @@
+=================================================================
+==11181==ERROR: AddressSanitizer: new-delete-type-mismatch on 0x506000000020 in thread T0:
+  object passed to delete has wrong type:
+  size of the allocated type:   64 bytes;
+  size of the deallocated type: 40 bytes.
+    #0 0x7ed8140b724f in operator delete(void*, unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:172
+    #1 0x59646fcf6edc in std::default_delete<Sensor>::operator()(Sensor*) const /usr/include/c++/11/bits/unique_ptr.h:85
+    #2 0x59646fcf82c9 in std::__uniq_ptr_impl<Sensor, std::default_delete<Sensor> >::reset(Sensor*) /usr/include/c++/11/bits/unique_ptr.h:182
+    #3 0x59646fcf6509 in std::unique_ptr<Sensor, std::default_delete<Sensor> >::reset(Sensor*) /usr/include/c++/11/bits/unique_ptr.h:456
+    #4 0x59646fcf1f32 in main /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:128
+    #5 0x7ed813829d8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+    #6 0x7ed813829e3f in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x29e3f)
+    #7 0x59646fcef8e4 in _start (/mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem2/build/sensors_no_virtual+0x48e4)
+
+0x506000000020 is located 0 bytes inside of 64-byte region [0x506000000020,0x506000000060)
+allocated by thread T0 here:
+    #0 0x7ed8140b61e7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x59646fcf62df in std::_MakeUniq<Lidar>::__single_object std::make_unique<Lidar, char const (&) [22], double>(char const (&) [22], double&&) /usr/include/c++/11/bits/unique_ptr.h:962
+    #2 0x59646fcf1e63 in main /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/cpp_basics/sensors/main.cpp:125
+    #3 0x7ed813829d8f  (/lib/x86_64-linux-gnu/libc.so.6+0x29d8f)
+
+SUMMARY: AddressSanitizer: new-delete-type-mismatch ../../../../src/libsanitizer/asan/asan_new_delete.cpp:172 in operator delete(void*, unsigned long)
+==11181==HINT: if you don't care about these errors you may set ASAN_OPTIONS=new_delete_type_mismatch=0
+==11181==ABORTING

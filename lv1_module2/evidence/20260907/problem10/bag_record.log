@@ -1,0 +1,11 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1788766851.747214946] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1788766851.777592100] [rosbag2_storage]: Opened database '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050/problem10_pose_distance_20260907_164050_0.db3' for READ_WRITE.
+[INFO] [1788766851.781580510] [rosbag2_recorder]: Listening for topics...
+[INFO] [1788766851.781611930] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1788766851.805668313] [rosbag2_recorder]: Subscribed to topic '/turtle1/pose'
+[INFO] [1788766851.806374416] [rosbag2_recorder]: Recording...
+[INFO] [1788766852.795314749] [rosbag2_recorder]: Subscribed to topic '/turtle_distance'
+[INFO] [1788766852.795626783] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1788766880.722338883] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1788766880.733320191] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1788766880.733621097] [rosbag2_recorder]: Recording stopped

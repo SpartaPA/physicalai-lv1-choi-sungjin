@@ -1,0 +1,4 @@
+/turtle1/teleport_absolute: turtlesim/srv/TeleportAbsolute
+/turtle1/set_pen: turtlesim/srv/SetPen
+/spawn: turtlesim/srv/Spawn
+/clear: std_srvs/srv/Empty

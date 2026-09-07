@@ -1,0 +1,70 @@
+Client edge checks | domain=62 | 2026-09-07T17:06:14+09:00
+ROS_LOCALHOST_ONLY=0 RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+FASTRTPS_DEFAULT_PROFILES_FILE=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/config/fastdds_loopback.xml
+
+CHECK clean_domain expected_exit=0 timeout=5s
+No existing application nodes discovered in the dedicated test domain.
+clean_domain	expected=0	actual=0
+
+CHECK service_unavailable expected_exit=1 timeout=7s
+[ERROR] [1788768383.399286041] [service_sequence_client]: service unavailable: /turtle1/teleport_absolute
+service_unavailable	expected=1	actual=1
+
+CHECK rotate_unavailable expected_exit=1 timeout=7s
+[ERROR] [1788768389.502541605] [rotate_action_client]: RotateAbsolute action server is unavailable
+rotate_unavailable	expected=1	actual=1
+
+CHECK polygon_unavailable expected_exit=1 timeout=7s
+[ERROR] [1788768395.676466022] [draw_polygon_client]: DrawPolygon action server is unavailable
+polygon_unavailable	expected=1	actual=1
+
+CHECK turtlesim_services_ready expected_exit=0 timeout=10s
+Discovered built-in service: /turtle1/teleport_absolute
+Discovered built-in service: /turtle1/set_pen
+Discovered built-in service: /spawn
+Discovered built-in service: /clear
+turtlesim_services_ready	expected=0	actual=0
+
+CHECK service_first_run expected_exit=0 timeout=12s
+[INFO] [1788768397.766585337] [service_sequence_client]: calling /turtle1/teleport_absolute with call_async()
+[INFO] [1788768397.786113412] [service_sequence_client]: /turtle1/teleport_absolute response: turtlesim.srv.TeleportAbsolute_Response()
+[INFO] [1788768397.801211571] [service_sequence_client]: calling /turtle1/set_pen with call_async()
+[INFO] [1788768397.819156848] [service_sequence_client]: /turtle1/set_pen response: turtlesim.srv.SetPen_Response()
+[INFO] [1788768397.833034383] [service_sequence_client]: calling /spawn with call_async()
+[INFO] [1788768397.852866034] [service_sequence_client]: /spawn response: turtlesim.srv.Spawn_Response(name='turtle2')
+[INFO] [1788768397.872641279] [service_sequence_client]: calling /clear with call_async()
+[INFO] [1788768397.895632702] [service_sequence_client]: /clear response: std_srvs.srv.Empty_Response()
+[INFO] [1788768397.906740697] [service_sequence_client]: all four built-in service calls completed
+service_first_run	expected=0	actual=0
+
+CHECK service_duplicate_spawn expected_exit=1 timeout=12s
+[INFO] [1788768398.974026319] [service_sequence_client]: calling /turtle1/teleport_absolute with call_async()
+[INFO] [1788768399.000929054] [service_sequence_client]: /turtle1/teleport_absolute response: turtlesim.srv.TeleportAbsolute_Response()
+[INFO] [1788768399.014061706] [service_sequence_client]: calling /turtle1/set_pen with call_async()
+[INFO] [1788768399.033267494] [service_sequence_client]: /turtle1/set_pen response: turtlesim.srv.SetPen_Response()
+[INFO] [1788768399.044489429] [service_sequence_client]: calling /spawn with call_async()
+[INFO] [1788768399.061511082] [service_sequence_client]: /spawn response: turtlesim.srv.Spawn_Response(name='')
+[ERROR] [1788768399.074911733] [service_sequence_client]: spawn failed to create turtle2; service sequence stopped
+service_duplicate_spawn	expected=1	actual=1
+
+CHECK polygon_invalid_sides expected_exit=1 timeout=9s
+[INFO] [1788768400.525468770] [draw_polygon_client]: sending polygon goal: sides=2, side_length=2.00
+[ERROR] [1788768401.009922186] [draw_polygon_client]: polygon goal was rejected
+polygon_invalid_sides	expected=1	actual=1
+
+CHECK polygon_concurrent_goal expected_exit=0 timeout=22s
+First goal active; measured displacement=0.032000 m
+[INFO] [1788768403.280957149] [draw_polygon_client]: sending polygon goal: sides=3, side_length=0.70
+[ERROR] [1788768403.299110123] [draw_polygon_client]: polygon goal was rejected
+Second client exit=1
+Active first goal preserved; second goal rejected; first goal canceled for cleanup.
+polygon_concurrent_goal	expected=0	actual=0
+
+CHECK square_pause_resume expected_exit=0 timeout=20s
+SetBool(False) success=True message=square driving disabled and turtle stopped
+Disabled interval=1.0s Pose_count=62 cmd_vel_count=0 max_translation=0.00000000 max_angle_change=0.00000000
+SetBool(True) success=True message=square driving enabled
+Resumed displacement=0.032000 m; cmd_vel_count=1
+SetBool(False) success=True message=square driving disabled and turtle stopped
+square_pause_resume	expected=0	actual=0
+CLIENT_EDGES_RUNTIME_PASS elapsed=36s

@@ -1,0 +1,6 @@
+waiting for service to become available...
+requester: making request: std_srvs.srv.SetBool_Request(data=False)
+
+response:
+std_srvs.srv.SetBool_Response(success=True, message='square driving disabled and turtle stopped')
+

@@ -1,0 +1,6 @@
+waiting for service to become available...
+requester: making request: turtle_interfaces.srv.SetGain_Request(kp=5.0, ki=0.0, kd=0.0)
+
+response:
+turtle_interfaces.srv.SetGain_Response(success=True, message='gains stored: kp=5.00, ki=0.00, kd=0.00')
+

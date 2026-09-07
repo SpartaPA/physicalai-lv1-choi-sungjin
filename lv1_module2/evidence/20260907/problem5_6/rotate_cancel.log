@@ -1,0 +1,20 @@
+[INFO] [1788765061.556224258] [rotate_action_client]: sending target angle -2.5000 rad
+[INFO] [1788765061.577820274] [rotate_action_client]: rotation remaining: 2.7912 rad
+[INFO] [1788765061.587659227] [rotate_action_client]: rotation goal accepted
+[INFO] [1788765061.597222705] [rotate_action_client]: rotation remaining: 2.7752 rad
+[INFO] [1788765061.609720575] [rotate_action_client]: rotation remaining: 2.7592 rad
+[INFO] [1788765061.625792340] [rotate_action_client]: rotation remaining: 2.7432 rad
+[INFO] [1788765061.643175613] [rotate_action_client]: rotation remaining: 2.7272 rad
+[INFO] [1788765061.657303785] [rotate_action_client]: rotation remaining: 2.7112 rad
+[INFO] [1788765061.673586229] [rotate_action_client]: rotation remaining: 2.6952 rad
+[INFO] [1788765061.689811644] [rotate_action_client]: rotation remaining: 2.6792 rad
+[INFO] [1788765061.706262524] [rotate_action_client]: rotation remaining: 2.6632 rad
+[INFO] [1788765061.722292396] [rotate_action_client]: rotation remaining: 2.6472 rad
+[INFO] [1788765061.738061328] [rotate_action_client]: rotation remaining: 2.6312 rad
+[INFO] [1788765061.754408634] [rotate_action_client]: rotation remaining: 2.6152 rad
+[INFO] [1788765061.770169687] [rotate_action_client]: rotation remaining: 2.5992 rad
+[INFO] [1788765061.785797643] [rotate_action_client]: rotation remaining: 2.5832 rad
+[WARN] [1788765061.796957548] [rotate_action_client]: requesting action cancel at turtle angle 1.2160 rad
+[INFO] [1788765061.807046344] [rotate_action_client]: rotation remaining: 2.5672 rad
+[INFO] [1788765061.818535441] [rotate_action_client]: cancel response: 1 goal(s) canceling
+[INFO] [1788765061.828416075] [rotate_action_client]: rotation action finished: CANCELED

@@ -1,0 +1,20 @@
+/turtle2/distance_publisher
+  Subscribers:
+    /turtle2/pose: turtlesim/msg/Pose
+  Publishers:
+    /parameter_events: rcl_interfaces/msg/ParameterEvent
+    /rosout: rcl_interfaces/msg/Log
+    /turtle2/turtle_distance: std_msgs/msg/Float32
+  Service Servers:
+    /turtle2/distance_publisher/describe_parameters: rcl_interfaces/srv/DescribeParameters
+    /turtle2/distance_publisher/get_parameter_types: rcl_interfaces/srv/GetParameterTypes
+    /turtle2/distance_publisher/get_parameters: rcl_interfaces/srv/GetParameters
+    /turtle2/distance_publisher/list_parameters: rcl_interfaces/srv/ListParameters
+    /turtle2/distance_publisher/set_parameters: rcl_interfaces/srv/SetParameters
+    /turtle2/distance_publisher/set_parameters_atomically: rcl_interfaces/srv/SetParametersAtomically
+  Service Clients:
+
+  Action Servers:
+
+  Action Clients:
+

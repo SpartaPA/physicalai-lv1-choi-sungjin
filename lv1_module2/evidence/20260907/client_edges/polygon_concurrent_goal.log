@@ -1,0 +1,5 @@
+First goal active; measured displacement=0.032000 m
+[INFO] [1788768403.280957149] [draw_polygon_client]: sending polygon goal: sides=3, side_length=0.70
+[ERROR] [1788768403.299110123] [draw_polygon_client]: polygon goal was rejected
+Second client exit=1
+Active first goal preserved; second goal rejected; first goal canceled for cleanup.

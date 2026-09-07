@@ -1,0 +1,2 @@
+[WARN] [1788768357.443644984] [distance_publisher]: publish_rate must be greater than zero; using 10.0 Hz
+[INFO] [1788768357.473830545] [distance_publisher]: distance publisher: /turtle1/pose -> /turtle_distance, 10.0 Hz, reliable/volatile

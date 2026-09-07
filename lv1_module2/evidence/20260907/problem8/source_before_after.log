@@ -1,0 +1,20 @@
+Before source install/setup.bash
+AMENT_PREFIX_PATH=/opt/ros/humble
+PYTHONPATH=/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+Package 'turtle_py' not found
+ros2 run exit=1
+After source install/setup.bash
+AMENT_PREFIX_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_cpp:/opt/ros/humble
+PYTHONPATH=/home/chsjh/physicalai_lv1_build/module2_20260907/build/turtle_py:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/python3.10/site-packages:/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages
+turtle_py distance_publisher
+turtle_py draw_polygon_client
+turtle_py draw_polygon_server
+turtle_py pose_tf_broadcaster
+turtle_py rotate_action_client
+turtle_py service_sequence_client
+turtle_py slow_distance_subscriber
+turtle_py square_driver
+turtle_py warn_subscriber
+turtle_py waypoint_marker_publisher
+turtle_py waypoint_publisher
+turtle_py waypoint_subscriber

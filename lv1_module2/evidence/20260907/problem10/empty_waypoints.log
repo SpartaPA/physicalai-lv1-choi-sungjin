@@ -1,0 +1,2 @@
+[WARN] [1788768365.045502725] [waypoint_publisher]: empty waypoint list received; nothing will be published
+[INFO] [1788768365.052626149] [waypoint_publisher]: waypoint publisher on /waypoints: reliable/transient_local/depth 1

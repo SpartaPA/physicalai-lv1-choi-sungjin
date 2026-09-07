@@ -1,0 +1,15 @@
+[INFO] [1788765041.435321692] [turtlesim]: Starting turtlesim with node name /turtlesim
+[INFO] [1788765041.449223512] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[INFO] [1788765049.521754690] [turtlesim]: Spawning turtle [turtle2] at x=[8.000000], y=[8.000000], theta=[0.000000]
+[INFO] [1788765049.552093426] [turtlesim]: Clearing turtlesim.
+[INFO] [1788765059.904258599] [turtlesim]: Rotation goal completed successfully
+[INFO] [1788765061.808513106] [turtlesim]: Rotation goal canceled
+[INFO] [1788765072.335772786] [turtlesim]: Resetting turtlesim.
+[INFO] [1788765072.340934515] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[INFO] [1788765087.007835780] [turtlesim]: Resetting turtlesim.
+[INFO] [1788765087.011148700] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[INFO] [1788765105.263917522] [turtlesim]: Resetting turtlesim.
+[INFO] [1788765105.266974657] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[INFO] [1788765130.415906245] [turtlesim]: Resetting turtlesim.
+[INFO] [1788765130.419106279] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[INFO] [1788765136.840621539] [rclcpp]: signal_handler(SIGINT/SIGTERM)

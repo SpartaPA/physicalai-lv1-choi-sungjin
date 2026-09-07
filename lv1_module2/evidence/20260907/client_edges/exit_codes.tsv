@@ -1,0 +1,11 @@
+check	expected	actual
+clean_domain	expected=0	actual=0
+service_unavailable	expected=1	actual=1
+rotate_unavailable	expected=1	actual=1
+polygon_unavailable	expected=1	actual=1
+turtlesim_services_ready	expected=0	actual=0
+service_first_run	expected=0	actual=0
+service_duplicate_spawn	expected=1	actual=1
+polygon_invalid_sides	expected=1	actual=1
+polygon_concurrent_goal	expected=0	actual=0
+square_pause_resume	expected=0	actual=0

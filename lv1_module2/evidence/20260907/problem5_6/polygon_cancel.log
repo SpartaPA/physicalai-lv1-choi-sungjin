@@ -1,0 +1,4 @@
+[INFO] [1788765132.258261133] [draw_polygon_client]: sending polygon goal: sides=6, side_length=1.00
+[WARN] [1788765132.780839466] [draw_polygon_client]: requesting DrawPolygon cancellation
+[INFO] [1788765132.859609117] [draw_polygon_client]: cancel response: 1 goal(s)
+[INFO] [1788765132.925717264] [draw_polygon_client]: polygon result: CANCELED, total_distance=0.48 m

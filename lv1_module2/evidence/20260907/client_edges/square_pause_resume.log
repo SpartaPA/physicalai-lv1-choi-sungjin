@@ -1,0 +1,5 @@
+SetBool(False) success=True message=square driving disabled and turtle stopped
+Disabled interval=1.0s Pose_count=62 cmd_vel_count=0 max_translation=0.00000000 max_angle_change=0.00000000
+SetBool(True) success=True message=square driving enabled
+Resumed displacement=0.032000 m; cmd_vel_count=1
+SetBool(False) success=True message=square driving disabled and turtle stopped

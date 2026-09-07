@@ -1,0 +1,4 @@
+[INFO] [1788765051.053576810] [square_driver]: square driver started; for-loop sides=4; services: /set_driving and /save_home
+[INFO] [1788765051.075937376] [square_driver]: side 1/4 target: x=5.000, y=3.000
+[INFO] [1788765052.080427640] [square_driver]: square driving disabled and turtle stopped
+[INFO] [1788765056.997737783] [square_driver]: home saved at x=3.992, y=3.000, theta=0.000

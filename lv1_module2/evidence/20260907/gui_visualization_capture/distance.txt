@@ -1,0 +1,1 @@
+[INFO] [1788767896.426220744] [distance_publisher]: distance publisher: /turtle1/pose -> /turtle_distance, 10.0 Hz, reliable/volatile

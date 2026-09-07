@@ -1,0 +1,52 @@
+[INFO] [1788767908.162448557] [tf2_echo]: Waiting for transform world ->  turtle1: Invalid frame ID "world" passed to canTransform argument target_frame - frame does not exist
+At time 1788767908.819223860
+- Translation: [5.544, 5.544, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  5.544
+  0.000  1.000  0.000  5.544
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+At time 1788767909.827346424
+- Translation: [5.544, 5.544, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  5.544
+  0.000  1.000  0.000  5.544
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+At time 1788767910.834809022
+- Translation: [5.544, 5.544, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  5.544
+  0.000  1.000  0.000  5.544
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+At time 1788767911.826892741
+- Translation: [5.544, 5.544, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  5.544
+  0.000  1.000  0.000  5.544
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+At time 1788767912.819089055
+- Translation: [5.544, 5.544, 0.000]
+- Rotation: in Quaternion (xyzw) [0.000, 0.000, 0.000, 1.000]
+- Rotation: in RPY (radian) [0.000, -0.000, 0.000]
+- Rotation: in RPY (degree) [0.000, -0.000, 0.000]
+- Matrix:
+  1.000  0.000  0.000  5.544
+  0.000  1.000  0.000  5.544
+  0.000  0.000  1.000  0.000
+  0.000  0.000  0.000  1.000
+[INFO] [1788767913.567241230] [rclcpp]: signal_handler(SIGINT/SIGTERM)

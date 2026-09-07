@@ -1,0 +1,8 @@
+[INFO] [1788768400.469656540] [draw_polygon_server]: DrawPolygon action server ready on /draw_polygon; cmd_vel=/turtle1/cmd_vel
+[WARN] [1788768401.001527192] [draw_polygon_server]: rejecting polygon: sides must be at least 3
+[INFO] [1788768402.502829850] [draw_polygon_server]: accepting polygon: 8 sides, 0.70 m each
+[INFO] [1788768402.520460017] [draw_polygon_server]: polygon side 1/8 target: x=3.700, y=3.000
+[WARN] [1788768403.290223161] [draw_polygon_server]: rejecting polygon: another goal is active
+[WARN] [1788768403.477821960] [draw_polygon_server]: polygon cancel request accepted; turtle stopped
+[WARN] [1788768403.546867017] [draw_polygon_server]: polygon canceled after 0 complete side(s); distance=0.54 m
+The following exception was never retrieved: cannot use Destroyable because destruction was requested

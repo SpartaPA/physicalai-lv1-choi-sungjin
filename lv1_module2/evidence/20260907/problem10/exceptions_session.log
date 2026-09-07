@@ -1,0 +1,205 @@
++ [[ --exceptions-only != --exceptions-only ]]
+++ cat /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_path.log
++ BAG_PATH=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
++ assert_hz /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log 8.5 11.5
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/assert_hz.py /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log 8.5 11.5
+Observed final rate=10.000 Hz; accepted range=8.5..11.5
++ python - /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050 /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/reused_replay_tf_verification.log
+Reused successful player/echo exit codes, actual Pose/distance, unchanged bag hashes, TF translation, and 4-point world Marker.
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_publish_rate.log ros2 run turtle_py distance_publisher --ros-args -p publish_rate:=0.0
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_publish_rate.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_publish_rate.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=21183
++ setsid ros2 run turtle_py distance_publisher --ros-args -p publish_rate:=0.0
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ INVALID_ID=21183
++ sleep 3
++ kill -0 21183
++ assert_venv_node_alive 21183 distance_publisher /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_rate_process_alive.log
++ python - 21183 distance_publisher /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_rate_process_alive.log
+observation=1 parent=21183 child=21185 state=S argv=['/home/chsjh/.venvs/ros2-humble/bin/python', '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/distance_publisher', '--ros-args', '-p', 'publish_rate:=0.0']
+observation=2 parent=21183 child=21185 state=S argv=['/home/chsjh/.venvs/ros2-humble/bin/python', '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/distance_publisher', '--ros-args', '-p', 'publish_rate:=0.0']
+PASS distance_publisher: same actual venv node process alive in two observations 2 seconds apart
++ ros2 node list --no-daemon --spin-time 1
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_rate_nodes.log
++ echo 'The CLI node list is an observation; actual venv node process survival is checked above.'
+The CLI node list is an observation; actual venv node process survival is checked above.
++ stop_group 21183
++ local id=21183
++ [[ 1 == 1 ]]
++ kill -INT -- -21183
++ for _ in {1..30}
++ kill -0 21183
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 21183
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 21183
++ break
++ kill -TERM -- -21183
++ true
++ for _ in {1..20}
++ kill -0 21183
++ break
++ kill -KILL -- -21183
++ true
++ wait 21183
++ unset 'ACTIVE_GROUPS[$id]'
++ start_node /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/empty_waypoints.log ros2 run turtle_py waypoint_publisher --ros-args -p 'x_values:=[]' -p 'y_values:=[]' -p 'tolerances:=[]' -p 'labels:=[]'
++ local log_file=/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/empty_waypoints.log
++ shift
+++ dirname -- /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/empty_waypoints.log
++ mkdir -p /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ LAST_GROUP_ID=21211
++ STARTED_GROUP_IDS+=("$LAST_GROUP_ID")
++ ACTIVE_GROUPS[$LAST_GROUP_ID]=1
++ setsid ros2 run turtle_py waypoint_publisher --ros-args -p 'x_values:=[]' -p 'y_values:=[]' -p 'tolerances:=[]' -p 'labels:=[]'
++ EMPTY_ID=21211
++ sleep 3
++ kill -0 21211
++ assert_venv_node_alive 21211 waypoint_publisher /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/empty_waypoints_process_alive.log
++ python - 21211 waypoint_publisher /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/empty_waypoints_process_alive.log
+observation=1 parent=21211 child=21213 state=S argv=['/home/chsjh/.venvs/ros2-humble/bin/python', '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/waypoint_publisher', '--ros-args', '-p', 'x_values:=[]', '-p', 'y_values:=[]', '-p', 'tolerances:=[]', '-p', 'labels:=[]']
+observation=2 parent=21211 child=21213 state=S argv=['/home/chsjh/.venvs/ros2-humble/bin/python', '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/install/turtle_py/lib/turtle_py/waypoint_publisher', '--ros-args', '-p', 'x_values:=[]', '-p', 'y_values:=[]', '-p', 'tolerances:=[]', '-p', 'labels:=[]']
+PASS waypoint_publisher: same actual venv node process alive in two observations 2 seconds apart
++ ros2 node list --no-daemon --spin-time 1
++ tee /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/empty_waypoints_nodes.log
++ echo 'The CLI node list is an observation; actual venv node process survival is checked above.'
+The CLI node list is an observation; actual venv node process survival is checked above.
++ stop_group 21211
++ local id=21211
++ [[ 1 == 1 ]]
++ kill -INT -- -21211
++ for _ in {1..30}
++ kill -0 21211
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 21211
++ sleep 0.1
++ for _ in {1..30}
++ kill -0 21211
++ break
++ kill -TERM -- -21211
++ true
++ for _ in {1..20}
++ kill -0 21211
++ break
++ kill -KILL -- -21211
++ true
++ wait 21211
++ unset 'ACTIVE_GROUPS[$id]'
++ grep -E 'Traceback|RCLError' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_publish_rate.log /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/empty_waypoints.log
++ grep -q 'average rate:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/hz_while_running.log
++ grep -q 'no fresh pose' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/diagnostic_distance_publisher.log
++ grep -q 'Topic: /turtle1/pose' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_info.log
++ grep -q 'Topic: /turtle_distance' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_info.log
++ grep -q data: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/bag_play_echo.log
++ grep -q 'world ->  turtle1' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf2_echo.log
++ grep -q Translation: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/tf2_echo.log
++ grep -q 'frame_id: world' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_echo.log
++ grep -q 'type: 7' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_echo.log
++ grep -q 'published RViz marker with 4 point(s)' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_publisher.log
+++ grep -c '^- x:' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/marker_echo.log
++ [[ 4 -ne 4 ]]
++ grep -q 'publish_rate must be greater than zero' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/invalid_publish_rate.log
++ grep -q 'empty waypoint list received' /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10/empty_waypoints.log
++ echo 'Verification logs: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10'
+Verification logs: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
++ echo 'Recorded bag: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050'
+Recorded bag: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/bags/problem10_pose_distance_20260907_164050
++ python3 /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/verify_calculation_mutation.py /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/ros2_ws/src/turtle_py /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_170553_21138/calculation_mutation /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module2/evidence/20260907/problem10
+Experiment uses a private copy of calculations.py and byte-identical original tests.
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/chsjh/.venvs/ros2-humble/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_170553_21138/calculation_mutation
+plugins: colcon-core-0.21.0, cov-3.0.0
+collecting ... collected 3 items
+
+test_calculations.py::test_distance_to_goal_normal_zero_and_invalid PASSED [ 33%]
+test_calculations.py::test_normalize_and_angle_to_goal PASSED            [ 66%]
+test_calculations.py::test_waypoint_reached_inclusive_boundary_and_invalid_tolerance PASSED [100%]
+
+============================== 3 passed in 0.04s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/chsjh/.venvs/ros2-humble/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_170553_21138/calculation_mutation
+plugins: colcon-core-0.21.0, cov-3.0.0
+collecting ... collected 3 items
+
+test_calculations.py::test_distance_to_goal_normal_zero_and_invalid FAILED [ 33%]
+test_calculations.py::test_normalize_and_angle_to_goal PASSED            [ 66%]
+test_calculations.py::test_waypoint_reached_inclusive_boundary_and_invalid_tolerance FAILED [100%]
+
+=================================== FAILURES ===================================
+________________ test_distance_to_goal_normal_zero_and_invalid _________________
+
+    def test_distance_to_goal_normal_zero_and_invalid() -> None:
+>       assert distance_to_goal(0.0, 0.0, 3.0, 4.0) == pytest.approx(5.0)
+E       assert -1.0 == 5.0 ± 5.0e-06
+E         
+E         comparison failed
+E         Obtained: -1.0
+E         Expected: 5.0 ± 5.0e-06
+
+test_calculations.py:16: AssertionError
+________ test_waypoint_reached_inclusive_boundary_and_invalid_tolerance ________
+
+    def test_waypoint_reached_inclusive_boundary_and_invalid_tolerance() -> None:
+        assert waypoint_reached(0.0, 0.0, 0.3, 0.4, 0.5)
+>       assert not waypoint_reached(0.0, 0.0, 0.3, 0.4, 0.499)
+E       assert not True
+E        +  where True = waypoint_reached(0.0, 0.0, 0.3, 0.4, 0.499)
+
+test_calculations.py:34: AssertionError
+=========================== short test summary info ============================
+FAILED test_calculations.py::test_distance_to_goal_normal_zero_and_invalid - ...
+FAILED test_calculations.py::test_waypoint_reached_inclusive_boundary_and_invalid_tolerance
+========================= 2 failed, 1 passed in 0.05s ==========================
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/chsjh/.venvs/ros2-humble/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_170553_21138/calculation_mutation
+plugins: colcon-core-0.21.0, cov-3.0.0
+collecting ... collected 3 items
+
+test_calculations.py::test_distance_to_goal_normal_zero_and_invalid PASSED [ 33%]
+test_calculations.py::test_normalize_and_angle_to_goal PASSED            [ 66%]
+test_calculations.py::test_waypoint_reached_inclusive_boundary_and_invalid_tolerance PASSED [100%]
+
+============================== 3 passed in 0.03s ===============================
+PASS: distance function fault detected; original function restored; unchanged tests pass.
+Original source and tests remained unchanged; source SHA256=2a62cb98d1c0f8fe8f4526652b17095b11753b157f9c096f7b240ff20948f7bd
++ echo 'PROBLEM10_CLI_PASS; actual rqt_graph and RViz2 screenshots require separate GUI verification.'
+PROBLEM10_CLI_PASS; actual rqt_graph and RViz2 screenshots require separate GUI verification.
++ mark_step_complete 10
++ local step=10
++ [[ -n 1788768353044446975_21131_27005 ]]
++ [[ 10 == \1\0 ]]
++ [[ -n /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/receipts/10_1788768353044446975_21131_27005.tsv ]]
++ printf '%s\t%s\n' 10 1788768353044446975_21131_27005
++ printf 'STEP_COMPLETE problem=%s token=%s\n' 10 1788768353044446975_21131_27005
+STEP_COMPLETE problem=10 token=1788768353044446975_21131_27005
++ handle_exit
++ local original_status=0
++ trap - EXIT
++ set +e
++ cleanup
++ local id
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 21183
++ local id=21183
++ [[ '' == 1 ]]
++ return 0
++ for id in "${STARTED_GROUP_IDS[@]}"
++ stop_group 21211
++ local id=21211
++ [[ '' == 1 ]]
++ return 0
++ exit 0

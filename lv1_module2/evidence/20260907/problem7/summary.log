@@ -1,0 +1,10 @@
+Mismatched RELIABLE warning count while both endpoints live: 0
+Matched BEST_EFFORT warning count: 144
+Late TRANSIENT_LOCAL messages after exactly one earlier publication: 1
+Late VOLATILE messages after exactly one earlier publication: 0
+Observed publisher rate: 100.041 Hz
+Observed callback rate: 4.705 Hz over 9.99 s
+Callback samples in interval: 48
+Publication/callback rate ratio: 21.26
+PASS: depth-1 slow reader processes far fewer samples than the measured publication rate
+PASS problem 7 runtime checks

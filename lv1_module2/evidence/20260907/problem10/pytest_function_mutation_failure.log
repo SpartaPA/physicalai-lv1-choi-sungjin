@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/chsjh/.venvs/ros2-humble/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_170553_21138/calculation_mutation
+plugins: colcon-core-0.21.0, cov-3.0.0
+collecting ... collected 3 items
+
+test_calculations.py::test_distance_to_goal_normal_zero_and_invalid FAILED [ 33%]
+test_calculations.py::test_normalize_and_angle_to_goal PASSED            [ 66%]
+test_calculations.py::test_waypoint_reached_inclusive_boundary_and_invalid_tolerance FAILED [100%]
+
+=================================== FAILURES ===================================
+________________ test_distance_to_goal_normal_zero_and_invalid _________________
+
+    def test_distance_to_goal_normal_zero_and_invalid() -> None:
+>       assert distance_to_goal(0.0, 0.0, 3.0, 4.0) == pytest.approx(5.0)
+E       assert -1.0 == 5.0 ± 5.0e-06
+E         
+E         comparison failed
+E         Obtained: -1.0
+E         Expected: 5.0 ± 5.0e-06
+
+test_calculations.py:16: AssertionError
+________ test_waypoint_reached_inclusive_boundary_and_invalid_tolerance ________
+
+    def test_waypoint_reached_inclusive_boundary_and_invalid_tolerance() -> None:
+        assert waypoint_reached(0.0, 0.0, 0.3, 0.4, 0.5)
+>       assert not waypoint_reached(0.0, 0.0, 0.3, 0.4, 0.499)
+E       assert not True
+E        +  where True = waypoint_reached(0.0, 0.0, 0.3, 0.4, 0.499)
+
+test_calculations.py:34: AssertionError
+=========================== short test summary info ============================
+FAILED test_calculations.py::test_distance_to_goal_normal_zero_and_invalid - ...
+FAILED test_calculations.py::test_waypoint_reached_inclusive_boundary_and_invalid_tolerance
+========================= 2 failed, 1 passed in 0.05s ==========================

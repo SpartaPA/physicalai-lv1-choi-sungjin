@@ -1,0 +1,9 @@
+/distance_publisher
+/pose_tf_broadcaster
+/rqt_gui_py_node_20947
+/rviz2
+/transform_listener_impl_5864ba639330
+/turtlesim
+/warn_subscriber
+/waypoint_marker_publisher
+/waypoint_publisher

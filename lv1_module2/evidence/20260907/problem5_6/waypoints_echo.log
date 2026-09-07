@@ -1,0 +1,23 @@
+header:
+  stamp:
+    sec: 1788765071
+    nanosec: 246608062
+  frame_id: world
+waypoints:
+- x: 2.0
+  y: 2.0
+  tolerance: 0.20000000298023224
+  label: start
+- x: 2.0
+  y: 8.0
+  tolerance: 0.25
+  label: upper_left
+- x: 8.0
+  y: 8.0
+  tolerance: 0.25
+  label: upper_right
+- x: 8.0
+  y: 3.0
+  tolerance: 0.20000000298023224
+  label: finish
+---

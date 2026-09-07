@@ -1,0 +1,2 @@
+[INFO] [1788764822.819302055] [cpp_distance_publisher]: C++ distance publisher: /turtle1/pose -> /turtle_distance at 10.0 Hz
+[INFO] [1788764835.031100845] [rclcpp]: signal_handler(SIGINT/SIGTERM)

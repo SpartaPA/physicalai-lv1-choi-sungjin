@@ -1,0 +1,6 @@
+[INFO] [1788768396.562622424] [turtlesim]: Starting turtlesim with node name /turtlesim
+[INFO] [1788768396.571770166] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[INFO] [1788768397.836984006] [turtlesim]: Spawning turtle [turtle2] at x=[8.000000], y=[8.000000], theta=[0.000000]
+[INFO] [1788768397.883632888] [turtlesim]: Clearing turtlesim.
+[ERROR] [1788768399.051710676] [turtlesim]: A turtle named [turtle2] already exists
+[INFO] [1788768407.061248063] [rclcpp]: signal_handler(SIGINT/SIGTERM)

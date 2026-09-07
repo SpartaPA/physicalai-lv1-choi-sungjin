@@ -1,0 +1,9 @@
+--- "/mnt/c/Desktop/coding/physicalai-lv1-\354\265\234\354\204\261\354\247\204/lv1_module2/cpp_basics/motor.cpp"	2026-09-04 11:42:45.459939200 +0900
++++ /mnt/c/Desktop/coding/_PRIVATE_PHYSICALAI/module2_current_verify/run_20260907_153840_10932/problem1/cmake_source/motor.cpp	2026-09-07 15:38:45.134250400 +0900
+@@ -16,5 +16,5 @@
+ 
+ void Motor::print_status() const
+ {
+-    std::cout << name_ << " motor speed: " << rpm_ << " rpm\n";
++    std::cout << name_ << " motor speed after edit: " << rpm_ << " rpm\n";
+ }

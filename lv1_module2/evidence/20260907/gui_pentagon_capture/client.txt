@@ -1,0 +1,7 @@
+[INFO] [1788765626.085035986] [draw_polygon_client]: sending polygon goal: sides=5, side_length=1.50
+[INFO] [1788765629.603399020] [draw_polygon_client]: polygon feedback: completed=1, progress=0.20
+[INFO] [1788765633.521282109] [draw_polygon_client]: polygon feedback: completed=2, progress=0.40
+[INFO] [1788765637.462076136] [draw_polygon_client]: polygon feedback: completed=3, progress=0.60
+[INFO] [1788765641.358153745] [draw_polygon_client]: polygon feedback: completed=4, progress=0.80
+[INFO] [1788765645.231721726] [draw_polygon_client]: polygon feedback: completed=5, progress=1.00
+[INFO] [1788765646.424562342] [draw_polygon_client]: polygon result: SUCCEEDED, total_distance=7.36 m

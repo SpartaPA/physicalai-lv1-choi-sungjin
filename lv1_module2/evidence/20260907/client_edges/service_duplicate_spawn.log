@@ -1,0 +1,7 @@
+[INFO] [1788768398.974026319] [service_sequence_client]: calling /turtle1/teleport_absolute with call_async()
+[INFO] [1788768399.000929054] [service_sequence_client]: /turtle1/teleport_absolute response: turtlesim.srv.TeleportAbsolute_Response()
+[INFO] [1788768399.014061706] [service_sequence_client]: calling /turtle1/set_pen with call_async()
+[INFO] [1788768399.033267494] [service_sequence_client]: /turtle1/set_pen response: turtlesim.srv.SetPen_Response()
+[INFO] [1788768399.044489429] [service_sequence_client]: calling /spawn with call_async()
+[INFO] [1788768399.061511082] [service_sequence_client]: /spawn response: turtlesim.srv.Spawn_Response(name='')
+[ERROR] [1788768399.074911733] [service_sequence_client]: spawn failed to create turtle2; service sequence stopped

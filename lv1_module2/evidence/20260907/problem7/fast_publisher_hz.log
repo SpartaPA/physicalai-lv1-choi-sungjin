@@ -1,0 +1,7 @@
+WARNING: topic [/turtle_distance] does not appear to be published yet
+average rate: 99.996
+	min: 0.010s max: 0.010s std dev: 0.00013s window: 100
+average rate: 99.969
+	min: 0.010s max: 0.011s std dev: 0.00016s window: 100
+average rate: 100.041
+	min: 0.010s max: 0.010s std dev: 0.00016s window: 100
