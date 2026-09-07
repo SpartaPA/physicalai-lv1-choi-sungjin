@@ -1,0 +1,17 @@
+{
+  "python": "/home/chsjh/.venvs/physicalai-lv1-math/bin/python",
+  "python_version": "3.10.12 (main, Jul 15 2026, 23:40:17) [GCC 11.4.0]",
+  "venv": "/home/chsjh/.venvs/physicalai-lv1-math",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "pytest": "9.1.1",
+    "jupyterlab": "4.6.3",
+    "ipykernel": "7.3.0",
+    "nbclient": "0.11.0",
+    "nbformat": "5.11.1",
+    "threadpoolctl": "3.6.0"
+  },
+  "requirements_sha256": "042ac70af6d3dbff9010c116abf9ab1a427be6363efb6513ff4ed328e1eae6a0"
+}

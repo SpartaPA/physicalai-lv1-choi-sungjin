@@ -16,3 +16,11 @@
 - [ROS 2 패키지 소스](lv1_module2/ros2_ws/src/)
 - [실행 화면](lv1_module2/screenshots/20260907/)
 - [실행 로그](lv1_module2/evidence/20260907/)
+
+## 모듈 3 — 로봇 좌표 변환 수학 라이브러리
+
+- [실행 안내와 결과](lv1_module3/README.md)
+- [문제 1~6 노트북](lv1_module3/notebooks/)
+- [수학 라이브러리 소스](lv1_module3/src/)
+- [테스트](lv1_module3/tests/)
+- [그래프와 3D 그림](lv1_module3/images/20260907/)

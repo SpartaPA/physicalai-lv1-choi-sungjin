@@ -1,0 +1,14 @@
+{
+  "notebook": "04_linear_system.ipynb",
+  "started": "2026-09-07T18:21:39+0900",
+  "finished": "2026-09-07T18:22:20+0900",
+  "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+  "pass_lines": 34,
+  "protected_cells": 7,
+  "images": [
+    "images/20260907/04_linear_system_1.png",
+    "images/20260907/04_linear_system_2.png"
+  ],
+  "notebook_sha256": "d4c5df29736d37996008cd6f732eacf605a27fe951f7f4e27c131f3f6e8e4937",
+  "result": "PASS"
+}

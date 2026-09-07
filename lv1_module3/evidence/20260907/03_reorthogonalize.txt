@@ -1,0 +1,232 @@
+
+CELL 2 / execution 1
+실행 Python: /home/chsjh/.venvs/physicalai-lv1-math/bin/python
+가상환경 사용: True
+
+CELL 3 / execution 2
+한글·수학 글꼴: Noto Sans KR
+
+CELL 4 / execution 3
+ROOT = /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module3
+
+CELL 5 / execution 4
+
+CELL 7 / execution 5
+누적 후 직교성 오차: 2.3836779644979223e-11
+누적 후 행렬식: 0.9999999999815234
+각 열의 길이: [1. 1. 1.]
+
+CELL 8 / execution 6
+float64 오차: 2.3836779644979223e-11
+float32 오차: 0.0060846852982080445
+float32 / float64: 255264569.66218886
+
+CELL 9 / execution 7
+[PASS] 누적 후 직교성이 실제로 무너졌다 (오차 > 0)
+[PASS] 한 번만 곱했을 때는 오차가 거의 0
+[PASS] 기록이 200개 (1000회마다)
+[PASS] 오차가 누적 횟수에 따라 증가
+[PASS] 누적 오차가 float64 에서 1e-12 ~ 1e-9 범위 (구현이 맞다면)
+[PASS] float32 가 float64 보다 훨씬 크게 무너진다 (1000배 이상)
+
+3-1 전체 통과: True
+
+CELL 11 / execution 8
+def gram_schmidt(A) -> np.ndarray:
+    """**열벡터**에 대해 Gram-Schmidt 직교정규화를 수행한다.
+
+        q1 = a1 / |a1|
+        vj = aj - sum_{i<j} (qi · aj) qi
+        qj = vj / |vj|
+
+    각 열에서 앞선 열 방향 성분(정사영)을 빼고 정규화하는 것이며,
+    문제 1 의 project / reject 와 같은 연산의 반복이다.
+
+    수치적으로는 성분을 빼자마자 갱신하는 modified Gram-Schmidt 가 더 안정적이다.
+    앞선 열들에 종속인 열이 있으면 ValueError.
+    """
+    A = np.asarray(A, dtype=float)
+    if A.ndim != 2:
+        raise ValueError(f"2차원 행렬이 필요합니다. 받은 shape={A.shape}")
+    m, n = A.shape
+    if n > m:
+        raise ValueError("열 수가 행 수보다 많으면 모든 열을 직교정규화할 수 없습니다")
+    Q = np.zeros_like(A, dtype=float)
+    scale = float(np.max(np.abs(A))) if A.size else 0.0
+    tol = max(m, n) * np.finfo(float).eps * max(1.0, scale)
+    for j in range(n):
+        v = A[:, j].copy()
+        for i in range(j):
+            v -= float(Q[:, i] @ v) * Q[:, i]
+        length = float(np.sqrt(np.sum(v * v)))
+        if length <= tol:
+            raise ValueError("앞선 열들에 종속인 열은 직교정규화할 수 없습니다")
+        Q[:, j] = v / length
+    return Q
+
+
+CELL 12 / execution 9
+재직교화 전 오차: 2.3836779644979223e-11
+재직교화 후 오차: 2.2652158746862216e-16
+개선 배율: 105229.61591146849
+복구 행렬 det: 1.0000000000000002
+자세 최대 성분 변화: 5.9037219557467324e-12
+
+CELL 13 / execution 10
+<Figure size 1200x400 with 2 Axes>
+CELL 14 / execution 11
+[PASS] 재직교화 후 오차가 전보다 작다
+[PASS] 재직교화 후 오차가 기계정밀도 수준 (< 1e-14)
+[PASS] 복구 행렬의 행렬식이 1
+[PASS] 복구 행렬이 진짜 회전행렬 (직교 + det=1)
+[PASS] 복구 행렬의 역행렬 == 전치
+[PASS] 자세가 크게 바뀌지 않았다 (차이 < 1e-6)
+[PASS] 이미 직교인 행렬에 적용하면 그대로
+[PASS] 노이즈 섞인 행렬도 회전행렬로 복구
+
+3-2 전체 통과: True
+
+CELL 16 / execution 12
+test_determinant_is_one[0.7853981633974483-rot_y] [32mPASSED[0m[32m [ 38%][0m
+tests/test_rotation.py::test_determinant_is_one[0.7853981633974483-rot_z] [32mPASSED[0m[32m [ 40%][0m
+tests/test_rotation.py::test_determinant_is_one[1.5707963267948966-rot_x] [32mPASSED[0m[32m [ 41%][0m
+tests/test_rotation.py::test_determinant_is_one[1.5707963267948966-rot_y] [32mPASSED[0m[32m [ 42%][0m
+tests/test_rotation.py::test_determinant_is_one[1.5707963267948966-rot_z] [32mPASSED[0m[32m [ 43%][0m
+tests/test_rotation.py::test_determinant_is_one[2.0-rot_x] [32mPASSED[0m[32m        [ 44%][0m
+tests/test_rotation.py::test_determinant_is_one[2.0-rot_y] [32mPASSED[0m[32m        [ 45%][0m
+tests/test_rotation.py::test_determinant_is_one[2.0-rot_z] [32mPASSED[0m[32m        [ 46%][0m
+tests/test_rotation.py::test_determinant_is_one[3.141592653589793-rot_x] [32mPASSED[0m[32m [ 47%][0m
+tests/test_rotation.py::test_determinant_is_one[3.141592653589793-rot_y] [32mPASSED[0m[32m [ 48%][0m
+tests/test_rotation.py::test_determinant_is_one[3.141592653589793-rot_z] [32mPASSED[0m[32m [ 50%][0m
+tests/test_rotation.py::test_determinant_is_one[-1.234-rot_x] [32mPASSED[0m[32m     [ 51%][0m
+tests/test_rotation.py::test_determinant_is_one[-1.234-rot_y] [32mPASSED[0m[32m     [ 52%][0m
+tests/test_rotation.py::test_determinant_is_one[-1.234-rot_z] [32mPASSED[0m[32m     [ 53%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.0-rot_x] [32mPASSED[0m[32m  [ 54%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.0-rot_y] [32mPASSED[0m[32m  [ 55%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.0-rot_z] [32mPASSED[0m[32m  [ 56%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.39269908169872414-rot_x] [32mPASSED[0m[32m [ 57%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.39269908169872414-rot_y] [32mPASSED[0m[32m [ 58%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.39269908169872414-rot_z] [32mPASSED[0m[32m [ 60%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.5235987755982988-rot_x] [32mPASSED[0m[32m [ 61%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.5235987755982988-rot_y] [32mPASSED[0m[32m [ 62%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.5235987755982988-rot_z] [32mPASSED[0m[32m [ 63%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.7853981633974483-rot_x] [32mPASSED[0m[32m [ 64%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.7853981633974483-rot_y] [32mPASSED[0m[32m [ 65%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[0.7853981633974483-rot_z] [32mPASSED[0m[32m [ 66%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[1.5707963267948966-rot_x] [32mPASSED[0m[32m [ 67%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[1.5707963267948966-rot_y] [32mPASSED[0m[32m [ 68%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[1.5707963267948966-rot_z] [32mPASSED[0m[32m [ 70%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[2.0-rot_x] [32mPASSED[0m[32m  [ 71%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[2.0-rot_y] [32mPASSED[0m[32m  [ 72%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[2.0-rot_z] [32mPASSED[0m[32m  [ 73%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[3.141592653589793-rot_x] [32mPASSED[0m[32m [ 74%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[3.141592653589793-rot_y] [32mPASSED[0m[32m [ 75%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[3.141592653589793-rot_z] [32mPASSED[0m[32m [ 76%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[-1.234-rot_x] [32mPASSED[0m[32m [ 77%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[-1.234-rot_y] [32mPASSED[0m[32m [ 78%][0m
+tests/test_rotation.py::test_inverse_equals_transpose[-1.234-rot_z] [32mPASSED[0m[32m [ 80%][0m
+tests/test_rotation.py::test_gram_schmidt_restores_orthogonality [32mPASSED[0m[32m  [ 81%][0m
+tests/test_rotation.py::test_reflection_is_not_a_rotation [32mPASSED[0m[32m         [ 82%][0m
+tests/test_rotation.py::test_rodrigues_matches_rot_z[0.0] [32mPASSED[0m[32m         [ 83%][0m
+tests/test_rotation.py::test_rodrigues_matches_rot_z[0.39269908169872414] [32mPASSED[0m[32m [ 84%][0m
+tests/test_rotation.py::test_rodrigues_matches_rot_z[0.5235987755982988] [32mPASSED[0m[32m [ 85%][0m
+tests/test_rotation.py::test_rodrigues_matches_rot_z[0.7853981633974483] [32mPASSED[0m[32m [ 86%][0m
+tests/test_rotation.py::test_rodrigues_matches_rot_z[1.5707963267948966] [32mPASSED[0m[32m [ 87%][0m
+tests/test_rotation.py::test_rodrigues_matches_rot_z[2.0] [32mPASSED[0m[32m         [ 88%][0m
+tests/test_rotation.py::test_rodrigues_matches_rot_z[3.141592653589793] [32mPASSED[0m[32m [ 90%][0m
+tests/test_rotation.py::test_rodrigues_matches_rot_z[-1.234] [32mPASSED[0m[32m      [ 91%][0m
+tests/test_rotation.py::test_axis_angle_roundtrip [32mPASSED[0m[32m                 [ 92%][0m
+tests/test_rotation.py::test_axis_angle_roundtrip_near_pi[3.141592153589793-axis0] [32mPASSED[0m[32m [ 93%][0m
+tests/test_rotation.py::test_axis_angle_roundtrip_near_pi[3.141592153589793-axis1] [32mPASSED[0m[32m [ 94%][0m
+tests/test_rotation.py::test_axis_angle_roundtrip_near_pi[3.141592653589793-axis0] [32mPASSED[0m[32m [ 95%][0m
+tests/test_rotation.py::test_axis_angle_roundtrip_near_pi[3.141592653589793-axis1] [32mPASSED[0m[32m [ 96%][0m
+tests/test_rotation.py::test_axis_angle_roundtrip_near_pi[3.141593153589793-axis0] [32mPASSED[0m[32m [ 97%][0m
+tests/test_rotation.py::test_axis_angle_roundtrip_near_pi[3.141593153589793-axis1] [32mPASSED[0m[32m [ 98%][0m
+tests/test_rotation.py::test_axis_angle_identity_uses_positive_x_axis [32mPASSED[0m[32m [100%][0m
+
+[32m============================== [32m[1m90 passed[0m[32m in 0.23s[0m[32m ==============================[0m
+
+종료 코드 : 0
+
+CELL 17 / execution 13
+[PASS] pytest 전수 통과 (종료 코드 0)
+[PASS] 실패/에러가 없다
+[PASS] 요구된 4가지 테스트가 모두 존재
+[PASS] 통과 케이스가 4개 이상 (parametrize 권장)
+
+3-3 전체 통과: True
+
+CELL 19 / execution 14
+0000e+00],\n       [0.000000e+00, 0.000000e+00, 1.000000e+00]]) = rot_z(1.5707963267948966)[0m
+[1m[31m/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module3/tests/test_rotation.py[0m:110: assert False
+[1m[31mE   assert False[0m
+[1m[31m     +  where False = <function allclose at 0x743cd1bb4370>(array([[-0.41614684, -0.90929743,  0.        ],\n       [ 0.90929743, -0.41614684,  0.        ],\n       [ 0.        ,  0.        ,  1.        ]]), array([[-0.41614684,  0.90929743,  0.        ],\n       [ 0.90929743, -0.41614684,  0.        ],\n       [ 0.        ,  0.        ,  1.        ]]), atol=1e-12)[0m
+[1m[31m     +    where <function allclose at 0x743cd1bb4370> = np.allclose[0m
+[1m[31m     +    and   array([[-0.41614684, -0.90929743,  0.        ],\n       [ 0.90929743, -0.41614684,  0.        ],\n       [ 0.        ,  0.        ,  1.        ]]) = rodrigues([0.0, 0.0, 4.0], 2.0)[0m
+[1m[31m     +    and   array([[-0.41614684,  0.90929743,  0.        ],\n       [ 0.90929743, -0.41614684,  0.        ],\n       [ 0.        ,  0.        ,  1.        ]]) = rot_z(2.0)[0m
+[1m[31m/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module3/tests/test_rotation.py[0m:110: assert False
+[1m[31mE   assert False[0m
+[1m[31m     +  where False = <function allclose at 0x743cd1bb4370>(array([[ 0.33046511,  0.94381821,  0.        ],\n       [-0.94381821,  0.33046511,  0.        ],\n       [ 0.        ,  0.        ,  1.        ]]), array([[ 0.33046511, -0.94381821,  0.        ],\n       [-0.94381821,  0.33046511,  0.        ],\n       [ 0.        ,  0.        ,  1.        ]]), atol=1e-12)[0m
+[1m[31m     +    where <function allclose at 0x743cd1bb4370> = np.allclose[0m
+[1m[31m     +    and   array([[ 0.33046511,  0.94381821,  0.        ],\n       [-0.94381821,  0.33046511,  0.        ],\n       [ 0.        ,  0.        ,  1.        ]]) = rodrigues([0.0, 0.0, 4.0], -1.234)[0m
+[1m[31m     +    and   array([[ 0.33046511, -0.94381821,  0.        ],\n       [-0.94381821,  0.33046511,  0.        ],\n       [ 0.        ,  0.        ,  1.        ]]) = rot_z(-1.234)[0m
+[1m[31m/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module3/tests/test_rotation.py[0m:110: assert False
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_rotation.py::[1mtest_columns_are_orthonormal[0.39269908169872414-rot_z][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_columns_are_orthonormal[0.5235987755982988-rot_z][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_columns_are_orthonormal[0.7853981633974483-rot_z][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_columns_are_orthonormal[2.0-rot_z][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_columns_are_orthonormal[-1.234-rot_z][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_determinant_is_one[0.39269908169872414-rot_z][0m - AssertionError: assert np.False_
+[31mFAILED[0m tests/test_rotation.py::[1mtest_determinant_is_one[0.5235987755982988-rot_z][0m - AssertionError: assert np.False_
+[31mFAILED[0m tests/test_rotation.py::[1mtest_determinant_is_one[0.7853981633974483-rot_z][0m - AssertionError: assert np.False_
+[31mFAILED[0m tests/test_rotation.py::[1mtest_determinant_is_one[1.5707963267948966-rot_z][0m - AssertionError: assert np.False_
+[31mFAILED[0m tests/test_rotation.py::[1mtest_determinant_is_one[2.0-rot_z][0m - AssertionError: assert np.False_
+[31mFAILED[0m tests/test_rotation.py::[1mtest_determinant_is_one[-1.234-rot_z][0m - AssertionError: assert np.False_
+[31mFAILED[0m tests/test_rotation.py::[1mtest_inverse_equals_transpose[0.39269908169872414-rot_z][0m - AssertionError: assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_inverse_equals_transpose[0.5235987755982988-rot_z][0m - AssertionError: assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_inverse_equals_transpose[0.7853981633974483-rot_z][0m - AssertionError: assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_inverse_equals_transpose[2.0-rot_z][0m - AssertionError: assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_inverse_equals_transpose[-1.234-rot_z][0m - AssertionError: assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_rodrigues_matches_rot_z[0.39269908169872414][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_rodrigues_matches_rot_z[0.5235987755982988][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_rodrigues_matches_rot_z[0.7853981633974483][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_rodrigues_matches_rot_z[1.5707963267948966][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_rodrigues_matches_rot_z[2.0][0m - assert False
+[31mFAILED[0m tests/test_rotation.py::[1mtest_rodrigues_matches_rot_z[-1.234][0m - assert False
+[31m[31m[1m22 failed[0m, [32m68 passed[0m[31m in 0.28s[0m[0m
+
+종료 코드 : 1 (0 이 아니면 테스트가 버그를 검출한 것)
+
+CELL 20 / execution 15
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m [ 75%]
+[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                 [100%][0m
+[32m[32m[1m96 passed[0m[32m in 0.36s[0m[0m
+
+복구 후 종료 코드 : 0
+
+CELL 21 / execution 16
+[PASS] 버그를 넣으면 테스트가 실패한다
+[PASS] 실패 목록에 요구된 4가지 중 하나 이상이 있다
+[PASS] 소스가 원본으로 복구되었다
+[PASS] 복구 후 전체 테스트 재통과
+[PASS] 복구된 rot_z 가 실제로 회전행렬이다
+
+3-4 전체 통과: True
+
+CELL 23 / execution 17
+
+1. 20만 번 누적 후 직교성 오차: 2.383678e-11   (지표: ||R^T R - I||_F)
+   - float32 로 하면: 6.084685e-03 (약 255264569.7 배)
+
+2. 재직교화 후 오차: 2.265216e-16  -> 개선 배율: 1.052e+05 배
+   - 자세 자체의 변화(최대 성분 차이): 5.903722e-12
+
+3. 복구 행렬의 행렬식: 1.000000000000  (직교 + det=1 이므로 회전행렬인가: True)
+
+4. pytest -v 전수 통과 출력: 위 3-3 셀 참조 — 종료 코드 0, 통과 케이스 90 개
+
+5. 함수를 틀리게 바꿨을 때 실패 출력: 위 3-4 셀 참조 — 종료 코드 1
+   - 바꾼 내용: rot_z의 첫 행 sin 부호를 -sin에서 +sin으로 변경
+   - 실패한 테스트: ['test_columns_are_orthonormal', 'test_determinant_is_one', 'test_inverse_equals_transpose', 'test_rodrigues_matches_rot_z']
+   - 원본 복구 완료 여부: True

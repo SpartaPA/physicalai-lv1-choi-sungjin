@@ -1,0 +1,11 @@
+{
+  "notebook": "01_vectors.ipynb",
+  "started": "2026-09-07T18:16:03+0900",
+  "finished": "2026-09-07T18:17:08+0900",
+  "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+  "pass_lines": 41,
+  "protected_cells": 6,
+  "images": [],
+  "notebook_sha256": "def98ebd2c7bb97829ab794b8b0f98443917a45174dcd204bd64117136dd461e",
+  "result": "PASS"
+}

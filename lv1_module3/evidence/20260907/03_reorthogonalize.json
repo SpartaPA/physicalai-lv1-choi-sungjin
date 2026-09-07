@@ -1,0 +1,13 @@
+{
+  "notebook": "03_reorthogonalize.ipynb",
+  "started": "2026-09-07T18:17:58+0900",
+  "finished": "2026-09-07T18:18:59+0900",
+  "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+  "pass_lines": 23,
+  "protected_cells": 6,
+  "images": [
+    "images/20260907/03_reorthogonalize_1.png"
+  ],
+  "notebook_sha256": "cec245803602c5c1689cb03d734da72220bb22b6b8e7abc8422a406476ea1c4f",
+  "result": "PASS"
+}

@@ -1,0 +1,262 @@
+
+CELL 2 / execution 1
+실행 Python: /home/chsjh/.venvs/physicalai-lv1-math/bin/python
+가상환경 사용: True
+
+CELL 3 / execution 2
+한글·수학 글꼴: Noto Sans KR
+
+CELL 4 / execution 3
+A =
+ [[ 3.  1.  2.]
+ [ 1.  4.  1.]
+ [ 2. -1.  5.]]
+
+b = [11.  1. 20.]
+
+CELL 5 / execution 4
+
+CELL 7 / execution 5
+def gauss_eliminate(A, b, pivoting: bool = True, verbose: bool = False):
+    """가우스 소거법 + 후진대입으로 Ax = b 를 푼다.
+
+    Parameters
+    ----------
+    pivoting : True 면 부분 피벗팅을 적용한다. False 면 피벗을 그대로 쓴다
+               (문제 4-4 에서 두 경우의 오차를 비교하므로 **둘 다 동작해야 한다**).
+    verbose  : True 면 각 소거 단계의 첨가행렬 [A|b] 를 출력한다
+               (문제 4-1 이 요구하는 '단계별 출력').
+
+    Returns
+    -------
+    x : 해 벡터
+    steps : 단계별 첨가행렬 [A|b] 스냅샷 리스트 (초기 상태 포함)
+
+    피벗이 0 이면 해가 유일하지 않다 -> ZeroDivisionError.
+    """
+    A = np.asarray(A, dtype=float)
+    b = np.asarray(b, dtype=float)
+    if A.ndim != 2 or A.shape[0] != A.shape[1]:
+        raise ValueError(f"정사각 행렬 A가 필요합니다. 받은 shape={A.shape}")
+    if b.ndim != 1 or b.shape[0] != A.shape[0]:
+        raise ValueError(f"b는 길이 {A.shape[0]}인 벡터여야 합니다. 받은 shape={b.shape}")
+
+    n = A.shape[0]
+    augmented = np.column_stack((A.copy(), b.copy()))
+    scale = float(np.max(np.abs(A))) if A.size else 0.0
+    tol = max(1, n) * np.finfo(float).eps * max(1.0, scale)
+    # 비피벗 모드는 문제 4-4에서 1e-16 같은 작은 *비영* 피벗을 일부러
+    # 사용해 수치 붕괴를 관찰해야 하므로, 정확한 0/언더플로만 거부한다.
+    pivot_tol = tol if pivoting else np.finfo(float).tiny
+    steps = [augmented.copy()]
+    if verbose:
+        print("초기 [A|b]:\n", augmented)
+
+    for col in range(n):
+        pivot_row = col
+        if pivoting:
+            pivot_row = col + int(np.argmax(np.abs(augmented[col:, col])))
+        if abs(augmented[pivot_row, col]) <= pivot_tol:
+            raise ZeroDivisionError("0 피벗 때문에 유일한 해를 구할 수 없습니다")
+        if pivot_row != col:
+            augmented[[col, pivot_row]] = augmented[[pivot_row, col]]
+
+        for row in range(col + 1, n):
+            factor = augmented[row, col] / augmented[col, col]
+            augmented[row, col:] -= factor * augmented[col, col:]
+            augmented[row, col] = 0.0
+        steps.append(augmented.copy())
+        if verbose:
+            print(f"{col + 1}단계 [A|b]:\n", augmented)
+
+    x = np.zeros(n, dtype=float)
+    for row in range(n - 1, -1, -1):
+        if abs(augmented[row, row]) <= pivot_tol:
+            raise ZeroDivisionError("0 피벗 때문에 유일한 해를 구할 수 없습니다")
+        known = np.sum(augmented[row, row + 1:n] * x[row + 1:n])
+        x[row] = (augmented[row, -1] - known) / augmented[row, row]
+    return x, steps
+
+
+CELL 8 / execution 6
+초기 [A|b]:
+ [[ 3.  1.  2. 11.]
+ [ 1.  4.  1.  1.]
+ [ 2. -1.  5. 20.]]
+1단계 [A|b]:
+ [[ 3.        1.        2.       11.      ]
+ [ 0.        3.666667  0.333333 -2.666667]
+ [ 0.       -1.666667  3.666667 12.666667]]
+2단계 [A|b]:
+ [[ 3.        1.        2.       11.      ]
+ [ 0.        3.666667  0.333333 -2.666667]
+ [ 0.        0.        3.818182 11.454545]]
+3단계 [A|b]:
+ [[ 3.        1.        2.       11.      ]
+ [ 0.        3.666667  0.333333 -2.666667]
+ [ 0.        0.        3.818182 11.454545]]
+
+CELL 9 / execution 7
+최종 해 x: [ 2. -1.  3.]
+정수해 여부: True
+A @ x: [11.  1. 20.] / b: [11.  1. 20.]
+잔차 노름 |Ax-b|: 3.580361673049448e-15
+np.linalg.solve 검산: [ 2. -1.  3.]
+
+CELL 10 / execution 8
+[PASS] 해가 (2, -1, 3)
+[PASS] 해가 정수로 떨어진다
+[PASS] A @ x == b
+[PASS] np.linalg.solve 와 일치
+[PASS] 소거 단계가 모두 기록되었다 (단계 수 4 >= 3)
+[PASS] 첫 기록이 초기 첨가행렬 [A|b]
+[PASS] 마지막 첨가행렬이 상삼각
+[PASS] 상삼각의 대각성분 곱 == ±det(A) (행 연산은 det 의 부호만 바꾼다)
+
+4-1 전체 통과: True
+
+CELL 12 / execution 9
+rank(A): 3 / rank([A|b]): 3 / 미지수: 3
+NumPy rank 검산: 3 3
+판정: 유일해
+모순: rank(A), rank([A|b]) = 2 3 / 마지막 행: [ 0.        0.        0.       -0.333333]
+무모순 종속: rank(A), rank([A|b]) = 2 2 / 마지막 행: [0. 0. 0. 0.]
+
+CELL 13 / execution 10
+[PASS] rank(A) == 3 (full rank)
+[PASS] rank([A|b]) == 3
+[PASS] 두 rank 가 같고 n 과 같다 -> 유일해
+[PASS] 직접 구현 rank == np.linalg.matrix_rank
+[PASS] A_dep 의 rank 는 2
+[PASS] 모순 케이스는 rank(A) < rank([A|b])
+[PASS] 무모순 종속 케이스는 두 rank 가 같고 n 보다 작다
+
+4-2 전체 통과: True
+
+CELL 15 / execution 11
+직접 det / NumPy 검산: 42.0 / 42.00000000000001
+직접 구한 역행렬:
+[[ 0.5      -0.166667 -0.166667]
+ [-0.071429  0.261905 -0.02381 ]
+ [-0.214286  0.119048  0.261905]]
+NumPy 역행렬 검산:
+[[ 0.5      -0.166667 -0.166667]
+ [-0.071429  0.261905 -0.02381 ]
+ [-0.214286  0.119048  0.261905]]
+A @ invA:
+[[ 1.  0.  0.]
+ [ 0.  1. -0.]
+ [ 0. -0.  1.]]
+invA @ b: [ 2. -1.  3.] / 가우스 소거 해: [ 2. -1.  3.]
+
+CELL 16 / execution 12
+스케일만 바꾼 경우
+     scale            det           cond           상대오차
+   1.0e+00   4.200000e+01   4.214603e+00   0.000000e+00
+   1.0e-01   4.200000e-02   4.214603e+00   2.517749e-16
+   1.0e-02   4.200000e-05   4.214603e+00   4.672745e-16
+   1.0e-03   4.200000e-08   4.214603e+00   1.483598e-16
+거의 특이해지는 경우
+       eps            det           cond           상대오차
+   1.0e-02   1.000000e-02   2.508010e+03   0.000000e+00
+   1.0e-04   1.000000e-04   2.500080e+05   0.000000e+00
+   1.0e-06   1.000000e-06   2.500001e+07   0.000000e+00
+   1.0e-08   1.000000e-08   2.500000e+09   0.000000e+00
+   1.0e-10   1.000000e-10   2.499989e+11   0.000000e+00
+   1.0e-12   1.000089e-12   2.497608e+13   0.000000e+00
+
+CELL 17 / execution 13
+[PASS] det(A) == 42
+[PASS] 직접 구현 det == np.linalg.det
+[PASS] A @ A^-1 == I
+[PASS] A^-1 @ A == I
+[PASS] 직접 구현 역행렬 == np.linalg.inv
+[PASS] A^-1 @ b == 가우스 소거 해
+[PASS] det(A^-1) == 1/det(A)
+[PASS] det(0.01 A) == 0.01^3 det(A) (det 은 스케일에 민감)
+[PASS] 조건수는 스케일에 무관
+
+4-3 전체 통과: True
+
+CELL 19 / execution 14
+eps=1e-5 참해: [1.00001 0.99999]
+피벗팅 없음: [1.00001 0.99999] / 상대오차: 2.6901964197197188e-12
+부분 피벗팅: [1.00001 0.99999] / 상대오차: 0.0
+         eps           피벗팅 없음           부분 피벗팅
+     1.0e-02     3.297026e-15     1.570012e-16
+     1.0e-03     1.601494e-14     0.000000e+00
+     1.0e-04     1.989307e-13     1.570092e-16
+     1.0e-05     2.690196e-12     0.000000e+00
+     1.0e-06     3.983796e-12     1.570092e-16
+     1.0e-07     3.563319e-10     0.000000e+00
+     1.0e-08     3.518027e-09     1.570092e-16
+     1.0e-09     2.070545e-08     0.000000e+00
+     1.0e-10     5.843557e-08     0.000000e+00
+     1.0e-11     5.849921e-08     0.000000e+00
+     1.0e-12     1.564242e-05     0.000000e+00
+     1.0e-13     2.198715e-04     1.570092e-16
+     1.0e-14     5.651748e-04     0.000000e+00
+     1.0e-15     5.651748e-04     1.570092e-16
+     1.0e-16     8.629857e-01     1.570092e-16
+
+CELL 20 / execution 15
+<Figure size 750x450 with 1 Axes>
+CELL 21 / execution 16
+[PASS] eps=1e-5 에서 피벗팅 없는 쪽의 오차가 더 크다
+[PASS] 부분 피벗팅 오차는 기계정밀도 수준 (< 1e-15)
+[PASS] eps 가 작아질수록 피벗팅 없는 오차가 커진다
+[PASS] eps=1e-16 근처에서는 피벗팅 없는 해가 완전히 무너진다 (오차 > 0.1)
+[PASS] 부분 피벗팅은 eps 와 무관하게 안정적
+[PASS] 피벗팅 결과는 np.linalg.solve 와 일치
+
+4-4 전체 통과: True
+
+CELL 23 / execution 17
+측정 BLAS 설정: [('openblas', 1)]
+방법                 시간(ms)             잔차
+solve               6.742   8.000724e-12
+inv @ b            24.834   1.618627e-11
+명시적 800x800 역행렬 저장 공간: 4.8828125 MiB
+
+CELL 24 / execution 18
+        목표 조건수         실제 조건수         solve 상대오차           inv 상대오차
+       1.0e+02      1.000e+02       5.192233e-15       2.838120e-14
+       1.0e+06      1.000e+06       1.529436e-11       1.107018e-10
+       1.0e+10      1.000e+10       6.278015e-08       1.488878e-06
+
+CELL 25 / execution 19
+<Figure size 1100x400 with 2 Axes>
+CELL 26 / execution 20
+[PASS] 두 방법의 해가 사실상 같다
+[PASS] solve 가 더 빠르다
+[PASS] solve 의 잔차가 더 작거나 같다
+[PASS] 두 해 모두 유효 (잔차가 작다)
+
+4-5 전체 통과: True
+
+CELL 28 / execution 21
+
+1. 가우스 소거 단계별 첨가행렬: 4-1 셀 출력 참조
+   최종 해: x = [ 2. -1.  3.]
+
+2. rank A: 3 / rank 첨가행렬: 3   (미지수 3개)
+   - 해의 존재·유일성 판정: 두 rank가 미지수 수 3과 같으므로 유일해
+   - 두 rank가 같으면 b가 A의 열공간에 있어 해가 존재하고, 다르면 모순이라 해가 없으며, 같지만 n보다 작으면 자유변수가 있어 무한해이다.
+
+3. 행렬식: 42.000000
+   역행렬:
+   [[ 0.5      -0.166667 -0.166667]
+ [-0.071429  0.261905 -0.02381 ]
+ [-0.214286  0.119048  0.261905]]
+   - det 이 0 에 가까울 때 위험한 이유: 작은 피벗으로 나누며 반올림 오차가 증폭될 수 있다.
+   - 실제 판정 기준: det의 절댓값은 스케일에 민감하므로 상대 민감도를 나타내는 조건수를 함께 본다.
+
+4. 피벗팅 없을 때 오차 / 부분 피벗팅 오차 (eps = 1e-5): 2.690196e-12 / 0.000000e+00
+   - eps 를 더 줄이면: 비피벗 해는 붕괴하지만 부분 피벗 해는 기계정밀도 수준을 유지한다.
+   - 유효숫자가 날아가는 지점: 첫 행을 1/eps 배 해 두 번째 행에서 뺄 때 큰 수끼리 상쇄된다.
+
+5. solve vs 역행렬 곱셈 (800x800)
+   - 시간 : 6.742 ms / 24.834 ms
+   - 잔차 : 8.000724e-12 / 1.618627e-11
+   - 조건수를 키웠을 때의 정확도 차이: 둘 다 악화되지만 명시적 역행렬 곱은 추가 반올림과 연산으로 대체로 더 불리하다.
+   - 결론: Ax=b는 분해 후 직접 푸는 solve를 사용하고, 선형 연산자 자체가 꼭 필요할 때만 역행렬을 명시적으로 만든다.

@@ -1,0 +1,14 @@
+{
+  "notebook": "02_rotation.ipynb",
+  "started": "2026-09-07T18:25:26+0900",
+  "finished": "2026-09-07T18:26:13+0900",
+  "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+  "pass_lines": 39,
+  "protected_cells": 7,
+  "images": [
+    "images/20260907/02_rotation_1.png",
+    "images/20260907/02_rotation_2.png"
+  ],
+  "notebook_sha256": "1a0c5f671eece30175cb7b74370b5afafdd1d93c94d55d60bae55c65ae80ea11",
+  "result": "PASS"
+}

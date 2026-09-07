@@ -1,0 +1,15 @@
+{
+  "notebook": "06_chain.ipynb",
+  "started": "2026-09-07T18:23:30+0900",
+  "finished": "2026-09-07T18:24:36+0900",
+  "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+  "pass_lines": 41,
+  "protected_cells": 8,
+  "images": [
+    "images/20260907/06_chain_1.png",
+    "images/20260907/06_chain_2.png",
+    "images/20260907/06_chain_3.png"
+  ],
+  "notebook_sha256": "78b4daa72b87701993e84d8fecb2d5e9135fab7b6831b09bf296a1a51563ba8c",
+  "result": "PASS"
+}

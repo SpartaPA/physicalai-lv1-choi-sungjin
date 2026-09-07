@@ -1,0 +1,14 @@
+{
+  "notebook": "05_transform.ipynb",
+  "started": "2026-09-07T18:22:21+0900",
+  "finished": "2026-09-07T18:23:29+0900",
+  "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+  "pass_lines": 43,
+  "protected_cells": 7,
+  "images": [
+    "images/20260907/05_transform_1.png",
+    "images/20260907/05_transform_2.png"
+  ],
+  "notebook_sha256": "9ef7b6a0d5d15f02bdb44032358a871b69ff855afe0282967f2439d9476d0003",
+  "result": "PASS"
+}

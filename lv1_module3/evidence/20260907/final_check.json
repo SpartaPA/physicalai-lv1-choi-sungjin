@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-09-07T18:27:53+0900",
+  "result": "PASS",
+  "notebooks": [
+    {
+      "notebook": "01_vectors.ipynb",
+      "pass_lines": 41,
+      "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+      "provided_cells_unchanged": 6,
+      "figures": 0,
+      "sha256": "def98ebd2c7bb97829ab794b8b0f98443917a45174dcd204bd64117136dd461e"
+    },
+    {
+      "notebook": "02_rotation.ipynb",
+      "pass_lines": 39,
+      "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+      "provided_cells_unchanged": 7,
+      "figures": 2,
+      "sha256": "1a0c5f671eece30175cb7b74370b5afafdd1d93c94d55d60bae55c65ae80ea11"
+    },
+    {
+      "notebook": "03_reorthogonalize.ipynb",
+      "pass_lines": 23,
+      "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+      "provided_cells_unchanged": 6,
+      "figures": 1,
+      "sha256": "cec245803602c5c1689cb03d734da72220bb22b6b8e7abc8422a406476ea1c4f"
+    },
+    {
+      "notebook": "04_linear_system.ipynb",
+      "pass_lines": 34,
+      "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+      "provided_cells_unchanged": 7,
+      "figures": 2,
+      "sha256": "d4c5df29736d37996008cd6f732eacf605a27fe951f7f4e27c131f3f6e8e4937"
+    },
+    {
+      "notebook": "05_transform.ipynb",
+      "pass_lines": 43,
+      "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+      "provided_cells_unchanged": 7,
+      "figures": 2,
+      "sha256": "9ef7b6a0d5d15f02bdb44032358a871b69ff855afe0282967f2439d9476d0003"
+    },
+    {
+      "notebook": "06_chain.ipynb",
+      "pass_lines": 41,
+      "execution_method": "JupyterLab UI: Restart Kernel and Run All Cells",
+      "provided_cells_unchanged": 8,
+      "figures": 3,
+      "sha256": "78b4daa72b87701993e84d8fecb2d5e9135fab7b6831b09bf296a1a51563ba8c"
+    }
+  ],
+  "total_pass_lines": 221,
+  "provided_cells_unchanged": 41,
+  "total_figures": 10,
+  "pytest_passed": 96,
+  "source_and_test_sha256": {
+    "src/__init__.py": "91f0bd0d7b0ed99490c9ea6cd6ef5b88d6c4068e81667a5103a550c9d3fc1815",
+    "src/coordinate_chain.py": "d2a5f193d7425ad50208e57dd38291dde98deb927a867d1b650ee4774b3bcd0d",
+    "src/rotation.py": "06b2e4203ea7d08ce28681bb812a9ae69c625ffa56873de83020cd313e01307a",
+    "src/transform.py": "1a05ea6fc9c6a89a1d00b6c088671ad63c69aff2f35d45a5002660dcc9ffd6ee",
+    "src/vectors.py": "18e7d5b0d20451488dea0b714062045955241366ab87a8e9713a9854e749a330",
+    "tests/conftest.py": "c0b7ec01ea773ed770ec506b2377364b229c6df7117222ee4ecb15ee6091808c",
+    "tests/test_rotation.py": "951b0458a77a92d4c0a9c8712e22142a40fbf8dfaf283d3aac885fca9abfdc96",
+    "tests/test_transform.py": "68eea7607a9e9dcbe9d09302472384f65b8514cbfab3b84b462c0101f0e49ddb"
+  }
+}
