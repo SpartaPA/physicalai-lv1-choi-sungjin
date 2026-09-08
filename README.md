@@ -11,7 +11,7 @@
 
 ## 모듈 2 — turtlesim ROS 2 패키지
 
-- [실행 안내](lv1_module2/README.md): 가상환경 설정과 터미널 입력으로 다각형 그리기
+- [실행 안내](lv1_module2/README.md): 클론 후 ros2-humble 가상환경 설정, 빌드, 터미널 입력으로 다각형 그리기
 - [과제 보고서](lv1_module2/report.md): 문제 1~10 구현, 실행 결과와 검증
 - [ROS 2 패키지 소스](lv1_module2/ros2_ws/src/)
 - [실행 화면](lv1_module2/screenshots/20260907/)
