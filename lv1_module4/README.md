@@ -34,12 +34,16 @@ wsl.exe -d Ubuntu-22.04
 
 아래 A와 B 중 자신의 상황에 맞는 **한쪽만** 실행한다.
 
-### A. 이 PC의 기존 작업을 이어서 실행
+### A. 이미 과제가 있는 경우
+
+이 PC에 과제 폴더와 가상환경이 준비돼 있다면 Ubuntu 터미널에서 **아래 두 줄만 실행**한다. `git clone`은 과제를 처음 내려받는 명령이므로 다시 실행하지 않는다.
 
 ```bash
 cd '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module4'
 source scripts/use_env.sh
 ```
+
+환경이 적용되면 B는 건너뛰고 **3단계**로 이동한다. 다른 위치에 과제가 있다면 첫 줄의 경로를 실제 `lv1_module4` 폴더로 바꾼다.
 
 이 스크립트는 모듈 3에서 사용한 수학용 가상환경과 `/opt/ros/humble/setup.bash`를 불러오고 터미널 표시를 `(venv)`로 맞춘다. 기존 `physicalai-lv1-math` 폴더와 설치 패키지는 그대로 사용한다. 가상환경 폴더 이름이 `ros2-humble`이어야만 Humble을 쓸 수 있는 것은 아니다.
 
