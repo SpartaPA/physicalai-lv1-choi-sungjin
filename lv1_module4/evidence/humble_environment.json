@@ -1,0 +1,142 @@
+{
+  "checked_at": "2026-09-09T07:42:19.527498+00:00",
+  "module_root": "/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module4",
+  "os": {
+    "ID": "ubuntu",
+    "PRETTY_NAME": "Ubuntu 22.04.5 LTS",
+    "VERSION_ID": "22.04",
+    "VERSION_CODENAME": "jammy"
+  },
+  "python": {
+    "executable": "/home/chsjh/.venvs/physicalai-lv1-math/bin/python",
+    "prefix": "/home/chsjh/.venvs/physicalai-lv1-math",
+    "base_prefix": "/usr",
+    "version": "3.10.12"
+  },
+  "ros_distro": "humble",
+  "package_versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.9",
+    "PIL": "12.3.0",
+    "pytest": "9.1.1",
+    "ipykernel": "7.3.0",
+    "jupyterlab": "4.6.3",
+    "nbclient": "0.11.0",
+    "nbformat": "5.11.1",
+    "rclpy": "",
+    "turtlesim.msg": ""
+  },
+  "checks": [
+    {
+      "name": "ubuntu_22_04_jammy",
+      "passed": true,
+      "detail": "Ubuntu 22.04.5 LTS; OS codename=jammy (ROS 이름과 별개)"
+    },
+    {
+      "name": "python_3_10",
+      "passed": true,
+      "detail": "3.10.12"
+    },
+    {
+      "name": "python_is_venv",
+      "passed": true,
+      "detail": "/home/chsjh/.venvs/physicalai-lv1-math/bin/python"
+    },
+    {
+      "name": "activated_venv_matches_python",
+      "passed": true,
+      "detail": {
+        "active": "/home/chsjh/.venvs/physicalai-lv1-math",
+        "python_prefix": "/home/chsjh/.venvs/physicalai-lv1-math"
+      }
+    },
+    {
+      "name": "ros_humble",
+      "passed": true,
+      "detail": "humble"
+    },
+    {
+      "name": "pip_local",
+      "passed": true,
+      "detail": "PIP_LOCAL=1"
+    },
+    {
+      "name": "import_numpy",
+      "passed": true,
+      "detail": "2.2.6"
+    },
+    {
+      "name": "import_scipy",
+      "passed": true,
+      "detail": "1.15.3"
+    },
+    {
+      "name": "import_matplotlib",
+      "passed": true,
+      "detail": "3.10.9"
+    },
+    {
+      "name": "import_PIL",
+      "passed": true,
+      "detail": "12.3.0"
+    },
+    {
+      "name": "import_pytest",
+      "passed": true,
+      "detail": "9.1.1"
+    },
+    {
+      "name": "import_ipykernel",
+      "passed": true,
+      "detail": "7.3.0"
+    },
+    {
+      "name": "import_jupyterlab",
+      "passed": true,
+      "detail": "4.6.3"
+    },
+    {
+      "name": "import_nbclient",
+      "passed": true,
+      "detail": "0.11.0"
+    },
+    {
+      "name": "import_nbformat",
+      "passed": true,
+      "detail": "5.11.1"
+    },
+    {
+      "name": "import_rclpy",
+      "passed": true,
+      "detail": "import OK"
+    },
+    {
+      "name": "import_turtlesim.msg",
+      "passed": true,
+      "detail": "import OK"
+    },
+    {
+      "name": "pip_freeze_excludes_ros",
+      "passed": true,
+      "detail": {
+        "returncode": 0,
+        "package_count": 106,
+        "ros_packages_in_freeze": []
+      }
+    },
+    {
+      "name": "rclpy_node_lifecycle",
+      "passed": true,
+      "detail": {
+        "returncode": 0,
+        "operation": "create/query/destroy"
+      }
+    }
+  ],
+  "summary": {
+    "passed": 19,
+    "failed": 0
+  },
+  "ok": true
+}

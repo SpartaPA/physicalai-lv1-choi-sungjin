@@ -8,7 +8,17 @@
 
 ## 1. 사용할 터미널 정하기
 
-이 안내는 **Ubuntu 22.04 또는 Ubuntu 22.04 WSL + Python 3.10의 venv**를 기준으로 한다. 모듈 4는 수학·시각화 실습이므로 ROS 2를 실행하거나 거북이 창을 띄울 필요가 없다.
+이 안내는 **Ubuntu 22.04 또는 Ubuntu 22.04 WSL + ROS 2 Humble + Python 3.10 가상환경**을 기준으로 한다. 모듈 4에서는 계산·시각화를 실행하므로 거북이 창을 띄우지 않는다. 터미널에는 Humble과 수학 패키지를 함께 불러온다.
+
+이름은 다음처럼 구분한다. `jammy`가 표시돼도 다른 ROS 배포판을 사용한 것이 아니다. [ROS 공식 안내](https://www.ros.org/blog/getting-started/)에서도 Ubuntu 22.04 Jammy와 ROS 2 Humble 조합을 안내한다.
+
+| 표시 | 뜻 | 이 실습의 값 |
+|---|---|---|
+| Ubuntu 코드명 | 운영체제 버전의 이름 | `jammy` = Ubuntu 22.04 |
+| `ROS_DISTRO` | 현재 불러온 ROS 2 배포판 | `humble` |
+| 터미널 앞의 괄호 | 활성화된 가상환경의 표시 이름 | `(venv)` |
+| 가상환경 폴더 | 파이썬과 패키지가 저장된 위치 | 기존 `physicalai-lv1-math` 또는 새 `.venv` |
+| 노트북 커널 | 노트북 코드를 실행할 파이썬 | `Python (pose_lab)` |
 
 **터미널 1개**에서 JupyterLab을 켜고 이후 계산은 브라우저에서 실행한다. JupyterLab을 켜 둔 채 pytest 같은 명령을 실행하려면 **두 번째 터미널**을 사용한다.
 
@@ -28,54 +38,51 @@ wsl.exe -d Ubuntu-22.04
 
 ```bash
 cd '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module4'
-source /home/chsjh/.venvs/physicalai-lv1-math/bin/activate
+source scripts/use_env.sh
 ```
 
-모듈 3에서 사용한 수학용 가상환경을 그대로 사용한다. 이 경로는 이번 실행 PC의 경로다.
+이 스크립트는 모듈 3에서 사용한 수학용 가상환경과 `/opt/ros/humble/setup.bash`를 불러오고 터미널 표시를 `(venv)`로 맞춘다. 기존 `physicalai-lv1-math` 폴더와 설치 패키지는 그대로 사용한다. 가상환경 폴더 이름이 `ros2-humble`이어야만 Humble을 쓸 수 있는 것은 아니다.
+
+환경 선택 순서는 명시한 `MODULE4_VENV` → 이 모듈의 `.venv` → `$HOME/.venvs/physicalai-lv1-math`다. 다른 위치에 만든 환경을 사용하려면 먼저 `export MODULE4_VENV='/실제/가상환경/경로'`를 실행한다. 지정한 경로가 잘못됐을 때는 다른 환경으로 자동 대체하지 않는다.
 
 ### B. 다른 PC에서 처음 내려받아 실행
 
-먼저 Git과 Python 3.10의 가상환경 도구, 한글 글꼴을 준비한다. 다음 설치 명령은 Ubuntu 22.04 기준이다.
+먼저 **Ubuntu 22.04에 ROS 2 Humble을 설치**한다. `/opt/ros/humble/setup.bash`가 없다면 [Humble 공식 설치 안내](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)의 저장소 등록과 `ros-humble-desktop` 설치를 마친다. `requirements.txt`는 ROS 자체를 설치하지 않는다.
+
+Git과 Python 3.10의 가상환경 도구, 한글 글꼴도 준비한다. 다음 명령은 Ubuntu 22.04 기준이다.
 
 ```bash
 sudo apt update
 sudo apt install -y git python3-venv fonts-nanum
 python3 --version
+test -f /opt/ros/humble/setup.bash && echo 'Humble 설치 확인'
 ```
 
-Python 버전이 `3.10.x`인지 확인한다. 다른 버전이라면 이 문서의 검증 환경과 다르므로 Python 3.10을 사용한다.
+Python 버전이 `3.10.x`이고 `Humble 설치 확인`이 출력되는지 확인한다. Ubuntu 24.04 터미널이나 다른 ROS 배포판을 불러온 터미널에서는 계속하지 않고 Ubuntu 22.04 터미널을 연다.
 
 저장소를 저장할 상위 폴더로 이동한 뒤:
 
 ```bash
 git clone https://github.com/SpartaPA/physicalai-lv1-choi-sungjin.git
 cd physicalai-lv1-choi-sungjin/lv1_module4
-python3 -m venv .venv
+python3 -m venv --prompt venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
+source scripts/use_env.sh
 ```
 
 비공개 저장소이므로 접근 권한이 있는 GitHub 계정으로 인증해야 한다. 이미 클론한 저장소가 있다면 다시 클론하지 않고 그 안의 `lv1_module4`로 이동한다. 가상환경은 Git에 포함되지 않으므로 새 PC에서 별도로 만든다.
 
-### Windows Python으로 직접 실행할 경우
+Windows PC에서도 이번 Humble 실행 순서는 **WSL의 Ubuntu 22.04 터미널**에서 따라 한다. PowerShell에 `source`를 입력하지 않는다.
 
-WSL 대신 Windows Python을 쓰려면 Python 3.10과 Git을 설치하고 PowerShell에서 저장소를 클론한 뒤 `lv1_module4`로 이동한다. 그다음:
-
-```powershell
-py -3.10 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m ipykernel install --user --name physicalai-lv1-math --display-name "Python (pose_lab)"
-.\.venv\Scripts\python.exe -m jupyter lab
-```
-
-실행 파일 경로를 직접 지정하므로 PowerShell 활성화 스크립트의 실행 정책을 바꿀 필요가 없다. 이후 4단계의 브라우저 작업부터 따라 한다. 전체 검증 명령은 `.\.venv\Scripts\python.exe scripts/verify_notebooks.py`다. Windows 직접 실행은 Ubuntu WSL의 실행 결과와 구분한다.
-
-## 3. 파이썬과 노트북 커널 연결
+## 3. Humble·가상환경 확인과 노트북 커널 연결
 
 Ubuntu에서 A 또는 B를 마쳤다면 같은 터미널에서:
 
 ```bash
 python -c "import sys; print(sys.executable); print(sys.prefix != sys.base_prefix)"
+echo "$ROS_DISTRO"
+python scripts/check_env.py
 python -m ipykernel install --user --name physicalai-lv1-math --display-name "Python (pose_lab)"
 python -m jupyter kernelspec list
 ```
@@ -84,17 +91,23 @@ python -m jupyter kernelspec list
 
 - 첫 줄은 A라면 `/home/chsjh/.venvs/physicalai-lv1-math/bin/python`, B라면 방금 만든 `.venv/bin/python` 경로다.
 - 둘째 줄이 `True`이면 가상환경이다.
+- `echo "$ROS_DISTRO"`의 결과가 `humble`이다. `check_env.py`의 모든 항목이 `[PASS]`여야 한다.
+- 터미널 앞은 `(venv)`다. 파이썬 경로에 `physicalai-lv1-math`가 남아 있어도 정상이다.
 - 커널 목록에 `physicalai-lv1-math`가 있다. 브라우저 표시 이름은 `Python (pose_lab)`이다.
 
 Kernel(커널)은 노트북의 코드를 실제로 실행하는 파이썬이다. 위 등록 명령은 현재 가상환경과 노트북을 연결한다. 같은 이름의 커널이 다른 가상환경에 연결돼 있었다면 이 명령으로 경로가 갱신된다.
 
+`use_env.sh`는 `PIP_LOCAL=1`도 설정한다. 따라서 노트북의 `pip freeze`는 가상환경에 설치한 pip 패키지를 기록하고, apt로 설치한 ROS 패키지는 포함하지 않는다. ROS 2 Humble 설치는 2단계에서 별도로 준비한다.
+
 ## 4. JupyterLab 열기
 
-터미널 1에서:
+2~3단계를 적용한 터미널 1에서:
 
 ```bash
 python -m jupyter lab
 ```
+
+**이전 안내로 이미 JupyterLab을 켰다면**, 열어 둔 노트북을 저장하고 기존 서버를 해당 터미널의 `Ctrl+C`로 종료한 뒤 `source scripts/use_env.sh`와 위 명령으로 다시 연다. 다른 터미널에서 환경을 적용해도 이미 실행 중인 서버에는 전달되지 않으며, 커널만 재시작해도 서버의 예전 환경을 물려받는다.
 
 1. 실행 터미널에 나온 `http://localhost:.../lab` 또는 `http://127.0.0.1:.../lab` 주소를 연다. 기본 포트가 사용 중이면 다른 포트가 표시될 수 있으므로 실제 출력 주소를 사용한다.
 2. 로그인 화면이 나오면 같은 터미널에 출력된 `?token=...`이 포함된 전체 주소로 연다.
@@ -172,11 +185,12 @@ JupyterLab을 켜 둔 경우 **터미널 2**를 열고 2단계의 `cd`와 가상
 
 ```bash
 cd '/mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module4'
-source /home/chsjh/.venvs/physicalai-lv1-math/bin/activate
+source scripts/use_env.sh
+python scripts/check_env.py
 python scripts/verify_notebooks.py
 ```
 
-다른 PC의 프로젝트 `.venv`를 쓰는 경우에는 `source .venv/bin/activate`로 활성화한다.
+다른 PC에서도 해당 `lv1_module4` 폴더에서 같은 `source scripts/use_env.sh`를 사용한다. 프로젝트 `.venv`가 있으면 자동 선택한다.
 
 이 명령은 아래 작업을 차례대로 수행한다.
 
@@ -194,6 +208,8 @@ python scripts/verify_notebooks.py
 python -m pytest -v
 ```
 
+이 모듈의 [pytest.ini](pytest.ini)는 Humble의 ROS launch 테스트 확장 `launch_testing`·`launch_ros`만 자동 로딩에서 제외한다. 두 확장은 이 모듈에서 사용하지 않으며, 기존 확장이 pytest 9와 충돌하는 것을 막기 위한 설정이다. 수학 함수 테스트는 모두 실행한다.
+
 현재 저장한 실행 결과는 **pytest 43개 통과**, 노트북 검증 **176개 통과 / 실패 0개**, GIF **60프레임**이다. 전체 검증 명령의 마지막에는 `노트북 3개 전체 실행 및 저장 결과 검사 통과`가 나온다.
 
 ## 9. 실행 기록과 파일 위치
@@ -206,6 +222,8 @@ python -m pytest -v
 | [demo.gif](demo.gif) | 위치와 방향이 동시에 변하는 60프레임 시연 |
 | [presentation.md](presentation.md) | 구조, 결과, 한계, 개선안 |
 | [requirements.txt](requirements.txt) | 사용한 패키지 버전 |
+| [use_env.sh](scripts/use_env.sh) · [check_env.py](scripts/check_env.py) | `(venv)`·Humble 적용과 실제 환경 검사 |
+| [humble_environment.json](evidence/humble_environment.json) | Ubuntu·가상환경·Humble·ROS 노드 실행 확인 |
 | [notebook_validation.json](evidence/notebook_validation.json) | 실행 시각·커널·노트북별 PASS/FAIL·오류·순차 실행 여부 |
 | [cell_order_experiment.json](evidence/cell_order_experiment.json) | 셀 순서 실험 결과 |
 | [pytest.txt](evidence/pytest.txt) | 함수 테스트 전체 출력 |
@@ -218,6 +236,10 @@ python -m pytest -v
 | 증상 | 확인·해결 |
 |---|---|
 | `wsl: command not found` | 이미 Ubuntu인지 프롬프트를 확인한다. Windows 명령은 PowerShell에서 실행한다. |
+| `(physicalai-lv1-math)`가 표시됨 | 정상적인 가상환경 이름이다. `(venv)` 표시와 Humble을 함께 적용하려면 `source scripts/use_env.sh`를 실행한다. |
+| Ubuntu에 `jammy`가 표시됨 | Ubuntu 22.04의 정상 코드명이다. ROS 배포판은 `echo "$ROS_DISTRO"`로 따로 확인한다. |
+| `ROS_DISTRO`가 비어 있거나 `rclpy`를 못 찾음 | `source scripts/use_env.sh`를 실행한다. JupyterLab이 이미 실행 중이었다면 저장 후 서버도 다시 연다. |
+| 다른 ROS 배포판이 불러와져 있음 | 해당 배포판을 자동으로 불러오는 설정을 확인하고, Ubuntu 22.04의 새 터미널에서 Humble을 적용한다. |
 | `ModuleNotFoundError` | 2단계 가상환경을 활성화하고 그 환경의 `python -m pip install -r requirements.txt`를 실행한다. |
 | `No module named src` | `lv1_module4`에서 JupyterLab을 열었는지 확인하고 노트북 첫 셀부터 실행한다. |
 | `Python (pose_lab)`이 없음 | 3단계 커널 등록을 실행하고 노트북을 다시 연다. |
