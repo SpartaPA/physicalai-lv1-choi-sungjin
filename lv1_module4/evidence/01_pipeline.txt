@@ -1,0 +1,169 @@
+인터프리터 : /home/chsjh/.venvs/physicalai-lv1-math/bin/python
+버전       : 3.10.12
+ROOT       : /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module4
+
+[PASS] 인터프리터 경로에 .venv 가 포함 (가상환경 커널)
+[PASS] Python 3.10 이상
+[PASS] 패키지 import 가능: numpy
+[PASS] 패키지 import 가능: scipy
+[PASS] 패키지 import 가능: matplotlib
+[PASS] 패키지 import 가능: pytest
+[PASS] 패키지 import 가능: PIL
+
+1-1 전체 통과: True
+
+count = 0
+
+count = 1
+
+최종 count = 1
+
+[PASS] count 변수가 존재한다
+[PASS] 위에서 아래로 한 번 실행했을 때 count == 1 (아니면 실행 순서가 섞인 것)
+
+1-2 전체 통과: True
+
+실제 사용한 T_base_link:
+[[ 0.92388  -0.382683  0.        0.35    ]
+ [ 0.382683  0.92388   0.        0.05    ]
+ [ 0.        0.        1.        0.45    ]
+ [ 0.        0.        0.        1.      ]]
+실제 사용한 T_link_cam:
+[[ 0.92388  -0.353553 -0.146447  0.12    ]
+ [ 0.        0.382683 -0.92388   0.04    ]
+ [ 0.382683  0.853553  0.353553  0.18    ]
+ [ 0.        0.        0.        1.      ]]
+  base 원점 (base 기준): [0. 0. 0.]
+  link 원점 (base 기준): [0.35 0.05 0.45]
+camera 원점 (base 기준): [0.445558 0.132877 0.63    ]
+object 원점 (base 기준): [ 0.62865  -0.399568  0.844195]
+
+<Figure size 800x700 with 1 Axes>
+[PASS] frames 에 네 좌표계가 모두 있다
+[PASS] frames 의 값이 모두 유효한 동차변환 (4x4, 회전부 직교, det=1)
+[PASS] frames['base'] 는 단위행렬
+[PASS] frames['link'] == T_base_link
+[PASS] frames['camera'] == T_base_link @ T_link_cam
+[PASS] frames['object'] == T_base_link @ T_link_cam @ T_cam_obj
+[PASS] base->link, link->camera 가 모듈 ③ default_chain 과 같다
+[PASS] 물체가 카메라 앞쪽 (카메라 z축 성분 ~ 0.6 m)
+[PASS] 물체가 작업대 위 (base z > 0)
+
+1-3 전체 통과: True
+
+기록한 파일 : /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module4/requirements.txt
+패키지 수   : 106
+anyio==4.15.0
+argon2-cffi==25.1.0
+argon2-cffi-bindings==26.1.0
+arrow==1.4.0
+asttokens==3.0.2
+async-lru==2.3.0
+attrs==26.1.0
+babel==2.18.0
+beautifulsoup4==4.15.0
+bleach==6.4.0
+certifi==2026.7.22
+cffi==2.1.1
+charset-normalizer==3.5.1
+comm==0.2.3
+contourpy==1.3.2 
+...
+
+[PASS] requirements.txt 가 생성되었다
+[PASS] numpy / scipy / matplotlib / pytest 가 기록되어 있다
+[PASS] jupyterlab / ipykernel 이 기록되어 있다
+[PASS] pillow 가 기록되어 있다 (GIF 저장용)
+
+1-4 전체 통과: True
+
+P_cam shape: (200, 3)
+앞 3개 (camera):
+ [[ 0.068283 -0.0512    0.607505]
+ [ 0.106434 -0.078531  0.586978]
+ [ 0.05767  -0.029487  0.599832]]
+
+P_base 앞 3개:
+[[ 0.660654 -0.406739  0.827215]
+ [ 0.701668 -0.380546  0.811228]
+ [ 0.639649 -0.398774  0.838973]]
+왕복 최대 오차: 2.220446049250313e-16
+벡터화와 반복문 최대 차이: 1.6653345369377348e-16
+
+[PASS] T_base_camera == T_base_link @ T_link_cam
+[PASS] T_camera_base == inv_T(T_base_camera)
+[PASS] P_base shape == (N,3)
+[PASS] 벡터화 결과 == transform_points 결과
+[PASS] 벡터화 결과 == 반복문 결과
+[PASS] 모듈 ③ default_chain 과 같은 결과
+[PASS] 왕복 오차가 기계정밀도 수준 (< 1e-12)
+[PASS] 단일 점 (3,) 도 처리
+[PASS] 강체 변환: 점 사이 거리 보존
+[PASS] 점군 중심이 base 에서 작업대 위 (z > 0)
+
+2-1 전체 통과: True
+
+    관절각[deg]         중심 x         중심 y         중심 z
+       -30.0     0.366951    -0.479603     0.842165
+         0.0     0.629482    -0.400174     0.842165
+        30.0     0.817125    -0.200121     0.842165
+
+<Figure size 900x750 with 1 Axes>
+[PASS] 세 각도 모두 계산됨
+[PASS] 관절 0도 결과 == 2-1 의 P_base
+[PASS] 관절 0도 T_base_camera == 원래 값
+[PASS] 각도가 다르면 결과가 다르다
+[PASS] 점군 중심에서 link 원점까지 거리는 세 각도에서 같다 (관절 둘레 회전)
+[PASS] link z축 둘레 회전이므로 세 중심의 z (base) 가 모두 같다
+[PASS] 관절 -30도: 점 사이 거리 보존
+[PASS] 관절 +0도: 점 사이 거리 보존
+[PASS] 관절 +30도: 점 사이 거리 보존
+[PASS] 파이프라인을 관절 0도로 되돌려 두었다
+
+2-2 전체 통과: True
+
+[1m============================= test session starts ==============================[0m
+[1mcollecting ... [0mcollected 9 items
+
+tests/test_pose_pipeline.py::test_camera_to_base_matches_chain [32mPASSED[0m[32m    [ 11%][0m
+tests/test_pose_pipeline.py::test_roundtrip_restores_points [32mPASSED[0m[32m       [ 22%][0m
+tests/test_pose_pipeline.py::test_joint_angle_zero_is_nominal [32mPASSED[0m[32m     [ 33%][0m
+tests/test_pose_pipeline.py::test_joint_angle_changes_result [32mPASSED[0m[32m      [ 44%][0m
+tests/test_pose_pipeline.py::test_distance_is_preserved [32mPASSED[0m[32m           [ 55%][0m
+tests/test_pose_pipeline.py::test_rejects_wrong_shape [32mPASSED[0m[32m             [ 66%][0m
+tests/test_pose_pipeline.py::test_joint_rotation_uses_link_axis[x-rot_x] [32mPASSED[0m[32m [ 77%][0m
+tests/test_pose_pipeline.py::test_joint_rotation_uses_link_axis[y-rot_y] [32mPASSED[0m[32m [ 88%][0m
+tests/test_pose_pipeline.py::test_object_pose_matches_four_frame_chain [32mPASSED[0m[32m [100%][0m
+
+[32m============================== [32m[1m9 passed[0m[32m in 0.17s[0m[32m ===============================[0m
+
+종료 코드 : 0
+
+[PASS] pytest 전수 통과 (종료 코드 0)
+[PASS] 실패/에러가 없다
+[PASS] 요구된 2가지 테스트가 모두 존재
+[PASS] 통과 케이스가 2개 이상
+
+2-3 전체 통과: True
+
+
+[문제 1]
+1. 커널 확인 출력 — 인터프리터 경로: /home/chsjh/.venvs/physicalai-lv1-math/bin/python
+2. 셀 실행 순서 실험 — 관찰한 현상: A→B→C는 1, B를 두 번 더 실행하면 3, 재시작 뒤 C만 실행하면 NameError
+   - 이유: 커널은 화면 배치와 무관하게 이전 셀 실행으로 만들어진 메모리 상태를 유지한다.
+   - Restart & Run All 이 필요한 이유: 숨은 상태와 잘못된 실행 순서 의존성을 제거해 처음부터 재현 가능한지 확인하기 위해서다.
+3. 네 좌표계 3D 시각화: 위 1-3 그림 참조
+   - object 원점 (base 기준): [ 0.62865  -0.399568  0.844195]
+4. requirements.txt: 패키지 106 개 기록 (위 1-4 출력 참조)
+
+[문제 2]
+1. PosePipeline 인터페이스 — 입력: T(base<-link), T(link<-camera), 관절축 및 camera 점/점군 / 출력: base 점/점군, 역변환, base 기준 물체 자세
+2. 점군 변환 결과 (앞 3개, base):
+[[ 0.660654 -0.406739  0.827215]
+ [ 0.701668 -0.380546  0.811228]
+ [ 0.639649 -0.398774  0.838973]]
+3. 왕복 검증 결과 — 최대 오차: 2.220446e-16
+4. 관절 각도 3종별 점군 중심 (base):
+   -30도: [ 0.366951 -0.479603  0.842165] / 0도: [ 0.629482 -0.400174  0.842165] / +30도: [ 0.817125 -0.200121  0.842165]   (그림: 위 2-2)
+5. pytest 통과 출력: 위 2-3 셀 참조 — 종료 코드 0, 통과 9 개
+

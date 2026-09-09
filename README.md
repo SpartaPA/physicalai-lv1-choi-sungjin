@@ -24,3 +24,11 @@
 - [수학 라이브러리 소스](lv1_module3/src/)
 - [테스트](lv1_module3/tests/)
 - [그래프와 3D 그림](lv1_module3/images/20260907/)
+
+## 모듈 4 — 픽앤플레이스 자세 추정과 궤적 생성
+
+- [단계별 실행 안내](lv1_module4/README.md): 환경 준비부터 노트북 3개 실행·검증까지
+- [문제 1~6 노트북](lv1_module4/notebooks/)
+- [시연 애니메이션](lv1_module4/demo.gif)
+- [발표 자료와 결과 해석](lv1_module4/presentation.md)
+- [전체 실행 검증 결과](lv1_module4/evidence/notebook_validation.json)

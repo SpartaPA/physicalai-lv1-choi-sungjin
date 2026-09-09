@@ -1,0 +1,199 @@
+ROOT = /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module4
+
+q_start: [ 0.167731 -0.044943 -0.254887  0.951251]
+q_goal : [-0.554998 -0.021592  0.790275  0.2588  ]
+왕복 최대 오차: 8.881784197001252e-16
+SciPy q_start: [ 0.167731 -0.044943 -0.254887  0.951251]
+
+[PASS] q_start 가 단위 노름
+[PASS] q_goal 이 단위 노름
+[PASS] R -> q -> R 왕복 (R_start)
+[PASS] 무작위 100개 + 특수 케이스 왕복 최대 오차 < 1e-10
+[PASS] SciPy 와 부호 무시하고 일치 (|q . q_scipy| == 1)
+[PASS] q 와 -q 가 같은 회전행렬을 준다
+[PASS] 단위행렬 -> (0,0,0,±1)
+[PASS] 180도 회전 (w=0) 도 처리
+[PASS] 모듈 ③ quaternion_from_axis_angle 과 일치 (부호 무시)
+
+3-1 전체 통과: True
+
+시작-목표 총 회전각: 174.57009006747109 도
+직접 SLERP와 SciPy 최대 행렬 오차: 8.881784197001252e-16
+
+[PASS] SLERP 결과가 모두 단위 노름
+[PASS] 직접 구현 SLERP == SciPy Slerp (회전행렬 기준, 최대 오차 < 1e-8)
+[PASS] t=0 이면 시작 자세
+[PASS] t=1 이면 목표 자세
+[PASS] 총 회전각 == 회전행렬로 구한 값
+[PASS] 각속도가 일정 (연속 자세 사이 각도가 모두 같다)
+[PASS] t=0.5 는 시작·목표에서 같은 각도
+
+3-2 전체 통과: True
+
+연속 자세 사이 각도 [deg]: [21.821261 21.821261 21.821261 21.821261 21.821261 21.821261 21.821261
+ 21.821261]
+
+<Figure size 1800x280 with 9 Axes>
+[PASS] 자세가 9개 (시작 + 중간 7 + 목표)
+[PASS] 모두 회전행렬
+[PASS] 첫 자세 == R_start, 끝 자세 == R_goal
+[PASS] 연속 자세 사이 각도가 모두 같다 (SLERP 는 등각속도)
+[PASS] 각도 합 == 총 회전각
+
+3-3 전체 통과: True
+
+최대 노름 편차: 0.2763401445619025 / t = 0.5
+SLERP 스텝 범위: 6.687983500341943e-13 / NLERP 스텝 범위: 2.5294338237478677
+
+<Figure size 1200x400 with 2 Axes>
+[PASS] t=0, t=1 에서는 크기 1
+[PASS] 중간에서 크기가 1 보다 작아진다 (현을 지난다)
+[PASS] 최대 크기 이탈이 0.01 이상 (큰 회전이라 뚜렷하다)
+[PASS] 최대 이탈은 t=0.5 근처
+[PASS] SLERP 연속 각도는 일정
+[PASS] NLERP 연속 각도는 일정하지 않다
+[PASS] NLERP 는 가운데가 가장 빠르다
+[PASS] normalize=True 는 단위 노름
+
+3-4 전체 통과: True
+
+거의 같은 자세 중간: [ 0.167731 -0.044943 -0.254887  0.951251] / NaN: False
+부호 반대 같은 자세 중간: [ 0.167731 -0.044943 -0.254887  0.951251] / NaN: False
+정반대 자세 NaN 개수: 0
+
+[PASS] 거의 같은 자세: NaN 없음
+[PASS] 거의 같은 자세: 결과 == 시작 자세
+[PASS] 부호 반대: NaN 없음
+[PASS] 부호 반대: 같은 자세로 인식 (결과 == R_start)
+[PASS] 정반대 자세: NaN 없음
+[PASS] 정반대 자세: 모두 단위 노름
+[PASS] 정반대 자세: 끝점 일치
+[PASS] 정반대 자세: 중간은 z축 90도
+
+3-5 전체 통과: True
+
+[1m============================= test session starts ==============================[0m
+[1mcollecting ... [0mcollected 11 items
+
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.0] [32mPASSED[0m[32m            [  9%][0m
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.1] [32mPASSED[0m[32m            [ 18%][0m
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.25] [32mPASSED[0m[32m           [ 27%][0m
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.5] [32mPASSED[0m[32m            [ 36%][0m
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.75] [32mPASSED[0m[32m           [ 45%][0m
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.9] [32mPASSED[0m[32m            [ 54%][0m
+tests/test_quaternion.py::test_slerp_is_unit_norm[1.0] [32mPASSED[0m[32m            [ 63%][0m
+tests/test_quaternion.py::test_slerp_endpoints [32mPASSED[0m[32m                    [ 72%][0m
+tests/test_quaternion.py::test_matrix_quaternion_roundtrip [32mPASSED[0m[32m        [ 81%][0m
+tests/test_quaternion.py::test_slerp_nearly_identical_poses [32mPASSED[0m[32m       [ 90%][0m
+tests/test_quaternion.py::test_lerp_norm_drops_below_one [32mPASSED[0m[32m          [100%][0m
+
+[32m============================== [32m[1m11 passed[0m[32m in 0.17s[0m[32m ==============================[0m
+
+종료 코드 : 0
+
+[PASS] pytest 전수 통과 (종료 코드 0)
+[PASS] 실패/에러가 없다
+[PASS] 요구된 2가지 테스트가 모두 존재
+[PASS] 통과 케이스가 2개 이상
+
+3-6 전체 통과: True
+
+선형 경유점 일치: True
+스플라인 경유점 일치: True
+
+<Figure size 1000x400 with 1 Axes>
+[PASS] shape == (501,)
+[PASS] 선형 보간이 경유점을 정확히 지난다
+[PASS] 스플라인이 경유점을 정확히 지난다
+[PASS] 두 궤적은 경유점 사이에서 다르다
+[PASS] 선형 보간은 경유점 사이에서 직선 (2차 차분 = 0)
+[PASS] 스플라인은 경유점 값 범위를 크게 벗어나지 않는다
+
+4-1 전체 통과: True
+
+방식                    속도 점프           가속도 점프
+선형             8.000000e-01     4.000000e+01
+스플라인           3.976512e-02     7.854545e-02
+
+<Figure size 1000x900 with 3 Axes>
+[PASS] shape 일치
+[PASS] 선형 보간 속도는 경유점 사이에서 일정
+[PASS] 선형 보간의 속도 점프가 스플라인보다 5배 이상 크다
+[PASS] 선형 보간의 가속도 점프(스파이크)가 스플라인보다 5배 이상 크다
+[PASS] 스플라인 속도는 연속 (점프가 속도 범위의 5% 미만)
+[PASS] 스플라인 가속도도 연속 (점프가 가속도 범위의 10% 미만)
+[PASS] finite_diff 가 np.gradient 와 같다
+
+4-2 전체 통과: True
+
+3D 선형/스플라인 shape: (501, 3) (501, 3)
+
+<Figure size 900x700 with 1 Axes>
+[PASS] shape == (501,3)
+[PASS] 선형 보간이 3D 경유점을 지난다
+[PASS] 스플라인이 3D 경유점을 지난다
+[PASS] 각 열이 1차원 결과와 같다 (열 독립 보간)
+[PASS] 스플라인 경로 길이 >= 직선 경로 길이
+
+4-3 전체 통과: True
+
+시작/끝 속도: 0.0 0.0
+시작/끝 가속도: 0.0 -3.552713678800501e-15
+최대 속도: 0.9375000000000002 / 최대 |가속도|: 1.4433300000000067
+
+<Figure size 1400x380 with 3 Axes>
+[PASS] q(t0) == q0, q(tf) == qf
+[PASS] 시작·끝 속도 == 0
+[PASS] 시작·끝 가속도 == 0
+[PASS] 해석적 속도 == 수치 미분 (atol 1e-2)
+[PASS] 해석적 가속도 == 수치 미분 (atol 1e-1)
+[PASS] 최대 속도는 중간 시각
+[PASS] 최대 속도 == 1.875 * (qf - q0) / (tf - t0)
+[PASS] 위치가 단조 증가
+[PASS] t=0.5 (tau) 에서 정확히 중간값
+[PASS] 다차원 (D=3) 입력도 처리
+
+4-4 전체 통과: True
+
+[1m============================= test session starts ==============================[0m
+[1mcollecting ... [0mcollected 7 items
+
+tests/test_trajectory.py::test_linear_interp_hits_waypoints[1d] [32mPASSED[0m[32m   [ 14%][0m
+tests/test_trajectory.py::test_linear_interp_hits_waypoints[3d] [32mPASSED[0m[32m   [ 28%][0m
+tests/test_trajectory.py::test_cubic_spline_hits_waypoints[1d] [32mPASSED[0m[32m    [ 42%][0m
+tests/test_trajectory.py::test_cubic_spline_hits_waypoints[3d] [32mPASSED[0m[32m    [ 57%][0m
+tests/test_trajectory.py::test_quintic_boundary_conditions [32mPASSED[0m[32m        [ 71%][0m
+tests/test_trajectory.py::test_spline_velocity_is_smoother_than_linear [32mPASSED[0m[32m [ 85%][0m
+tests/test_trajectory.py::test_quintic_is_monotonic_for_zero_boundary [32mPASSED[0m[32m [100%][0m
+
+[32m============================== [32m[1m7 passed[0m[32m in 0.31s[0m[32m ===============================[0m
+
+종료 코드 : 0
+
+[PASS] pytest 전수 통과 (종료 코드 0)
+[PASS] 실패/에러가 없다
+[PASS] 요구된 3가지 테스트가 모두 존재
+[PASS] 통과 케이스가 3개 이상
+
+4-6 전체 통과: True
+
+
+[문제 3]
+1. 행렬 -> 쿼터니언 -> 행렬 왕복 검증: 최대 오차 8.881784e-16 (무작위 100개 + 특수 케이스)
+2. 직접 구현 SLERP 와 SciPy 일치: 최대 오차 8.881784e-16
+3. 중간 자세 7개 3D 그림: 위 3-3 참조 — 연속 자세 사이 각도 21.821261 도 (총 회전각 174.570090 도)
+4. 선형 보간 시 쿼터니언 크기 그래프: 위 3-4 참조 — 최대 편차: 0.276340 (t = 0.500)
+   - 단순 선형 보간을 쓰면 단위 노름이 깨지고, 정규화한 NLERP도 각속도가 일정하지 않다.
+5. 경계 상황 처리 — 거의 같은 자세: 정규화 선형 대체 / 부호 반대: 목표 부호 반전 / 정반대 자세: 선택된 짧은 대원호 보간
+6. pytest: 종료 코드 0, 통과 11 개
+
+[문제 4]
+1. 선형 보간과 스플라인 궤적 그래프: 위 4-1 참조
+2. 위치·속도·가속도 비교: 속도 점프 선형 8.000000e-01 / 스플라인 3.976512e-02, 가속도 점프 선형 4.000000e+01 / 스플라인 7.854545e-02
+   - 선형은 경유점에서 속도와 토크가 급변하고, C2 스플라인은 속도·가속도를 연속으로 이어 기계 충격을 줄인다.
+3. 3D 공간 궤적: 위 4-3 참조
+4. 5차 다항식 경계 조건 — 시작 속도/가속도: 0.000e+00 / 0.000e+00, 끝: 0.000e+00 / -3.553e-15
+   - 정지 상태에서 출발·도착해 순간 속도 및 가속도 명령을 피한다.
+5. 보간 방식 선택 기준표: 위 4-5 표 참조
+6. pytest: 종료 코드 0, 통과 7 개
+

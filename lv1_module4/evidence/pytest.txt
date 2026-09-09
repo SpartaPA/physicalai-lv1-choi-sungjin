@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.1.1, pluggy-1.6.0 -- /home/chsjh/.venvs/physicalai-lv1-math/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/c/Desktop/coding/physicalai-lv1-최성진/lv1_module4
+plugins: anyio-4.15.0
+collecting ... collected 43 items
+
+tests/test_pose_estimation.py::test_pca_axes_are_sorted_and_right_handed PASSED [  2%]
+tests/test_pose_estimation.py::test_kabsch_recovers_known_transform PASSED [  4%]
+tests/test_pose_estimation.py::test_plane_fit_and_mad_outlier_removal PASSED [  6%]
+tests/test_pose_estimation.py::test_plane_fit_accepts_vertical_plane PASSED [  9%]
+tests/test_pose_estimation.py::test_plane_fit_rejects_undetermined_plane[points0] PASSED [ 11%]
+tests/test_pose_estimation.py::test_plane_fit_rejects_undetermined_plane[points1] PASSED [ 13%]
+tests/test_pose_estimation.py::test_iterative_mad_corrects_plane_biased_by_normal_outliers[42] PASSED [ 16%]
+tests/test_pose_estimation.py::test_iterative_mad_corrects_plane_biased_by_normal_outliers[123] PASSED [ 18%]
+tests/test_pose_estimation.py::test_iterative_mad_corrects_plane_biased_by_normal_outliers[999] PASSED [ 20%]
+tests/test_pose_estimation.py::test_iterative_mad_keeps_mask_when_retained_points_are_collinear PASSED [ 23%]
+tests/test_pose_pipeline.py::test_camera_to_base_matches_chain PASSED    [ 25%]
+tests/test_pose_pipeline.py::test_roundtrip_restores_points PASSED       [ 27%]
+tests/test_pose_pipeline.py::test_joint_angle_zero_is_nominal PASSED     [ 30%]
+tests/test_pose_pipeline.py::test_joint_angle_changes_result PASSED      [ 32%]
+tests/test_pose_pipeline.py::test_distance_is_preserved PASSED           [ 34%]
+tests/test_pose_pipeline.py::test_rejects_wrong_shape PASSED             [ 37%]
+tests/test_pose_pipeline.py::test_joint_rotation_uses_link_axis[x-rot_x] PASSED [ 39%]
+tests/test_pose_pipeline.py::test_joint_rotation_uses_link_axis[y-rot_y] PASSED [ 41%]
+tests/test_pose_pipeline.py::test_object_pose_matches_four_frame_chain PASSED [ 44%]
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.0] PASSED            [ 46%]
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.1] PASSED            [ 48%]
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.25] PASSED           [ 51%]
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.5] PASSED            [ 53%]
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.75] PASSED           [ 55%]
+tests/test_quaternion.py::test_slerp_is_unit_norm[0.9] PASSED            [ 58%]
+tests/test_quaternion.py::test_slerp_is_unit_norm[1.0] PASSED            [ 60%]
+tests/test_quaternion.py::test_slerp_endpoints PASSED                    [ 62%]
+tests/test_quaternion.py::test_matrix_quaternion_roundtrip PASSED        [ 65%]
+tests/test_quaternion.py::test_slerp_nearly_identical_poses PASSED       [ 67%]
+tests/test_quaternion.py::test_lerp_norm_drops_below_one PASSED          [ 69%]
+tests/test_rotation_regression.py::test_axis_angle_roundtrip_near_pi[3.141592153589793-axis0] PASSED [ 72%]
+tests/test_rotation_regression.py::test_axis_angle_roundtrip_near_pi[3.141592153589793-axis1] PASSED [ 74%]
+tests/test_rotation_regression.py::test_axis_angle_roundtrip_near_pi[3.141592653589793-axis0] PASSED [ 76%]
+tests/test_rotation_regression.py::test_axis_angle_roundtrip_near_pi[3.141592653589793-axis1] PASSED [ 79%]
+tests/test_rotation_regression.py::test_axis_angle_roundtrip_near_pi[3.141593153589793-axis0] PASSED [ 81%]
+tests/test_rotation_regression.py::test_axis_angle_roundtrip_near_pi[3.141593153589793-axis1] PASSED [ 83%]
+tests/test_trajectory.py::test_linear_interp_hits_waypoints[1d] PASSED   [ 86%]
+tests/test_trajectory.py::test_linear_interp_hits_waypoints[3d] PASSED   [ 88%]
+tests/test_trajectory.py::test_cubic_spline_hits_waypoints[1d] PASSED    [ 90%]
+tests/test_trajectory.py::test_cubic_spline_hits_waypoints[3d] PASSED    [ 93%]
+tests/test_trajectory.py::test_quintic_boundary_conditions PASSED        [ 95%]
+tests/test_trajectory.py::test_spline_velocity_is_smoother_than_linear PASSED [ 97%]
+tests/test_trajectory.py::test_quintic_is_monotonic_for_zero_boundary PASSED [100%]
+
+============================== 43 passed in 0.54s ==============================
