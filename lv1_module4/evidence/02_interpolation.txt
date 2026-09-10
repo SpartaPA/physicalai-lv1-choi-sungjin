@@ -87,7 +87,7 @@ tests/test_quaternion.py::test_matrix_quaternion_roundtrip [32mPASSED[0m[32m 
 tests/test_quaternion.py::test_slerp_nearly_identical_poses [32mPASSED[0m[32m       [ 90%][0m
 tests/test_quaternion.py::test_lerp_norm_drops_below_one [32mPASSED[0m[32m          [100%][0m
 
-[32m============================== [32m[1m11 passed[0m[32m in 0.17s[0m[32m ==============================[0m
+[32m============================== [32m[1m11 passed[0m[32m in 0.13s[0m[32m ==============================[0m
 
 종료 코드 : 0
 

@@ -65,20 +65,23 @@ def test_plane_fit_rejects_undetermined_plane(points):
         fit_plane_lstsq(points)
 
 
-@pytest.mark.parametrize("seed", [42, 123, 999])
-def test_iterative_mad_corrects_plane_biased_by_normal_outliers(seed):
-    """10% 법선 이상치에 기울어진 평면을 정제해 대응점 정합을 개선한다."""
+@pytest.mark.parametrize("seed, outlier_count", [
+    (42, 12),   # 공식 과제의 시드와 이상치 비율
+    (42, 24), (123, 24), (999, 24),  # 기존 추가 회귀 조건
+])
+def test_iterative_mad_corrects_plane_biased_by_normal_outliers(seed, outlier_count):
+    """공식 5% 조건과 추가 10% 조건에서 평면 정제 후 정합 오차를 확인한다."""
     rng = np.random.default_rng(seed)
     reference = rng.normal(0.0, [0.35, 0.10, 0.05], (240, 3))
     rotation = rodrigues([1.0, 2.0, 0.5], np.deg2rad(40.0))
     translation = np.array([0.10, -0.05, 0.02])
     observed = reference @ rotation.T + translation
     observed += rng.normal(0.0, 0.01, observed.shape)
-    outlier_indices = rng.choice(len(observed), 24, replace=False)
-    offsets = rng.uniform(0.2, 0.5, 24) * rng.choice([-1.0, 1.0], 24)
+    outlier_indices = rng.choice(len(observed), outlier_count, replace=False)
+    offsets = rng.uniform(0.2, 0.5, outlier_count) * rng.choice([-1.0, 1.0], outlier_count)
     normal = rotation @ np.array([0.0, 0.0, 1.0])
     observed[outlier_indices] += (
-        offsets[:, None] * normal + rng.normal(0.0, 0.03, (24, 3))
+        offsets[:, None] * normal + rng.normal(0.0, 0.03, (outlier_count, 3))
     )
 
     _, _, residuals = fit_plane_lstsq(observed)

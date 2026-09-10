@@ -135,7 +135,7 @@ tests/test_pose_pipeline.py::test_joint_rotation_uses_link_axis[x-rot_x] [32mPA
 tests/test_pose_pipeline.py::test_joint_rotation_uses_link_axis[y-rot_y] [32mPASSED[0m[32m [ 88%][0m
 tests/test_pose_pipeline.py::test_object_pose_matches_four_frame_chain [32mPASSED[0m[32m [100%][0m
 
-[32m============================== [32m[1m9 passed[0m[32m in 0.17s[0m[32m ===============================[0m
+[32m============================== [32m[1m9 passed[0m[32m in 0.13s[0m[32m ===============================[0m
 
 종료 코드 : 0
 
